@@ -4,164 +4,164 @@
   NOTE: 'https://example.com/' is an explicit placeholder URL.
   Replace with your production domain before live hosting.
 -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://pixelcraftui.netlify.app/">
   <!-- 1. Home -->
   <url>
-    <loc>https://example.com/index.html</loc>
+    <loc>https://pixelcraftui.netlify.app/index.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- 2. Components Directory -->
   <url>
-    <loc>https://example.com/components.html</loc>
+    <loc>https://pixelcraftui.netlify.app/components.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- 3. Navbars -->
   <url>
-    <loc>https://example.com/navbar-components.html</loc>
+    <loc>https://pixelcraftui.netlify.app/navbar-components.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 4. Forms -->
   <url>
-    <loc>https://example.com/forms.html</loc>
+    <loc>https://pixelcraftui.netlify.app/forms.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 5. Pricing Cards -->
   <url>
-    <loc>https://example.com/pricing-cards.html</loc>
+    <loc>https://pixelcraftui.netlify.app/pricing-cards.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 6. Footers -->
   <url>
-    <loc>https://example.com/footer-components.html</loc>
+    <loc>https://pixelcraftui.netlify.app/footer-components.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 7. Buttons -->
   <url>
-    <loc>https://example.com/buttons.html</loc>
+    <loc>https://pixelcraftui.netlify.app/buttons.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 8. Cards -->
   <url>
-    <loc>https://example.com/cards.html</loc>
+    <loc>https://pixelcraftui.netlify.app/cards.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 9. Hero Sections -->
   <url>
-    <loc>https://example.com/hero-sections.html</loc>
+    <loc>https://pixelcraftui.netlify.app/hero-sections.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 10. CSS Animations -->
   <url>
-    <loc>https://example.com/animations.html</loc>
+    <loc>https://pixelcraftui.netlify.app/animations.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 11. Responsive Design Guide -->
   <url>
-    <loc>https://example.com/responsive-design.html</loc>
+    <loc>https://pixelcraftui.netlify.app/responsive-design.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 12. Getting Started Guide -->
   <url>
-    <loc>https://example.com/getting-started.html</loc>
+    <loc>https://pixelcraftui.netlify.app/getting-started.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 13. Accessibility Guide -->
   <url>
-    <loc>https://example.com/accessibility.html</loc>
+    <loc>https://pixelcraftui.netlify.app/accessibility.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 14. About Page -->
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://pixelcraftui.netlify.app/about.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- 15. FAQ Page -->
   <url>
-    <loc>https://example.com/faq.html</loc>
+    <loc>https://pixelcraftui.netlify.app/faq.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- 16. Login Page -->
   <url>
-    <loc>https://example.com/login.html</loc>
+    <loc>https://pixelcraftui.netlify.app/login.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 17. Sign Up Page -->
   <url>
-    <loc>https://example.com/signup.html</loc>
+    <loc>https://pixelcraftui.netlify.app/signup.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 18. 100+ Card Div Gallery -->
   <url>
-    <loc>https://example.com/card-gallery.html</loc>
+    <loc>https://pixelcraftui.netlify.app/card-gallery.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- 19. Register Page -->
   <url>
-    <loc>https://example.com/register.html</loc>
+    <loc>https://pixelcraftui.netlify.app/register.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 20. Forgot Password Page -->
   <url>
-    <loc>https://example.com/forgot-password.html</loc>
+    <loc>https://pixelcraftui.netlify.app/forgot-password.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- 21. Reset Password Page -->
   <url>
-    <loc>https://example.com/reset-password.html</loc>
+    <loc>https://pixelcraftui.netlify.app/reset-password.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- 22. Dashboard Page -->
   <url>
-    <loc>https://example.com/dashboard.html</loc>
+    <loc>https://pixelcraftui.netlify.app/dashboard.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Custom 404 -->
   <url>
-    <loc>https://example.com/404.html</loc>
+    <loc>https://pixelcraftui.netlify.app/404.html</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
