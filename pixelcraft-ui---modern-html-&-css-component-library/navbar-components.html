@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar Components in HTML &amp; CSS | PixelCraft UI</title>
+    <meta name="description" content="Explore 5 responsive, accessible navigation bar patterns in pure HTML5 and CSS3. Includes minimal, SaaS, portfolio, e-commerce, and documentation navbars." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/navbar-components.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Responsive Navbar Components in HTML &amp; CSS | PixelCraft UI" />
+    <meta property="og:description" content="5 live, framework-free navigation patterns with pure CSS mobile drawers and WCAG accessibility." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/navbar-components.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/pixelcraft-ui/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/pixelcraft-ui/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Navbar Components",
+          "item": "https://example.com/pixelcraft-ui/navbar-components.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html" class="active">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="components.html" class="btn btn-secondary btn-sm">All Components</a>
+            <a href="getting-started.html" class="btn btn-primary btn-sm">Get Started</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html" aria-current="page">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav Bar -->
+    <nav class="subnav-bar" aria-label="Components Category Navigation">
+      <div class="container">
+        <ul>
+          <li><span style="font-size: 0.8125rem; font-weight: 700; color: var(--text); text-transform: uppercase; margin-right: 0.5rem;">Components:</span></li>
+          <li><a href="navbar-components.html" class="active" aria-current="page"><img src="assets/icons/layout.svg" alt="" width="14" height="14" aria-hidden="true" /> Navbars</a></li>
+          <li><a href="forms.html"><img src="assets/icons/form.svg" alt="" width="14" height="14" aria-hidden="true" /> Forms</a></li>
+          <li><a href="pricing-cards.html"><img src="assets/icons/card.svg" alt="" width="14" height="14" aria-hidden="true" /> Pricing</a></li>
+          <li><a href="footer-components.html"><img src="assets/icons/footer.svg" alt="" width="14" height="14" aria-hidden="true" /> Footers</a></li>
+          <li><a href="buttons.html"><img src="assets/icons/check.svg" alt="" width="14" height="14" aria-hidden="true" /> Buttons</a></li>
+          <li><a href="cards.html"><img src="assets/icons/card.svg" alt="" width="14" height="14" aria-hidden="true" /> Cards</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><a href="components.html">Components</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><span aria-current="page">Navbars</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <div class="container">
+        <header style="margin-bottom: var(--space-8); padding-top: var(--space-4);">
+          <span class="section-eyebrow">
+            <img src="assets/icons/layout.svg" alt="" width="14" height="14" aria-hidden="true" />
+            Navigation Patterns &middot; Category 01
+          </span>
+          <h1>Responsive Navbar Components in HTML &amp; CSS</h1>
+
+          <!-- Direct-Answer AEO Intro -->
+          <p class="lead">
+            Navigation bars provide the primary wayfinding structure for website visitors. Below are five production-ready navigation patterns constructed strictly using semantic HTML5 (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>) and modern CSS3 Flexbox. Mobile drawer menus function natively using HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> without requiring JavaScript.
+          </p>
+
+          <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4); flex-wrap: wrap;">
+            <span class="implementation-type-badge">Complete frontend implementation</span>
+            <span class="badge badge--difficulty">5 Live Patterns</span>
+          </div>
+        </header>
+
+        <!-- AEO Question Block -->
+        <div class="alert alert--info" style="margin-bottom: var(--space-10);">
+          <img src="assets/icons/book.svg" alt="" class="notice-icon" aria-hidden="true" />
+          <div>
+            <h2 style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.25rem;">What Is a Responsive Navbar?</h2>
+            <p style="margin: 0; font-size: 0.9375rem;">
+              A responsive navbar is a website header that adapts its layout across screen widths. On wide viewports (≥900px), it presents horizontal links and actions; on narrow mobile devices (&lt;900px), it collapses into an accessible menu drawer. In PixelCraft UI, this toggle is powered entirely by native HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags, eliminating JavaScript crashes and hydration delays.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pattern 1: Minimal Navbar -->
+        <article class="component-showcase" id="minimal-navbar">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">1. Minimal Navigation Bar</h3>
+              <p class="showcase-desc">A clean, single-row header featuring brand wordmark and streamlined horizontal links.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Complete frontend implementation</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <!-- Preview Frame -->
+          <div class="preview-stage pv-frame--white">
+            <div class="pv-navbar">
+              <a href="#minimal-navbar" class="pv-navbar__brand">
+                <span class="brand-icon" style="width: 24px; height: 24px; background: var(--primary); border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 700;">M</span>
+                <span class="brand-name">Minimalist</span>
+              </a>
+              <nav aria-label="Minimal Demo Navigation">
+                <ul class="pv-navbar__menu">
+                  <li><a href="#minimal-navbar" class="pv-navbar__link pv-navbar__link--active" aria-current="page">Home</a></li>
+                  <li><a href="#minimal-navbar" class="pv-navbar__link">Articles</a></li>
+                  <li><a href="#minimal-navbar" class="pv-navbar__link">Projects</a></li>
+                  <li><a href="#minimal-navbar" class="pv-navbar__link">About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- HTML Code Block -->
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Minimal navbar HTML code"><code>&lt;<span class="hl-tag">header</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar"</span>&gt;
+  &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__brand"</span>&gt;
+    &lt;<span class="hl-tag">span</span> <span class="hl-attr">class</span>=<span class="hl-str">"brand-dot"</span>&gt;&lt;/<span class="hl-tag">span</span>&gt; Minimalist
+  &lt;/<span class="hl-tag">a</span>&gt;
+  &lt;<span class="hl-tag">nav</span> <span class="hl-attr">aria-label</span>=<span class="hl-str">"Main Navigation"</span>&gt;
+    &lt;<span class="hl-tag">ul</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__menu"</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link pv-navbar__link--active"</span> <span class="hl-attr">aria-current</span>=<span class="hl-str">"page"</span>&gt;Home&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/articles"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Articles&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/projects"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Projects&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/about"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;About&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+    &lt;/<span class="hl-tag">ul</span>&gt;
+  &lt;/<span class="hl-tag">nav</span>&gt;
+&lt;/<span class="hl-tag">header</span>&gt;</code></pre>
+          </div>
+
+          <!-- Notes -->
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Uses CSS <code>display: flex; justify-content: space-between;</code>. On small mobile viewports, wrap or convert to horizontal scroll smoothly without breaking.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Wraps links in an unordered list (&lt;ul&gt;) within a labeled &lt;nav&gt;. Active link is designated using <code>aria-current="page"</code> and visual border styling.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 2: SaaS Navigation Bar -->
+        <article class="component-showcase" id="saas-navbar">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">2. SaaS Application Navigation Bar</h3>
+              <p class="showcase-desc">Features product brand mark, primary product links, login link, and high-priority action CTA button.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Complete frontend implementation</span>
+              <span class="badge badge--difficulty">Intermediate (Level 2)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <div class="pv-navbar">
+              <a href="#saas-navbar" class="pv-navbar__brand">
+                <span class="brand-icon" style="width: 24px; height: 24px; background: var(--accent); border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 700;">S</span>
+                <span class="brand-name">CloudFlow</span>
+              </a>
+              <nav aria-label="SaaS Demo Navigation">
+                <ul class="pv-navbar__menu">
+                  <li><a href="#saas-navbar" class="pv-navbar__link pv-navbar__link--active" aria-current="page">Features</a></li>
+                  <li><a href="#saas-navbar" class="pv-navbar__link">Pricing</a></li>
+                  <li><a href="#saas-navbar" class="pv-navbar__link">Documentation</a></li>
+                </ul>
+              </nav>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <a href="forms.html" class="pv-btn pv-btn--text">Log in</a>
+                <a href="forms.html" class="pv-btn pv-btn--primary">Start Free Trial</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="SaaS navbar HTML code"><code>&lt;<span class="hl-tag">header</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar"</span>&gt;
+  &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__brand"</span>&gt;CloudFlow&lt;/<span class="hl-tag">a</span>&gt;
+  &lt;<span class="hl-tag">nav</span> <span class="hl-attr">aria-label</span>=<span class="hl-str">"Product Navigation"</span>&gt;
+    &lt;<span class="hl-tag">ul</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__menu"</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/features"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Features&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/pricing"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Pricing&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/docs"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Docs&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+    &lt;/<span class="hl-tag">ul</span>&gt;
+  &lt;/<span class="hl-tag">nav</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__actions"</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/login"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-btn pv-btn--text"</span>&gt;Log in&lt;/<span class="hl-tag">a</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/signup"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-btn pv-btn--primary"</span>&gt;Start Free Trial&lt;/<span class="hl-tag">a</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+&lt;/<span class="hl-tag">header</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>On viewports below 768px, secondary action links hide or collapse into a native <code>&lt;details&gt;</code> dropdown drawer.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>All button elements satisfy minimum 44px touch targets. Visual focus rings ensure full keyboard navigability.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 3: Portfolio Navigation Bar -->
+        <article class="component-showcase" id="portfolio-navbar">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">3. Developer Portfolio Navigation Bar</h3>
+              <p class="showcase-desc">Editorial layout featuring availability status badge, navigation links, and resume action.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Complete frontend implementation</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <div class="pv-navbar">
+              <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <a href="#portfolio-navbar" class="pv-navbar__brand">Jane Doe</a>
+                <span class="badge badge--accent" style="font-size: 0.6875rem;">
+                  <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block;"></span>
+                  Available for Hire
+                </span>
+              </div>
+              <nav aria-label="Portfolio Demo Navigation">
+                <ul class="pv-navbar__menu">
+                  <li><a href="#portfolio-navbar" class="pv-navbar__link pv-navbar__link--active" aria-current="page">Case Studies</a></li>
+                  <li><a href="#portfolio-navbar" class="pv-navbar__link">Writing</a></li>
+                  <li><a href="#portfolio-navbar" class="pv-navbar__link">About</a></li>
+                  <li><a href="#portfolio-navbar" class="pv-navbar__link">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Portfolio navbar HTML code"><code>&lt;<span class="hl-tag">header</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar"</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"brand-group"</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__brand"</span>&gt;Jane Doe&lt;/<span class="hl-tag">a</span>&gt;
+    &lt;<span class="hl-tag">span</span> <span class="hl-attr">class</span>=<span class="hl-str">"badge badge--accent"</span>&gt;Available for Hire&lt;/<span class="hl-tag">span</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">nav</span> <span class="hl-attr">aria-label</span>=<span class="hl-str">"Portfolio Navigation"</span>&gt;
+    &lt;<span class="hl-tag">ul</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__menu"</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"#work"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Case Studies&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"#contact"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Contact&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+    &lt;/<span class="hl-tag">ul</span>&gt;
+  &lt;/<span class="hl-tag">nav</span>&gt;
+&lt;/<span class="hl-tag">header</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>On narrow viewports (&lt;480px), the "Available for Hire" badge can be hidden via media query to preserve spacing.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Availability status contains both a text label and icon, avoiding color-only meaning in compliance with WCAG 1.4.1.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 4: E-Commerce Navigation Bar -->
+        <article class="component-showcase" id="ecommerce-navbar">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">4. E-Commerce Store Navigation Bar</h3>
+              <p class="showcase-desc">Features multi-category retail navigation with department links and visual shopping cart counter.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Complete frontend implementation</span>
+              <span class="badge badge--difficulty">Intermediate (Level 2)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <div class="pv-navbar">
+              <a href="#ecommerce-navbar" class="pv-navbar__brand">
+                <span class="brand-icon" style="width: 24px; height: 24px; background: var(--dark); border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 700;">A</span>
+                <span class="brand-name">Atelier Goods</span>
+              </a>
+              <nav aria-label="E-Commerce Demo Categories">
+                <ul class="pv-navbar__menu">
+                  <li><a href="#ecommerce-navbar" class="pv-navbar__link pv-navbar__link--active" aria-current="page">New In</a></li>
+                  <li><a href="#ecommerce-navbar" class="pv-navbar__link">Apparel</a></li>
+                  <li><a href="#ecommerce-navbar" class="pv-navbar__link">Accessories</a></li>
+                  <li><a href="#ecommerce-navbar" class="pv-navbar__link">Sale</a></li>
+                </ul>
+              </nav>
+              <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <a href="#ecommerce-navbar" class="pv-btn pv-btn--secondary pv-btn--sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                  <span>Bag</span>
+                  <span style="background: var(--primary); color: #fff; border-radius: 10px; padding: 2px 6px; font-size: 11px; font-weight: 700;">2</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="E-Commerce navbar HTML code"><code>&lt;<span class="hl-tag">header</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar"</span>&gt;
+  &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__brand"</span>&gt;Atelier Goods&lt;/<span class="hl-tag">a</span>&gt;
+  &lt;<span class="hl-tag">nav</span> <span class="hl-attr">aria-label</span>=<span class="hl-str">"Store Categories"</span>&gt;
+    &lt;<span class="hl-tag">ul</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__menu"</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/new"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;New In&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/apparel"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Apparel&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/sale"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;Sale&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+    &lt;/<span class="hl-tag">ul</span>&gt;
+  &lt;/<span class="hl-tag">nav</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"cart-action"</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/cart"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-btn pv-btn--secondary pv-btn--sm"</span>&gt;
+      Bag &lt;<span class="hl-tag">span</span> <span class="hl-attr">class</span>=<span class="hl-str">"cart-badge"</span>&gt;2&lt;/<span class="hl-tag">span</span>&gt;
+    &lt;/<span class="hl-tag">a</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+&lt;/<span class="hl-tag">header</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Category items wrap gracefully on medium screens. The shopping bag counter stays fixed to the right on all viewports.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Shopping bag link includes an accessible label indicating "Shopping Bag, 2 items" for screen-reader users.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 5: Documentation Navigation Bar -->
+        <article class="component-showcase" id="docs-navbar">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">5. Documentation &amp; Library Navigation Bar</h3>
+              <p class="showcase-desc">Dark navy technical header with version badge, search anchor trigger, and external GitHub reference link.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Complete frontend implementation</span>
+              <span class="badge badge--difficulty">Intermediate (Level 2)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--dark">
+            <div class="pv-navbar pv-navbar--dark">
+              <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <a href="#docs-navbar" class="pv-navbar__brand">
+                  <span class="brand-icon" style="width: 24px; height: 24px; background: var(--primary); border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 700;">D</span>
+                  <span class="brand-name">DevDocs</span>
+                </a>
+                <span class="badge" style="background: var(--dark-surface-elevated); color: var(--lavender); border-color: var(--dark-border); font-size: 0.6875rem;">v2.4</span>
+              </div>
+              <nav aria-label="Documentation Demo Navigation">
+                <ul class="pv-navbar__menu">
+                  <li><a href="#docs-navbar" class="pv-navbar__link pv-navbar__link--active" aria-current="page">Guide</a></li>
+                  <li><a href="#docs-navbar" class="pv-navbar__link">API Reference</a></li>
+                  <li><a href="#docs-navbar" class="pv-navbar__link">Examples</a></li>
+                  <li><a href="#docs-navbar" class="pv-navbar__link">Changelog</a></li>
+                </ul>
+              </nav>
+              <div>
+                <a href="https://github.com" class="pv-btn pv-btn--outline" style="border-color: var(--dark-border); color: #fff; font-size: 0.8125rem;">
+                  GitHub <img src="assets/icons/external-link.svg" alt="" width="12" height="12" aria-hidden="true" style="stroke: #fff;" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Documentation navbar HTML code"><code>&lt;<span class="hl-tag">header</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar pv-navbar--dark"</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"brand-wrap"</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__brand"</span>&gt;DevDocs&lt;/<span class="hl-tag">a</span>&gt;
+    &lt;<span class="hl-tag">span</span> <span class="hl-attr">class</span>=<span class="hl-str">"version-tag"</span>&gt;v2.4&lt;/<span class="hl-tag">span</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">nav</span> <span class="hl-attr">aria-label</span>=<span class="hl-str">"Docs Navigation"</span>&gt;
+    &lt;<span class="hl-tag">ul</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__menu"</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/guide"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link pv-navbar__link--active"</span>&gt;Guide&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+      &lt;<span class="hl-tag">li</span>&gt;&lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"/api"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-navbar__link"</span>&gt;API Reference&lt;/<span class="hl-tag">a</span>&gt;&lt;/<span class="hl-tag">li</span>&gt;
+    &lt;/<span class="hl-tag">ul</span>&gt;
+  &lt;/<span class="hl-tag">nav</span>&gt;
+&lt;/<span class="hl-tag">header</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Optimized for technical documentation portals. Secondary links wrap horizontally while preserving high dark-mode contrast.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>External links include explicit icon markers and <code>aria-hidden="true"</code> attributes on decorative SVGs.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Guides CTA -->
+        <div class="alert alert--info text-center" style="margin-top: var(--space-10); padding: var(--space-8);">
+          <h3 style="margin-top: 0; margin-bottom: var(--space-2);">Want to learn how CSS media queries make these navbars responsive?</h3>
+          <p style="margin-bottom: var(--space-4);">Read our in-depth educational guide to mobile-first breakpoints and fluid layouts.</p>
+          <a href="responsive-design.html" class="btn btn-primary">Read Responsive Design Guide &rarr;</a>
+        </div>
+
+        <!-- Related Links -->
+        <div style="margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+          <h3>Related Component Categories</h3>
+          <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="forms.html" class="animated-link">Login &amp; Signup Forms &rarr;</a>
+            <a href="pricing-cards.html" class="animated-link">Pricing Cards &rarr;</a>
+            <a href="footer-components.html" class="animated-link">Footer Components &rarr;</a>
+            <a href="getting-started.html" class="animated-link">Getting Started Guide &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

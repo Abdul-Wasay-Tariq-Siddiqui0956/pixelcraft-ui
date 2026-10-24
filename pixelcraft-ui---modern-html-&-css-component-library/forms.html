@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible HTML &amp; CSS Form Components | PixelCraft UI</title>
+    <meta name="description" content="Explore accessible HTML5 and CSS3 form components. Includes minimal login, split-screen authentication, signup, contact, and newsletter forms." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/forms.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Accessible HTML &amp; CSS Form Components | PixelCraft UI" />
+    <meta property="og:description" content="5 production-ready form patterns with explicit labels, HTML5 validation, and accessible focus states." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/forms.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/pixelcraft-ui/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/pixelcraft-ui/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Forms",
+          "item": "https://example.com/pixelcraft-ui/forms.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="forms.html" aria-current="page">Forms</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <div class="mobile-nav-divider"></div>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav Bar -->
+    <nav class="subnav-bar" aria-label="Components Category Navigation">
+      <div class="container">
+        <ul>
+          <li><span style="font-size: 0.8125rem; font-weight: 700; color: var(--text); text-transform: uppercase; margin-right: 0.5rem;">Components:</span></li>
+          <li><a href="navbar-components.html"><img src="assets/icons/layout.svg" alt="" width="14" height="14" aria-hidden="true" /> Navbars</a></li>
+          <li><a href="forms.html" class="active" aria-current="page"><img src="assets/icons/form.svg" alt="" width="14" height="14" aria-hidden="true" /> Forms</a></li>
+          <li><a href="pricing-cards.html"><img src="assets/icons/card.svg" alt="" width="14" height="14" aria-hidden="true" /> Pricing</a></li>
+          <li><a href="footer-components.html"><img src="assets/icons/footer.svg" alt="" width="14" height="14" aria-hidden="true" /> Footers</a></li>
+          <li><a href="buttons.html"><img src="assets/icons/check.svg" alt="" width="14" height="14" aria-hidden="true" /> Buttons</a></li>
+          <li><a href="cards.html"><img src="assets/icons/card.svg" alt="" width="14" height="14" aria-hidden="true" /> Cards</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><a href="components.html">Components</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><span aria-current="page">Forms</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <div class="container">
+        <header style="margin-bottom: var(--space-8); padding-top: var(--space-4);">
+          <span class="section-eyebrow">
+            <img src="assets/icons/form.svg" alt="" width="14" height="14" aria-hidden="true" />
+            Input Controls &middot; Category 02
+          </span>
+          <h1>Accessible HTML &amp; CSS Form Components</h1>
+
+          <!-- Direct-Answer AEO Intro -->
+          <p class="lead">
+            Forms are the primary interactive vehicle for gathering input, account creation, and user communication on the web. Below are five accessible form patterns designed with explicit labels, native HTML5 validation constraints, high-contrast focus rings, and mobile-friendly touch layouts.
+          </p>
+
+          <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4); flex-wrap: wrap;">
+            <span class="implementation-type-badge">Visual UI Demo</span>
+            <span class="badge badge--difficulty">5 Form Patterns</span>
+          </div>
+        </header>
+
+        <!-- Mandatory Disclaimer Notice -->
+        <div class="alert alert--warning" style="margin-bottom: var(--space-8);">
+          <img src="assets/icons/book.svg" alt="" class="notice-icon" aria-hidden="true" />
+          <div>
+            <strong>Important Technical Notice:</strong>
+            These are frontend UI examples. Form submission and account authentication require an appropriate backend or external service.
+          </div>
+        </div>
+
+        <!-- AEO Question Block -->
+        <div class="alert alert--info" style="margin-bottom: var(--space-10);">
+          <img src="assets/icons/book.svg" alt="" class="notice-icon" aria-hidden="true" />
+          <div>
+            <h2 style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.25rem;">How Do You Build a Login Form with HTML and CSS?</h2>
+            <p style="margin: 0; font-size: 0.9375rem;">
+              To build an accessible login form, wrap your inputs inside a semantic <code>&lt;form&gt;</code> element, pair each <code>&lt;input&gt;</code> with an explicit <code>&lt;label for="..."&gt;</code>, specify correct <code>type="email"</code> and <code>type="password"</code> attributes, enable browser autofill via <code>autocomplete</code>, and provide a clear <code>:focus-visible</code> outline with at least 3:1 contrast.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pattern 1: Minimal Login Form -->
+        <article class="component-showcase" id="minimal-login">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">1. Minimal Login Form</h3>
+              <p class="showcase-desc">A centered authentication card with explicit labels, email and password fields, and submit button.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Visual UI Demo</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <form class="pv-form" action="#" method="get" onsubmit="return false;">
+              <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Sign In</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">Enter your credentials to access your account.</p>
+
+              <div class="pv-form__group">
+                <label for="demo-email-1" class="pv-form__label">Email Address <span style="color: var(--danger);">*</span></label>
+                <input type="email" id="demo-email-1" name="email" class="pv-form__input" placeholder="name@example.com" required autocomplete="email" />
+              </div>
+
+              <div class="pv-form__group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <label for="demo-pass-1" class="pv-form__label" style="margin-bottom: 0;">Password <span style="color: var(--danger);">*</span></label>
+                  <a href="#minimal-login" style="font-size: 0.75rem;">Forgot password?</a>
+                </div>
+                <input type="password" id="demo-pass-1" name="password" class="pv-form__input" placeholder="••••••••" required minlength="8" autocomplete="current-password" />
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+                <input type="checkbox" id="demo-remember-1" name="remember" style="accent-color: var(--primary);" />
+                <label for="demo-remember-1" style="font-size: 0.875rem; color: var(--text-muted);">Remember this browser for 30 days</label>
+              </div>
+
+              <button type="submit" class="pv-btn pv-btn--primary" style="width: 100%;">Sign In</button>
+            </form>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Minimal login form HTML code"><code>&lt;<span class="hl-tag">form</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-form"</span> <span class="hl-attr">action</span>=<span class="hl-str">"/login"</span> <span class="hl-attr">method</span>=<span class="hl-str">"post"</span>&gt;
+  &lt;<span class="hl-tag">h3</span>&gt;Sign In&lt;/<span class="hl-tag">h3</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"form-group"</span>&gt;
+    &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"email"</span>&gt;Email Address&lt;/<span class="hl-tag">label</span>&gt;
+    &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"email"</span> <span class="hl-attr">id</span>=<span class="hl-str">"email"</span> <span class="hl-attr">name</span>=<span class="hl-str">"email"</span> <span class="hl-attr">required</span> <span class="hl-attr">autocomplete</span>=<span class="hl-str">"email"</span> /&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"form-group"</span>&gt;
+    &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"password"</span>&gt;Password&lt;/<span class="hl-tag">label</span>&gt;
+    &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"password"</span> <span class="hl-attr">id</span>=<span class="hl-str">"password"</span> <span class="hl-attr">name</span>=<span class="hl-str">"password"</span> <span class="hl-attr">required</span> <span class="hl-attr">minlength</span>=<span class="hl-str">"8"</span> /&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">button</span> <span class="hl-attr">type</span>=<span class="hl-str">"submit"</span> <span class="hl-attr">class</span>=<span class="hl-str">"btn btn-primary btn-full"</span>&gt;Sign In&lt;/<span class="hl-tag">button</span>&gt;
+&lt;/<span class="hl-tag">form</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Constrained to <code>max-width: 440px</code> on desktop; fluidly adapts to 100% width on mobile viewports with 16px touch padding.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Explicit <code>&lt;label for="..."&gt;</code> tags ensure assistive technologies announce field purposes. Required asterisk is marked in color with text label.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 2: Split-Layout Login Form -->
+        <article class="component-showcase" id="split-login">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">2. Split-Layout Login Screen</h3>
+              <p class="showcase-desc">Two-column authentication layout combining brand narrative with sign-in controls.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Visual UI Demo</span>
+              <span class="badge badge--difficulty">Intermediate (Level 2)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: var(--radius-2); overflow: hidden; max-width: 780px; margin-inline: auto; box-shadow: var(--shadow-2);">
+              <!-- Left Brand Column -->
+              <div style="background: var(--dark); color: #fff; padding: var(--space-8); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <span class="badge" style="background: var(--dark-surface-elevated); color: var(--lavender); border-color: var(--dark-border); margin-bottom: var(--space-4);">Enterprise Portal</span>
+                  <h4 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">Build Faster with PixelCraft UI</h4>
+                  <p style="color: var(--dark-text-muted); font-size: 0.875rem;">Clean HTML and CSS design system for professional web developers.</p>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--dark-text-muted);">
+                  &copy; 2026 Academic Frontend Showcase
+                </div>
+              </div>
+
+              <!-- Right Form Column -->
+              <div style="background: #FFFFFF; padding: var(--space-8);">
+                <form action="#" method="get" onsubmit="return false;">
+                  <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem;">Member Access</h4>
+                  <div class="pv-form__group">
+                    <label for="demo-split-user" class="pv-form__label">Username or Email</label>
+                    <input type="text" id="demo-split-user" name="username" class="pv-form__input" placeholder="developer@example.com" required autocomplete="username" />
+                  </div>
+                  <div class="pv-form__group">
+                    <label for="demo-split-pass" class="pv-form__label">Password</label>
+                    <input type="password" id="demo-split-pass" name="password" class="pv-form__input" placeholder="••••••••" required autocomplete="current-password" />
+                  </div>
+                  <button type="submit" class="pv-btn pv-btn--primary" style="width: 100%; margin-top: 0.5rem;">Authenticate</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Split layout login HTML code"><code>&lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"split-auth-container"</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"auth-panel-brand"</span>&gt;
+    &lt;<span class="hl-tag">h3</span>&gt;Build Faster with PixelCraft UI&lt;/<span class="hl-tag">h3</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"auth-panel-form"</span>&gt;
+    &lt;<span class="hl-tag">form</span> <span class="hl-attr">action</span>=<span class="hl-str">"/login"</span> <span class="hl-attr">method</span>=<span class="hl-str">"post"</span>&gt;
+      &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"user"</span>&gt;Username or Email&lt;/<span class="hl-tag">label</span>&gt;
+      &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"text"</span> <span class="hl-attr">id</span>=<span class="hl-str">"user"</span> <span class="hl-attr">name</span>=<span class="hl-str">"user"</span> <span class="hl-attr">required</span> /&gt;
+      &lt;<span class="hl-tag">button</span> <span class="hl-attr">type</span>=<span class="hl-str">"submit"</span> <span class="hl-attr">class</span>=<span class="hl-str">"btn btn-primary btn-full"</span>&gt;Authenticate&lt;/<span class="hl-tag">button</span>&gt;
+    &lt;/<span class="hl-tag">form</span>&gt;
+  &lt;/<span class="hl-tag">div</span>&gt;
+&lt;/<span class="hl-tag">div</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>On viewports below 768px, the split layout stacks vertically via <code>grid-template-columns: 1fr</code>, keeping the form easily accessible.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Left banner content uses proper header hierarchy without skipping levels. Focus stays contained sequentially through form controls.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 3: Signup Form -->
+        <article class="component-showcase" id="signup-form">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">3. Account Registration Form</h3>
+              <p class="showcase-desc">Features full name, email, password strength hint, terms checkbox, and submit action.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Visual UI Demo</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <form class="pv-form" action="#" method="get" onsubmit="return false;">
+              <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Create Your Account</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">Start exploring PixelCraft UI components today.</p>
+
+              <div class="pv-form__group">
+                <label for="demo-reg-name" class="pv-form__label">Full Name</label>
+                <input type="text" id="demo-reg-name" name="name" class="pv-form__input" placeholder="Alex Morgan" required autocomplete="name" />
+              </div>
+
+              <div class="pv-form__group">
+                <label for="demo-reg-email" class="pv-form__label">Email Address</label>
+                <input type="email" id="demo-reg-email" name="email" class="pv-form__input" placeholder="alex@example.com" required autocomplete="email" />
+              </div>
+
+              <div class="pv-form__group">
+                <label for="demo-reg-pass" class="pv-form__label">Choose a Password</label>
+                <input type="password" id="demo-reg-pass" name="password" class="pv-form__input" placeholder="Minimum 8 characters" required minlength="8" autocomplete="new-password" />
+                <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; display: block;">Must contain at least 8 characters.</span>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 1.5rem;">
+                <input type="checkbox" id="demo-terms" name="terms" required style="accent-color: var(--primary); margin-top: 3px;" />
+                <label for="demo-terms" style="font-size: 0.8125rem; color: var(--text-muted);">
+                  I agree to the <a href="about.html">Terms of Service</a> and <a href="about.html">Privacy Policy</a>.
+                </label>
+              </div>
+
+              <button type="submit" class="pv-btn pv-btn--primary" style="width: 100%;">Create Account</button>
+            </form>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Signup form HTML code"><code>&lt;<span class="hl-tag">form</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-form"</span> <span class="hl-attr">action</span>=<span class="hl-str">"/register"</span> <span class="hl-attr">method</span>=<span class="hl-str">"post"</span>&gt;
+  &lt;<span class="hl-tag">h3</span>&gt;Create Your Account&lt;/<span class="hl-tag">h3</span>&gt;
+  &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"name"</span>&gt;Full Name&lt;/<span class="hl-tag">label</span>&gt;
+  &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"text"</span> <span class="hl-attr">id</span>=<span class="hl-str">"name"</span> <span class="hl-attr">required</span> <span class="hl-attr">autocomplete</span>=<span class="hl-str">"name"</span> /&gt;
+  &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"email"</span>&gt;Email Address&lt;/<span class="hl-tag">label</span>&gt;
+  &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"email"</span> <span class="hl-attr">id</span>=<span class="hl-str">"email"</span> <span class="hl-attr">required</span> <span class="hl-attr">autocomplete</span>=<span class="hl-str">"email"</span> /&gt;
+  &lt;<span class="hl-tag">button</span> <span class="hl-attr">type</span>=<span class="hl-str">"submit"</span> <span class="hl-attr">class</span>=<span class="hl-str">"btn btn-primary btn-full"</span>&gt;Create Account&lt;/<span class="hl-tag">button</span>&gt;
+&lt;/<span class="hl-tag">form</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Form inputs maintain full width with <code>box-sizing: border-box</code> to prevent overflow beyond the viewport.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Includes native HTML5 validation constraints (<code>required</code>, <code>minlength="8"</code>) that provide accessible browser messages.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 4: Contact Form -->
+        <article class="component-showcase" id="contact-form">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">4. Contact &amp; Feedback Form</h3>
+              <p class="showcase-desc">Multi-field communication form featuring subject selection and resizable textarea.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Visual UI Demo</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <form class="pv-form" style="max-width: 520px;" action="#" method="get" onsubmit="return false;">
+              <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Send a Message</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">Have questions about the library? Get in touch.</p>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                <div class="pv-form__group">
+                  <label for="demo-contact-name" class="pv-form__label">Your Name</label>
+                  <input type="text" id="demo-contact-name" name="name" class="pv-form__input" placeholder="Taylor" required />
+                </div>
+                <div class="pv-form__group">
+                  <label for="demo-contact-email" class="pv-form__label">Your Email</label>
+                  <input type="email" id="demo-contact-email" name="email" class="pv-form__input" placeholder="taylor@example.com" required />
+                </div>
+              </div>
+
+              <div class="pv-form__group">
+                <label for="demo-contact-subject" class="pv-form__label">Subject</label>
+                <select id="demo-contact-subject" name="subject" class="pv-form__input">
+                  <option value="general">General Inquiry</option>
+                  <option value="components">Component Question</option>
+                  <option value="accessibility">Accessibility Feedback</option>
+                </select>
+              </div>
+
+              <div class="pv-form__group">
+                <label for="demo-contact-msg" class="pv-form__label">Message</label>
+                <textarea id="demo-contact-msg" name="message" class="pv-form__input" style="min-height: 100px; resize: vertical;" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="pv-btn pv-btn--primary" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Contact form HTML code"><code>&lt;<span class="hl-tag">form</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-form"</span> <span class="hl-attr">action</span>=<span class="hl-str">"/contact"</span> <span class="hl-attr">method</span>=<span class="hl-str">"post"</span>&gt;
+  &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"subject"</span>&gt;Subject&lt;/<span class="hl-tag">label</span>&gt;
+  &lt;<span class="hl-tag">select</span> <span class="hl-attr">id</span>=<span class="hl-str">"subject"</span> <span class="hl-attr">name</span>=<span class="hl-str">"subject"</span>&gt;
+    &lt;<span class="hl-tag">option</span> <span class="hl-attr">value</span>=<span class="hl-str">"general"</span>&gt;General Inquiry&lt;/<span class="hl-tag">option</span>&gt;
+  &lt;/<span class="hl-tag">select</span>&gt;
+  &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"message"</span>&gt;Message&lt;/<span class="hl-tag">label</span>&gt;
+  &lt;<span class="hl-tag">textarea</span> <span class="hl-attr">id</span>=<span class="hl-str">"message"</span> <span class="hl-attr">name</span>=<span class="hl-str">"message"</span> <span class="hl-attr">required</span>&gt;&lt;/<span class="hl-tag">textarea</span>&gt;
+  &lt;<span class="hl-tag">button</span> <span class="hl-attr">type</span>=<span class="hl-str">"submit"</span> <span class="hl-attr">class</span>=<span class="hl-str">"btn btn-primary"</span>&gt;Send Message&lt;/<span class="hl-tag">button</span>&gt;
+&lt;/<span class="hl-tag">form</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Name and Email fields display side-by-side on desktop and stack into a single column on viewports under 600px.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Uses vertical-only resize to prevent users from breaking horizontal layout boundaries.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 5: Newsletter Form -->
+        <article class="component-showcase" id="newsletter-form">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">5. Inline Newsletter Subscription Form</h3>
+              <p class="showcase-desc">Horizontal email capture block with inline button and privacy confirmation note.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Visual UI Demo</span>
+              <span class="badge badge--difficulty">Beginner (Level 1)</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white">
+            <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-2); padding: var(--space-8); max-width: 580px; margin-inline: auto; text-align: center;">
+              <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Subscribe to Component Updates</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">Receive fresh HTML5 and CSS3 patterns directly in your inbox.</p>
+              
+              <form action="#" method="get" onsubmit="return false;" style="display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center;">
+                <label for="demo-nl-email" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Your email address</label>
+                <input type="email" id="demo-nl-email" name="email" class="pv-form__input" placeholder="Enter your email" style="max-width: 320px; flex: 1 1 240px;" required />
+                <button type="submit" class="pv-btn pv-btn--primary">Subscribe</button>
+              </form>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem; display: block;">No spam. Demonstrative frontend UI only.</span>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML Markup</span>
+              <span class="code-copy-notice">Select and copy manually</span>
+            </div>
+            <pre class="code-block" tabindex="0" role="region" aria-label="Newsletter form HTML code"><code>&lt;<span class="hl-tag">form</span> <span class="hl-attr">class</span>=<span class="hl-str">"newsletter-form"</span> <span class="hl-attr">action</span>=<span class="hl-str">"/newsletter"</span> <span class="hl-attr">method</span>=<span class="hl-str">"post"</span>&gt;
+  &lt;<span class="hl-tag">label</span> <span class="hl-attr">for</span>=<span class="hl-str">"nl-email"</span> <span class="hl-attr">class</span>=<span class="hl-str">"sr-only"</span>&gt;Email address&lt;/<span class="hl-tag">label</span>&gt;
+  &lt;<span class="hl-tag">input</span> <span class="hl-attr">type</span>=<span class="hl-str">"email"</span> <span class="hl-attr">id</span>=<span class="hl-str">"nl-email"</span> <span class="hl-attr">placeholder</span>=<span class="hl-str">"name@example.com"</span> <span class="hl-attr">required</span> /&gt;
+  &lt;<span class="hl-tag">button</span> <span class="hl-attr">type</span>=<span class="hl-str">"submit"</span> <span class="hl-attr">class</span>=<span class="hl-str">"btn btn-primary"</span>&gt;Subscribe&lt;/<span class="hl-tag">button</span>&gt;
+&lt;/<span class="hl-tag">form</span>&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Responsive Behavior
+              </h4>
+              <p>Flexbox wrapping allows the input and button to sit inline on desktop and automatically stack on screens under 420px.</p>
+            </div>
+            <div class="notes-card">
+              <h4>
+                <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                Accessibility Notes
+              </h4>
+              <p>Uses an accessible screen-reader-only <code>.sr-only</code> label so assistive tools announce the field even without a visual label.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Links -->
+        <div style="margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+          <h3>Related Component Categories</h3>
+          <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="navbar-components.html" class="animated-link">Navbar Patterns &rarr;</a>
+            <a href="buttons.html" class="animated-link">Button Controls &rarr;</a>
+            <a href="pricing-cards.html" class="animated-link">Pricing Cards &rarr;</a>
+            <a href="accessibility.html" class="animated-link">Accessibility Guidelines &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

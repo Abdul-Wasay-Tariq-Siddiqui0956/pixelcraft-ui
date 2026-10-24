@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an Account — PixelCraft UI</title>
+    <meta
+      name="description"
+      content="Create a free PixelCraft UI account. Access 112+ pure HTML & CSS components, save custom themes, and build faster with accessible UI patterns."
+    />
+    <link rel="canonical" href="https://pixelcraft-ui.dev/register.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="register.html" class="active" aria-current="page">Register</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <div class="header-actions">
+            <!-- Theme Color Trigger -->
+            <button type="button" class="nav-theme-btn" data-theme-picker-open aria-label="Customize theme colors">
+              <span class="theme-dot"></span>
+              <span>Theme</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Components</a>
+                <a href="card-gallery.html">100+ Cards</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" aria-current="page">Register</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-picker-open style="width: 100%; justify-content: center;">
+                  🎨 Change Theme Color
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm w-100" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Account</a></li>
+          <li><span aria-current="page">Create Account</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Main Auth Form Container -->
+    <main id="main-content" class="auth-page-container">
+      <div class="auth-card-modern auth-card-split">
+        <!-- Visual Brand Showcase (Left Column) -->
+        <div class="auth-split-visual">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; margin-bottom: 24px; backdrop-filter: blur(4px);">
+              <span>⚡</span> Pure HTML5 &amp; CSS3
+            </div>
+            <h2 style="font-family: var(--font-headings); font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 16px;">
+              Build better interfaces in record time.
+            </h2>
+            <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin-bottom: 32px;">
+              Get instant access to over 112+ production-grade component designs, live theme color generators, and zero-dependency layouts.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
+                <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.25); font-weight: 900; font-size: 11px;">✓</span>
+                <span>112+ Card Divs with 10+ Color Spectrum Themes</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
+                <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.25); font-weight: 900; font-size: 11px;">✓</span>
+                <span>Universal Theme Engine &amp; Custom Color Picker</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem;">
+                <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.25); font-weight: 900; font-size: 11px;">✓</span>
+                <span>WCAG 2.1 AA Compliant &amp; Mobile Responsive</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; opacity: 0.85;">
+            "PixelCraft UI replaced all our heavy CSS frameworks with lightweight, accessible native code."
+          </div>
+        </div>
+
+        <!-- Form Column (Right Column) -->
+        <div class="auth-split-form">
+          <div class="auth-header" style="text-align: left; margin-bottom: var(--space-4);">
+            <h1 class="auth-title">Create your account</h1>
+            <p class="auth-subtitle">Join for free. No credit card required.</p>
+          </div>
+
+          <!-- Live In-Page Theme & Color Selector -->
+          
+
+          <form class="auth-form" id="registerForm" onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+            <!-- Full Name -->
+            <div class="form-field">
+              <label for="regName">Full Name</label>
+              <div class="input-icon-wrap">
+                <span class="field-icon">👤</span>
+                <input
+                  type="text"
+                  id="regName"
+                  name="name"
+                  class="form-input"
+                  placeholder="Alex Chen"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-field">
+              <label for="regEmail">Work or Personal Email</label>
+              <div class="input-icon-wrap">
+                <span class="field-icon">✉️</span>
+                <input
+                  type="email"
+                  id="regEmail"
+                  name="email"
+                  class="form-input"
+                  placeholder="alex@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <!-- Role Selector -->
+            <div class="form-field">
+              <label>Your Primary Role</label>
+              <div class="role-cards-grid">
+                <label class="role-card-item">
+                  <input type="radio" name="role" value="developer" checked />
+                  <div class="role-card-icon">💻</div>
+                  <div class="role-card-title">Developer</div>
+                </label>
+                <label class="role-card-item">
+                  <input type="radio" name="role" value="designer" />
+                  <div class="role-card-icon">🎨</div>
+                  <div class="role-card-title">Designer</div>
+                </label>
+                <label class="role-card-item">
+                  <input type="radio" name="role" value="creator" />
+                  <div class="role-card-icon">🚀</div>
+                  <div class="role-card-title">Creator</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-field">
+              <label for="regPassword">
+                <span>Password</span>
+              </label>
+              <div class="input-icon-wrap">
+                <span class="field-icon">🔒</span>
+                <input
+                  type="password"
+                  id="regPassword"
+                  name="password"
+                  class="form-input"
+                  placeholder="Create a strong password"
+                  required
+                  minlength="8"
+                  autocomplete="new-password"
+                />
+                <button type="button" class="password-toggle-btn" id="toggleRegPassword" aria-label="Toggle password visibility">
+                  Show
+                </button>
+              </div>
+
+              <!-- Live Strength Meter -->
+              <div class="password-strength-container" id="passwordStrengthBox">
+                <div class="password-strength-bars">
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                  <div class="strength-segment"></div>
+                </div>
+                <div class="strength-text">
+                  <span id="strengthLabel">Enter password</span>
+                  <span id="strengthScore">0 / 4</span>
+                </div>
+              </div>
+
+              <!-- Requirements Checklist -->
+              <ul class="password-checklist">
+                <li id="reqLength"><span>○</span> At least 8 characters</li>
+                <li id="reqUpper"><span>○</span> One uppercase letter</li>
+                <li id="reqNumber"><span>○</span> One number (0-9)</li>
+                <li id="reqSpecial"><span>○</span> One special character</li>
+              </ul>
+            </div>
+
+            <!-- Terms Agreement -->
+            <div style="display: flex; align-items: flex-start; gap: 8px; margin-top: 4px;">
+              <input type="checkbox" id="termsCheck" required style="margin-top: 4px; accent-color: var(--primary);" />
+              <label for="termsCheck" style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+                I agree to the <a href="about.html" style="color: var(--primary); font-weight: 600;">Terms of Service</a> and <a href="about.html" style="color: var(--primary); font-weight: 600;">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px; margin-top: 4px; font-weight: 700;">
+              Create Free Account →
+            </button>
+          </form>
+
+          <div class="auth-divider">
+            <span>or sign up with</span>
+          </div>
+
+          <!-- Social Signup Buttons -->
+          <div class="social-auth-row">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='dashboard.html';" style="justify-content: center;">
+              <span>🐙</span> GitHub
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.location.href='dashboard.html';" style="justify-content: center;">
+              <span>🌐</span> Google
+            </button>
+          </div>
+
+          <div class="auth-footer-prompt">
+            Already have an account? <a href="login.html">Log in here</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" width="160" height="34" />
+            </a>
+            <p class="footer-tagline">Beautiful Components. Pure HTML &amp; CSS.</p>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Pages</div>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="card-gallery.html">100+ Cards</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Auth &amp; Account</div>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="forgot-password.html">Forgot Password</a></li>
+              <li><a href="reset-password.html">Reset Password</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Appearance</div>
+            <ul class="footer-links">
+              <li><a href="#" data-theme-picker-open>🎨 Theme Color Picker</a></li>
+              <li><a href="#" data-theme-toggle>🌓 Toggle Dark Mode</a></li>
+              <li><a href="about.html">About &amp; Brand Kit</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 PixelCraft UI. Responsive &amp; Accessible Design System.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Password Validation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var pwdInput = document.getElementById('regPassword');
+        var toggleBtn = document.getElementById('toggleRegPassword');
+        var strengthBox = document.getElementById('passwordStrengthBox');
+        var label = document.getElementById('strengthLabel');
+        var scoreEl = document.getElementById('strengthScore');
+
+        var reqLen = document.getElementById('reqLength');
+        var reqUp = document.getElementById('reqUpper');
+        var reqNum = document.getElementById('reqNumber');
+        var reqSpec = document.getElementById('reqSpecial');
+
+        if (toggleBtn && pwdInput) {
+          toggleBtn.addEventListener('click', function() {
+            var isPwd = pwdInput.type === 'password';
+            pwdInput.type = isPwd ? 'text' : 'password';
+            toggleBtn.textContent = isPwd ? 'Hide' : 'Show';
+          });
+        }
+
+        if (pwdInput) {
+          pwdInput.addEventListener('input', function() {
+            var val = pwdInput.value;
+            var score = 0;
+
+            var hasLen = val.length >= 8;
+            var hasUp = /[A-Z]/.test(val);
+            var hasNum = /[0-9]/.test(val);
+            var hasSpec = /[^A-Za-z0-9]/.test(val);
+
+            function updateReq(el, valid) {
+              if (valid) {
+                el.classList.add('valid');
+                el.querySelector('span').textContent = '✓';
+              } else {
+                el.classList.remove('valid');
+                el.querySelector('span').textContent = '○';
+              }
+            }
+
+            updateReq(reqLen, hasLen);
+            updateReq(reqUp, hasUp);
+            updateReq(reqNum, hasNum);
+            updateReq(reqSpec, hasSpec);
+
+            if (hasLen) score++;
+            if (hasUp) score++;
+            if (hasNum) score++;
+            if (hasSpec) score++;
+
+            strengthBox.className = 'password-strength-container';
+            scoreEl.textContent = score + ' / 4';
+
+            if (score === 0) {
+              label.textContent = 'Too short';
+            } else if (score === 1) {
+              strengthBox.classList.add('is-weak');
+              label.textContent = 'Weak';
+            } else if (score === 2) {
+              strengthBox.classList.add('is-fair');
+              label.textContent = 'Fair';
+            } else if (score === 3) {
+              strengthBox.classList.add('is-good');
+              label.textContent = 'Good';
+            } else if (score === 4) {
+              strengthBox.classList.add('is-strong');
+              label.textContent = 'Strong';
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

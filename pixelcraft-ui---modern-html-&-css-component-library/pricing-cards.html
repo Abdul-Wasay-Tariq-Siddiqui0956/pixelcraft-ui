@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Pricing Cards & Tier Layouts in Pure CSS | PixelCraft UI</title>
+    <meta name="description" content="Explore responsive pricing cards, 3-tier SaaS subscription plans, featured plan callouts, and feature comparison tables built with pure CSS Grid and Flexbox." />
+    <link rel="canonical" href="https://example.com/pricing-cards.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Responsive Pricing Cards & Tier Layouts | PixelCraft UI" />
+    <meta property="og:description" content="Modern pricing cards and comparison tables in HTML5 & CSS3. Responsive on mobile and tablet without JavaScript." />
+    <meta property="og:url" content="https://example.com/pricing-cards.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pricing Cards",
+          "item": "https://example.com/pricing-cards.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html" class="active">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html" aria-current="page">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Pricing Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="#simple-pricing">1. Simple Cards</a></li>
+          <li><a href="#three-tier-pricing">2. Three-Tier SaaS</a></li>
+          <li><a href="#featured-plan">3. Featured Plan Highlight</a></li>
+          <li><a href="#billing-comparison">4. Monthly vs Annual</a></li>
+          <li><a href="#matrix-comparison">5. Feature Matrix</a></li>
+          <li><a href="responsive-design.html">Responsive Guide &rarr;</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="components.html">Components</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Pricing Cards</li>
+          </ol>
+        </nav>
+
+        <!-- Intro -->
+        <section class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+          <span class="section-eyebrow">Commerce &amp; Monetization UI</span>
+          <h1>Responsive Pricing Cards &amp; Tier Layouts</h1>
+          <p class="lead" style="max-width: 820px;">
+            Clear, transparent pricing presentations are essential for digital products and services. These pricing layouts use CSS Grid and Flexbox to balance visual hierarchy, feature lists, and calls-to-action without relying on fragile JavaScript toggles.
+          </p>
+
+          <!-- Illustrative Pricing Disclaimer -->
+          <div class="notice-box warning" style="max-width: 840px;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong style="color: #92400E;">Illustrative Sample Pricing Notice:</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                All prices and subscription tiers displayed below are illustrative UI examples for student coursework. PixelCraft UI is a completely free academic resource and does not sell subscriptions or charge any fees.
+              </p>
+            </div>
+          </div>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="max-width: 840px; margin-top: 1rem;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>How Can You Make a Pricing Card Responsive with CSS?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                Use CSS Grid with <code>grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))</code> or media queries that stack cards vertically on mobile screens (&lt;768px). Use Flexbox with <code>flex-direction: column</code> inside each card so the action button pins cleanly to the bottom with <code>margin-top: auto</code>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRICING 1: Simple 2-Tier Pricing Cards -->
+        <article id="simple-pricing" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">1. Simple Two-Tier Pricing Cards</h2>
+              <p class="showcase-desc">Clean side-by-side comparison for straightforward Starter and Professional offerings.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag">Beginner</span>
+              <span class="badge-tag primary">2-Column Grid</span>
+            </div>
+          </div>
+
+          <!-- Live Preview -->
+          <div class="preview-stage white-stage">
+            <div class="grid grid-cols-2" style="max-width: 760px; margin-inline: auto;">
+              <!-- Starter -->
+              <div class="card" style="display: flex; flex-direction: column;">
+                <span class="badge-tag" style="align-self: flex-start; margin-bottom: 0.5rem;">Free Tier</span>
+                <h3 style="font-size: 1.35rem; margin-top: 0; margin-bottom: 0.25rem;">Community Starter</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Essential tools for students and individual learners.</p>
+                <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem; font-family: var(--font-display);">
+                  $0 <span style="font-size: 0.875rem; font-weight: 500; color: var(--text-muted); font-family: var(--font-sans);">/ forever</span>
+                </div>
+                <ul style="font-size: 0.875rem; list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; Access to 15 core HTML templates</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; Pure CSS shared stylesheet</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; Community discussion guides</li>
+                </ul>
+                <div style="margin-top: auto;">
+                  <a href="getting-started.html" class="btn btn-secondary btn-full">Start Free Tutorial &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Professional -->
+              <div class="card" style="display: flex; flex-direction: column; border-color: var(--primary); box-shadow: var(--shadow-md);">
+                <span class="badge-tag primary" style="align-self: flex-start; margin-bottom: 0.5rem;">Recommended</span>
+                <h3 style="font-size: 1.35rem; margin-top: 0; margin-bottom: 0.25rem;">Freelance Pro</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Full component library with responsive design tokens.</p>
+                <div style="font-size: 2.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem; font-family: var(--font-display);">
+                  $19 <span style="font-size: 0.875rem; font-weight: 500; color: var(--text-muted); font-family: var(--font-sans);">/ month (example)</span>
+                </div>
+                <ul style="font-size: 0.875rem; list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; All 15 distinct layout pages</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; Complete design system tokens</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; WCAG 2.1 AA accessibility checklists</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;">&check; Commercial license compatibility</li>
+                </ul>
+                <div style="margin-top: auto;">
+                  <a href="forms.html" class="btn btn-primary btn-full">Get Started Pro (Demo) &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- 2-Tier Pricing Grid --&gt;
+&lt;div class="pricing-grid-2"&gt;
+  &lt;div class="pricing-card"&gt;
+    &lt;span class="tier-badge"&gt;Free Tier&lt;/span&gt;
+    &lt;h3&gt;Community Starter&lt;/h3&gt;
+    &lt;p class="tier-desc"&gt;Essential tools for individual learners.&lt;/p&gt;
+    &lt;div class="price"&gt;$0 &lt;span class="period"&gt;/ forever&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class="features-list"&gt;
+      &lt;li&gt;&amp;check; Access to 15 core templates&lt;/li&gt;
+      &lt;li&gt;&amp;check; Pure CSS shared stylesheet&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="/start" class="btn btn-secondary btn-full"&gt;Start Free&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="pricing-card featured"&gt;
+    &lt;span class="tier-badge primary"&gt;Recommended&lt;/span&gt;
+    &lt;h3&gt;Freelance Pro&lt;/h3&gt;
+    &lt;p class="tier-desc"&gt;Full component library with design tokens.&lt;/p&gt;
+    &lt;div class="price"&gt;$19 &lt;span class="period"&gt;/ mo (example)&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class="features-list"&gt;
+      &lt;li&gt;&amp;check; All 15 layout pages&lt;/li&gt;
+      &lt;li&gt;&amp;check; Complete design system tokens&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="/signup" class="btn btn-primary btn-full"&gt;Get Started Pro&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>On viewports narrower than 680px, the 2-column grid collapses into a single vertical column, maintaining touch-friendly button targets.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>List items use explicit tick symbols <code>&amp;check;</code> alongside descriptive text rather than empty checkboxes.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRICING 2: Three-Tier SaaS Pricing Grid -->
+        <article id="three-tier-pricing" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">2. Three-Tier SaaS Pricing Architecture</h2>
+              <p class="showcase-desc">Standard industry model: Free Tier, Professional (elevated with accent border), and Enterprise.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">SaaS Architecture</span>
+              <span class="badge-tag">3-Column Grid</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <div class="grid grid-cols-3" style="max-width: 1040px; margin-inline: auto; align-items: stretch;">
+              <!-- Tier 1 -->
+              <div class="card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 0.25rem;">Developer</h3>
+                <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1rem;">For prototyping and side projects.</p>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; font-family: var(--font-display);">
+                  $0
+                </div>
+                <ul style="font-size: 0.8125rem; list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+                  <li>&check; 1 Developer Seat</li>
+                  <li>&check; HTML &amp; CSS Source Access</li>
+                  <li>&check; Public Documentation</li>
+                </ul>
+                <div style="margin-top: auto;">
+                  <a href="getting-started.html" class="btn btn-secondary btn-full btn-sm">Explore Free</a>
+                </div>
+              </div>
+
+              <!-- Tier 2 (Highlighted) -->
+              <div class="card" style="display: flex; flex-direction: column; border: 2px solid var(--primary); background: #FFFFFF; transform: scale(1.02); box-shadow: var(--shadow-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                  <h3 style="font-size: 1.25rem; margin: 0; color: var(--primary);">Team Studio</h3>
+                  <span class="badge-tag primary">Popular</span>
+                </div>
+                <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1rem;">For growing product teams and agencies.</p>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; font-family: var(--font-display);">
+                  $49 <span style="font-size: 0.8125rem; font-weight: 500; color: var(--text-muted); font-family: var(--font-sans);">/ month (example)</span>
+                </div>
+                <ul style="font-size: 0.8125rem; list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+                  <li>&check; Up to 10 Team Members</li>
+                  <li>&check; All 8 Component Families</li>
+                  <li>&check; Figma Design System Tokens</li>
+                  <li>&check; Priority Email Guidance</li>
+                </ul>
+                <div style="margin-top: auto;">
+                  <a href="forms.html" class="btn btn-primary btn-full btn-sm">Start 14-Day Trial &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Tier 3 -->
+              <div class="card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 0.25rem;">Enterprise</h3>
+                <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1rem;">For universities and enterprise organizations.</p>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; font-family: var(--font-display);">
+                  Custom
+                </div>
+                <ul style="font-size: 0.8125rem; list-style: none; padding: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-secondary);">
+                  <li>&check; Unlimited Student Seats</li>
+                  <li>&check; Custom CSS Variable Themes</li>
+                  <li>&check; Dedicated Training Workshop</li>
+                </ul>
+                <div style="margin-top: auto;">
+                  <a href="forms.html#contact-form" class="btn btn-secondary btn-full btn-sm">Contact Support</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- 3-Tier SaaS Pricing Layout --&gt;
+&lt;div class="saas-pricing-grid"&gt;
+  &lt;!-- Starter Card --&gt;
+  &lt;div class="plan-card"&gt;
+    &lt;h3&gt;Developer&lt;/h3&gt;
+    &lt;div class="price"&gt;$0&lt;/div&gt;
+    &lt;ul&gt;&lt;li&gt;1 Developer Seat&lt;/li&gt;&lt;/ul&gt;
+    &lt;a href="/start" class="btn btn-secondary"&gt;Explore Free&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Highlighted Card --&gt;
+  &lt;div class="plan-card featured"&gt;
+    &lt;span class="badge"&gt;Popular&lt;/span&gt;
+    &lt;h3&gt;Team Studio&lt;/h3&gt;
+    &lt;div class="price"&gt;$49 &lt;span&gt;/ mo (example)&lt;/span&gt;&lt;/div&gt;
+    &lt;ul&gt;&lt;li&gt;10 Team Members&lt;/li&gt;&lt;/ul&gt;
+    &lt;a href="/trial" class="btn btn-primary"&gt;Start Trial&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Enterprise Card --&gt;
+  &lt;div class="plan-card"&gt;
+    &lt;h3&gt;Enterprise&lt;/h3&gt;
+    &lt;div class="price"&gt;Custom&lt;/div&gt;
+    &lt;ul&gt;&lt;li&gt;Unlimited Seats&lt;/li&gt;&lt;/ul&gt;
+    &lt;a href="/contact" class="btn btn-secondary"&gt;Contact Support&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>On screens under 992px, the grid transitions from 3 columns to 1 column so card details remain easily scannable.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The middle highlighted card uses a 2px high-contrast border and a textual badge ("Popular") so state does not depend on color alone.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRICING 3: Static Monthly vs Annual Presentation -->
+        <article id="billing-comparison" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">3. Static Monthly &amp; Annual Comparison Display</h2>
+              <p class="showcase-desc">Honest, static side-by-side presentation demonstrating how to present savings without a fake JavaScript toggle.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Zero Fake JS</span>
+              <span class="badge-tag">Transparent UI</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; max-width: 820px; margin-inline: auto;">
+              <div style="text-align: center; margin-bottom: 2rem;">
+                <h3 style="margin-top: 0; margin-bottom: 0.35rem;">Transparent Billing Comparison (Static UI)</h3>
+                <p style="font-size: 0.9375rem; color: var(--text-secondary); margin: 0;">Compare monthly flexibility with annual upfront savings directly.</p>
+              </div>
+
+              <div class="grid grid-cols-2" style="gap: 1.5rem;">
+                <!-- Monthly Plan -->
+                <div class="card" style="background: #FFFFFF;">
+                  <h4 style="margin-top: 0; color: var(--text-main);">Monthly Flexibility</h4>
+                  <p style="font-size: 0.8125rem; color: var(--text-secondary);">Cancel or pause anytime. No long-term lock-in.</p>
+                  <div style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin-block: 0.75rem; font-family: var(--font-display);">
+                    $24 <span style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-sans);">/ billed monthly (example)</span>
+                  </div>
+                  <ul style="font-size: 0.8125rem; color: var(--text-secondary); padding-left: 1.25rem;">
+                    <li>Month-to-month flexibility</li>
+                    <li>Full library access</li>
+                    <li>Total: $288 / year</li>
+                  </ul>
+                  <a href="forms.html" class="btn btn-secondary btn-full btn-sm" style="margin-top: 1rem;">Select Monthly (Demo)</a>
+                </div>
+
+                <!-- Annual Plan -->
+                <div class="card" style="background: #FFFFFF; border-color: var(--highlight);">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4 style="margin-top: 0; color: var(--text-main);">Annual Plan</h4>
+                    <span class="badge-tag highlight">Save 20%</span>
+                  </div>
+                  <p style="font-size: 0.8125rem; color: var(--text-secondary);">One upfront payment with full year access.</p>
+                  <div style="font-size: 1.85rem; font-weight: 700; color: var(--highlight); margin-block: 0.75rem; font-family: var(--font-display);">
+                    $19 <span style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-sans);">/ mo ($228 billed yearly)</span>
+                  </div>
+                  <ul style="font-size: 0.8125rem; color: var(--text-secondary); padding-left: 1.25rem;">
+                    <li>Save $60 compared to monthly</li>
+                    <li>Full library access + updates</li>
+                    <li>Annual invoice provided</li>
+                  </ul>
+                  <a href="forms.html" class="btn btn-primary btn-full btn-sm" style="margin-top: 1rem;">Select Annual (Demo)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Static Billing Comparison (No JavaScript Toggle) --&gt;
+&lt;div class="billing-comparison-grid"&gt;
+  &lt;div class="plan-box monthly"&gt;
+    &lt;h4&gt;Monthly Billing&lt;/h4&gt;
+    &lt;div class="price"&gt;$24 &lt;span&gt;/ mo&lt;/span&gt;&lt;/div&gt;
+    &lt;p class="summary"&gt;Total: $288 / year&lt;/p&gt;
+    &lt;a href="/billing?term=monthly" class="btn btn-secondary"&gt;Select Monthly&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="plan-box annual featured"&gt;
+    &lt;div class="badge-row"&gt;
+      &lt;h4&gt;Annual Billing&lt;/h4&gt;
+      &lt;span class="badge"&gt;Save 20%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="price"&gt;$19 &lt;span&gt;/ mo ($228/yr)&lt;/span&gt;&lt;/div&gt;
+    &lt;p class="summary"&gt;Save $60 annually&lt;/p&gt;
+    &lt;a href="/billing?term=annual" class="btn btn-primary"&gt;Select Annual&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Both billing options remain visible on small screens without requiring users to find and click an interactive switch.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Eliminates inaccessible ARIA switch widgets. Information is plain, static, and immediately crawlable by search engines and screen readers.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRICING 4: Feature Comparison Matrix -->
+        <article id="matrix-comparison" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">4. Comprehensive Feature Comparison Table</h2>
+              <p class="showcase-desc">An accessible tabular breakdown comparing detailed feature availability across all three subscription tiers.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Data Table</span>
+              <span class="badge-tag">Overflow Container</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <div class="comparison-table-wrapper">
+              <table class="data-table" aria-label="Feature Comparison Matrix">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 40%;">Core Feature</th>
+                    <th scope="col" style="width: 20%; text-align: center;">Developer ($0)</th>
+                    <th scope="col" style="width: 20%; text-align: center; color: var(--primary);">Studio ($49)</th>
+                    <th scope="col" style="width: 20%; text-align: center;">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">HTML5 Semantic Pages</th>
+                    <td style="text-align: center;">15 Pages</td>
+                    <td style="text-align: center; font-weight: 600;">15 Pages</td>
+                    <td style="text-align: center; font-weight: 600;">Custom Extensions</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">Pure CSS3 (Zero JS)</th>
+                    <td style="text-align: center;">&check; Yes</td>
+                    <td style="text-align: center; color: var(--primary); font-weight: 600;">&check; Yes</td>
+                    <td style="text-align: center;">&check; Yes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">Design Tokens (:root variables)</th>
+                    <td style="text-align: center;">Basic Tokens</td>
+                    <td style="text-align: center; color: var(--primary); font-weight: 600;">Full Palette</td>
+                    <td style="text-align: center;">Custom Brand Themes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">WCAG 2.1 AA Focus Rings</th>
+                    <td style="text-align: center;">&check; Included</td>
+                    <td style="text-align: center; color: var(--primary); font-weight: 600;">&check; Included</td>
+                    <td style="text-align: center;">&check; Audited</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">Print Stylesheet (@media print)</th>
+                    <td style="text-align: center;">&check; Yes</td>
+                    <td style="text-align: center; color: var(--primary); font-weight: 600;">&check; Yes</td>
+                    <td style="text-align: center;">&check; Yes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="font-weight: 500;">Commercial Use Authorization</th>
+                    <td style="text-align: center;">Academic Only</td>
+                    <td style="text-align: center; color: var(--primary); font-weight: 600;">Client Work</td>
+                    <td style="text-align: center;">Enterprise Wide</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Accessible Responsive Feature Comparison Table --&gt;
+&lt;div class="table-scroll-container"&gt;
+  &lt;table class="data-table" aria-label="Feature Comparison"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Feature&lt;/th&gt;
+        &lt;th scope="col"&gt;Developer&lt;/th&gt;
+        &lt;th scope="col"&gt;Studio&lt;/th&gt;
+        &lt;th scope="col"&gt;Enterprise&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Semantic HTML5 Pages&lt;/th&gt;
+        &lt;td&gt;15 Pages&lt;/td&gt;
+        &lt;td&gt;15 Pages&lt;/td&gt;
+        &lt;td&gt;Custom&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.table-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>The <code>.comparison-table-wrapper</code> enables smooth horizontal scrolling on touch screens without clipping or breaking the main page container.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Features explicit <code>scope="col"</code> and <code>scope="row"</code> headers so screen reader users can identify corresponding column and row data cells.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Guides CTA -->
+        <section class="section" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem;">
+          <h3 style="margin-top: 0;">Next Step: Explore Card Layouts &amp; Hero Sections</h3>
+          <p>Learn how to build modular content cards or inspect full landing hero section designs.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="cards.html" class="btn btn-primary">Explore Card Components &rarr;</a>
+            <a href="hero-sections.html" class="btn btn-secondary">Explore Hero Sections &rarr;</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

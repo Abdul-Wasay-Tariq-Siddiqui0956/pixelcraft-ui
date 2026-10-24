@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Components in HTML & CSS | PixelCraft UI</title>
+    <meta name="description" content="Explore 6 responsive card designs in pure HTML5 and CSS3: basic content cards, author profiles, blog article cards, product cards, bento features, and testimonials." />
+    <link rel="canonical" href="https://example.com/cards.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Responsive Card Components in HTML & CSS | PixelCraft UI" />
+    <meta property="og:description" content="Clean content cards, profile cards, blog cards, product cards, and testimonials built with pure CSS Grid and Flexbox." />
+    <meta property="og:url" content="https://example.com/cards.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cards",
+          "item": "https://example.com/cards.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html" class="active">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html" aria-current="page">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Cards Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="#basic-card">1. Basic Content</a></li>
+          <li><a href="#profile-card">2. User Profile</a></li>
+          <li><a href="#blog-card">3. Editorial Blog</a></li>
+          <li><a href="#product-card">4. Product Showcase</a></li>
+          <li><a href="#feature-card">5. Bento Feature</a></li>
+          <li><a href="#testimonial-card">6. Testimonial</a></li>
+          <li><a href="responsive-design.html">Responsive Guide &rarr;</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="components.html">Components</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Card Components</li>
+          </ol>
+        </nav>
+
+        <!-- Intro -->
+        <section class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+          <span class="section-eyebrow">Modular Surfaces</span>
+          <h1>Responsive Card Components in HTML &amp; CSS</h1>
+          <p class="lead" style="max-width: 820px;">
+            Cards act as modular content surfaces that bundle related information, actions, and media. These 6 card architectures follow modern single-elevation design rules, generous inner padding, and disciplined typography.
+          </p>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="max-width: 840px;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>How Do You Design Flexible Card Layouts Without Frameworks?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                By combining CSS Grid on parent containers (<code>grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))</code>) with Flexbox internally (<code>display: flex; flex-direction: column</code>). Setting <code>margin-top: auto</code> on the card footer guarantees that all action links align uniformly along the bottom regardless of varying headline lengths.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CARD 1: Basic Content Card -->
+        <article id="basic-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">1. Basic Content Card</h2>
+              <p class="showcase-desc">Foundational card surface with headline, metadata category, descriptive copy, and footer action.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag">Beginner</span>
+              <span class="badge-tag primary">Flex Column</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 380px; width: 100%;">
+              <span class="badge-tag primary" style="margin-bottom: 0.75rem;">Web Standards</span>
+              <h3 class="card-title">Semantic HTML Landmarks</h3>
+              <p class="card-text">
+                Using elements like <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;section&gt;</code> establishes an accessible document outline for screen readers and search engines.
+              </p>
+              <div class="card-footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Guide &middot; 4 min</span>
+                <a href="accessibility.html" class="btn btn-secondary btn-sm">Read Article &rarr;</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Basic Semantic Content Card --&gt;
+&lt;article class="card"&gt;
+  &lt;span class="badge-tag primary"&gt;Web Standards&lt;/span&gt;
+  &lt;h3 class="card-title"&gt;Semantic HTML Landmarks&lt;/h3&gt;
+  &lt;p class="card-text"&gt;
+    Using semantic landmarks establishes an accessible outline for screen readers.
+  &lt;/p&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;span class="meta"&gt;Guide &amp;middot; 4 min&lt;/span&gt;
+    &lt;a href="/accessibility" class="btn btn-secondary btn-sm"&gt;Read Article &amp;rarr;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;style&gt;
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #edf0f7;
+  padding-top: 1rem;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>The card flexes smoothly across full-width mobile screens and locks neatly inside desktop grid layouts without overflow.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Wraps contents in semantic <code>&lt;article&gt;</code> element, indicating an independent, self-contained composition.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: User Profile Card -->
+        <article id="profile-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">2. User Profile Card</h2>
+              <p class="showcase-desc">Developer or team member profile card featuring styled avatar monogram, role, and action buttons.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Profile</span>
+              <span class="badge-tag">CSS Avatar</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 360px; width: 100%; text-align: center; align-items: center;">
+              <div style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; font-family: var(--font-display); margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);">
+                EN
+              </div>
+              <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 0.2rem;">Elena Rostova</h3>
+              <span style="font-size: 0.8125rem; color: var(--primary); font-weight: 600; margin-bottom: 0.75rem;">Design Systems Architect</span>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Specializes in accessible CSS frameworks, design tokens, and semantic HTML architecture for academic publications.
+              </p>
+              <div style="display: flex; gap: 0.5rem; width: 100%;">
+                <a href="about.html" class="btn btn-secondary btn-sm" style="flex: 1;">View Bio</a>
+                <a href="forms.html#contact-form" class="btn btn-primary btn-sm" style="flex: 1;">Contact</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- User Profile Card --&gt;
+&lt;article class="profile-card"&gt;
+  &lt;div class="avatar-circle"&gt;EN&lt;/div&gt;
+  &lt;h3 class="profile-name"&gt;Elena Rostova&lt;/h3&gt;
+  &lt;span class="profile-role"&gt;Design Systems Architect&lt;/span&gt;
+  &lt;p class="profile-bio"&gt;
+    Specializes in accessible CSS frameworks and design tokens.
+  &lt;/p&gt;
+  &lt;div class="profile-actions"&gt;
+    &lt;a href="/profile" class="btn btn-secondary btn-sm"&gt;View Bio&lt;/a&gt;
+    &lt;a href="/contact" class="btn btn-primary btn-sm"&gt;Contact&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;style&gt;
+.avatar-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c5ce7, #a89bfa);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Action buttons use <code>flex: 1</code> to expand equally across the base of the card, providing comfortable touch points.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The monogram avatar utilizes CSS styling with sufficient inner text contrast and an explicit name heading above the biography.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: Blog Article Card -->
+        <article id="blog-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">3. Editorial Blog Article Card</h2>
+              <p class="showcase-desc">Article card featuring stylized CSS visual header, publication date, reading duration, and excerpt.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Editorial</span>
+              <span class="badge-tag">CSS Visual</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 420px; width: 100%; padding: 0; overflow: hidden;">
+              <!-- CSS Visual Header -->
+              <div style="height: 140px; background: linear-gradient(135deg, #151827 0%, #2A304C 100%); display: flex; align-items: center; justify-content: center; position: relative; color: #FFFFFF;">
+                <span style="font-family: var(--font-mono); font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.35rem 0.75rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
+                  CSS Grid : auto-fill
+                </span>
+              </div>
+              <div style="padding: 1.75rem; display: flex; flex-direction: column; flex: 1;">
+                <div style="display: flex; gap: 0.5rem; align-items: center; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                  <span>March 2026</span>
+                  <span aria-hidden="true">&bull;</span>
+                  <span>6 min read</span>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem; line-height: 1.35;">
+                  <a href="responsive-design.html" style="color: var(--text-main); text-decoration: none;">Why CSS Grid auto-fill Outperforms Media Queries</a>
+                </h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Discover how modern CSS Grid allows cards to adapt fluidly across any viewport without writing dozens of brittle breakpoint rules.
+                </p>
+                <div style="margin-top: auto;">
+                  <a href="responsive-design.html" class="animated-link" style="font-weight: 600; font-size: 0.875rem;">Read Full Guide &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Blog Article Card with CSS Visual Header --&gt;
+&lt;article class="blog-card"&gt;
+  &lt;div class="card-visual-header"&gt;
+    &lt;span class="code-pill"&gt;CSS Grid : auto-fill&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="card-content"&gt;
+    &lt;div class="card-meta"&gt;
+      &lt;span&gt;March 2026&lt;/span&gt;
+      &lt;span aria-hidden="true"&gt;&amp;bull;&lt;/span&gt;
+      &lt;span&gt;6 min read&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;&lt;a href="/guide"&gt;Why CSS Grid auto-fill Outperforms Queries&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;Discover how modern CSS Grid adapts fluidly without brittle breakpoints.&lt;/p&gt;
+    &lt;a href="/guide" class="animated-link"&gt;Read Full Guide &amp;rarr;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>The visual header maintains an exact 140px height to prevent cumulative layout shift (CLS) during browser font loading.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The headline link has clear descriptive text, avoiding generic "Click Here" or "Read More" antipatterns.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4: Product Showcase Card -->
+        <article id="product-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">4. Product Showcase Card</h2>
+              <p class="showcase-desc">Commercial product card featuring stock badge, price indicator, and secondary details.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">E-Commerce</span>
+              <span class="badge-tag">Demo Price</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 340px; width: 100%; padding: 1.25rem;">
+              <!-- Product Graphic Box -->
+              <div style="height: 160px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 1rem;">
+                <span class="badge-tag highlight" style="position: absolute; top: 10px; right: 10px;">In Stock</span>
+                <span style="font-family: var(--font-display); font-weight: 700; color: var(--text-muted); font-size: 1rem;">
+                  Mechanical Keyboard UI
+                </span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-top: 0; margin-bottom: 0.35rem;">PixelCraft Pro Switch</h3>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1rem;">Linear responsive tactile feedback keycaps designed for programmers.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Price</span>
+                  <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); font-family: var(--font-display);">$89 (demo)</span>
+                </div>
+                <a href="forms.html" class="btn btn-primary btn-sm">Add to Bag</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Product Card Component --&gt;
+&lt;article class="product-card"&gt;
+  &lt;div class="product-image-box"&gt;
+    &lt;span class="badge in-stock"&gt;In Stock&lt;/span&gt;
+    &lt;span class="product-placeholder"&gt;Mechanical Keyboard UI&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;PixelCraft Pro Switch&lt;/h3&gt;
+  &lt;p&gt;Linear tactile switches designed for programmers.&lt;/p&gt;
+  &lt;div class="product-footer"&gt;
+    &lt;div class="price-box"&gt;
+      &lt;span class="label"&gt;Price&lt;/span&gt;
+      &lt;span class="amount"&gt;$89 (demo)&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;a href="/cart/add" class="btn btn-primary btn-sm"&gt;Add to Bag&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Cards naturally arrange in autofill columns when placed inside <code>.grid-cards</code>, maintaining 300px min-width per card.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The price is marked clearly with descriptive labeling so screen readers do not read isolated numeric strings without context.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5: Bento Feature Card -->
+        <article id="feature-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">5. Bento Feature Grid Card</h2>
+              <p class="showcase-desc">Asymmetric feature card highlighting a core technical capability with verified metric points.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Bento Architecture</span>
+              <span class="badge-tag">No Pill Clutter</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 480px; width: 100%; background: var(--surface-subtle); border-color: var(--secondary);">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">
+                01. Layout Integrity
+              </div>
+              <h3 style="font-size: 1.35rem; margin-top: 0; margin-bottom: 0.75rem;">Zero Layout Shift Architecture</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Every component reserves dimensional aspect ratios and avoids runtime layout shifts. No sudden banner jumps or flickering hydration artifacts.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+                <div>
+                  <span style="font-size: 1.5rem; font-weight: 700; color: var(--text-main); font-family: var(--font-display); display: block;">0.00</span>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Cumulative Layout Shift</span>
+                </div>
+                <div>
+                  <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); font-family: var(--font-display); display: block;">100%</span>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">CSS-Only Mechanics</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Bento Capability Card --&gt;
+&lt;article class="bento-feature-card"&gt;
+  &lt;div class="chapter-index"&gt;01. Layout Integrity&lt;/div&gt;
+  &lt;h3&gt;Zero Layout Shift Architecture&lt;/h3&gt;
+  &lt;p&gt;Every component reserves dimensional aspect ratios.&lt;/p&gt;
+  &lt;div class="metric-row"&gt;
+    &lt;div class="metric"&gt;
+      &lt;strong class="metric-val"&gt;0.00&lt;/strong&gt;
+      &lt;span class="metric-label"&gt;Cumulative Layout Shift&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="metric"&gt;
+      &lt;strong class="metric-val"&gt;100%&lt;/strong&gt;
+      &lt;span class="metric-label"&gt;CSS-Only Mechanics&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Metric row uses <code>grid-template-columns: 1fr 1fr</code> which collapses to single rows if container width dips below 280px.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Avoids code-comment slashes (`// 01`) in headings, adopting natural editorial numbering for clean screen-reader speech.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6: Client Testimonial Card -->
+        <article id="testimonial-card" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">6. Student Testimonial Card</h2>
+              <p class="showcase-desc">Quote surface containing student feedback, academic role, and university affiliation.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Blockquote</span>
+              <span class="badge-tag">Academic Context</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card" style="max-width: 440px; width: 100%;">
+              <blockquote style="margin: 0; padding: 0;">
+                <p style="font-size: 1rem; color: var(--text-main); font-style: italic; line-height: 1.6; margin-bottom: 1.25rem;">
+                  &ldquo;PixelCraft UI completely transformed my understanding of CSS Grid and responsive design. Building without JavaScript frameworks made me a significantly stronger web engineer.&rdquo;
+                </p>
+                <footer style="display: flex; align-items: center; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+                  <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--surface-alt); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary);">
+                    DK
+                  </div>
+                  <div>
+                    <cite style="font-weight: 700; font-style: normal; color: var(--text-main); font-size: 0.9375rem; display: block;">David Kim</cite>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Computer Science Undergraduate &middot; UI Course</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Accessible Testimonial Card --&gt;
+&lt;article class="card testimonial-card"&gt;
+  &lt;blockquote&gt;
+    &lt;p class="quote"&gt;
+      &amp;ldquo;PixelCraft UI transformed my understanding of CSS Grid and responsive design.&amp;rdquo;
+    &lt;/p&gt;
+    &lt;footer class="quote-author"&gt;
+      &lt;div class="author-avatar"&gt;DK&lt;/div&gt;
+      &lt;div class="author-info"&gt;
+        &lt;cite class="author-name"&gt;David Kim&lt;/cite&gt;
+        &lt;span class="author-title"&gt;Computer Science Student&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Uses standard fluid card boundaries that preserve proportional line lengths between 45 and 65 characters.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Employs semantic <code>&lt;blockquote&gt;</code> and <code>&lt;cite&gt;</code> tags for formal attribution markup.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Guides CTA -->
+        <section class="section" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem;">
+          <h3 style="margin-top: 0;">Next Step: Hero Section Layouts</h3>
+          <p>Discover how to integrate cards into landing heroes, split-screen layouts, and developer portfolios.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="hero-sections.html" class="btn btn-primary">Explore Hero Sections &rarr;</a>
+            <a href="responsive-design.html" class="btn btn-secondary">Responsive Design Guide &rarr;</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

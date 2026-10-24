@@ -1,0 +1,10 @@
+# ==============================================================================
+# PixelCraft UI — Production robots.txt
+# Placeholder production domain: https://example.com/ (replace upon deployment)
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Sitemap Index (Placeholder URL)
+Sitemap: https://example.com/sitemap.xml

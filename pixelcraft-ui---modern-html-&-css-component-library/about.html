@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About PixelCraft UI | Pure HTML &amp; CSS Component Resource</title>
+    <meta name="description" content="Discover the mission, design principles, limitations, and complete brand identity rules behind PixelCraft UI, an educational frontend component library." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/about.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="About PixelCraft UI | Free Pure HTML &amp; CSS Component Resource" />
+    <meta property="og:description" content="Transparent educational mission, design system rules, brand kit guidelines, and honest technical limitations." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/about.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/pixelcraft-ui/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://example.com/pixelcraft-ui/about.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html" class="active" aria-current="page">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="getting-started.html" class="btn btn-secondary btn-sm">Tutorial</a>
+            <a href="#brand-kit" class="btn btn-primary btn-sm">Brand Kit</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html" aria-current="page">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><span aria-current="page">About</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <article class="section" style="padding-top: var(--space-8);">
+        <div class="container container-narrow">
+          <span class="section-eyebrow">
+            <img src="assets/icons/layers.svg" alt="" width="14" height="14" aria-hidden="true" />
+            Project Overview &amp; Guidelines
+          </span>
+          <h1>About PixelCraft UI</h1>
+
+          <!-- Direct-Answer Intro -->
+          <p class="lead">
+            PixelCraft UI is an open, educational web design system built specifically for an academic website design assignment. Its purpose is to demonstrate that modern, responsive, accessible web interfaces can be constructed using pure HTML5 and CSS3—completely free from JavaScript dependencies and heavy framework runtimes.
+          </p>
+
+          <div class="alert alert--info">
+            <img src="assets/icons/check.svg" alt="" class="notice-icon" aria-hidden="true" />
+            <div>
+              <strong>Transparent Academic Scope:</strong>
+              This project is designed as an educational reference. It does not sell commercial subscriptions, does not collect personal data, and does not invent corporate history, fictitious awards, or fake testimonials.
+            </div>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--border); margin-block: var(--space-8);" />
+
+          <h2>1. Mission &amp; Educational Purpose</h2>
+          <p>
+            In modern web engineering, beginners are frequently introduced to complex JavaScript frameworks (React, Vue, Angular) and utility frameworks before they fully grasp how semantic HTML and modern CSS work. This creates unnecessary cognitive overhead and hides the fundamental mechanics of the web platform.
+          </p>
+          <p>
+            PixelCraft UI exists to provide an authentic alternative: a comprehensive component library where every line of code is accessible, inspectable, and directly connected to W3C web standards. Students can study real Flexbox alignments, CSS Grid track definitions, media queries, and accessibility patterns without build tools getting in the way.
+          </p>
+
+          <h2>2. Target Audience</h2>
+          <p>PixelCraft UI was designed from the ground up to support:</p>
+          <ul>
+            <li><strong>Web Design Students:</strong> Learners taking academic courses in frontend development who need clean, compliant HTML5/CSS3 references.</li>
+            <li><strong>Beginner Frontend Developers:</strong> Programmers looking to solidify their CSS layout, typography, and responsive design fundamentals.</li>
+            <li><strong>Freelance Web Designers:</strong> Practitioners seeking lightweight, zero-dependency starter patterns for fast-loading client sites.</li>
+            <li><strong>UI/UX Learners:</strong> Designers transitioning into code who want to understand how design tokens and components map to native CSS.</li>
+          </ul>
+
+          <h2>3. Why Pure HTML &amp; CSS?</h2>
+          <p>
+            Standard HTML and CSS offer distinct architectural advantages:
+          </p>
+          <ul>
+            <li><strong>Zero Runtime Overhead:</strong> No JavaScript parsing, compilation, or hydration delays. Pages render instantly upon arrival.</li>
+            <li><strong>Maximum Longevity:</strong> Native HTML and CSS written today will continue to render correctly in browsers for decades without package depreciation.</li>
+            <li><strong>Accessible by Default:</strong> Leveraging native elements (&lt;button&gt;, &lt;details&gt;, &lt;form&gt;) provides built-in keyboard navigation and screen-reader semantics.</li>
+            <li><strong>Portability:</strong> Components can be copied into any environment—static HTML sites, WordPress, Rails, Django, or React templates.</li>
+          </ul>
+
+          <h2>4. Core Project Principles</h2>
+          <div class="grid grid-cols-2" style="margin-block: var(--space-6);">
+            <div class="card">
+              <h3 class="card__title">1. Standards First</h3>
+              <p class="card__text">We strictly write valid HTML5 elements and CSS3 custom properties according to W3C and WHATWG specifications.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">2. Radical Honesty</h3>
+              <p class="card__text">We clearly disclose when a component is a visual UI demonstration (e.g. login forms) and require backend services for full operation.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">3. Universal Accessibility</h3>
+              <p class="card__text">Every interactive control features a visible focus state, accessible contrast ratios exceeding 4.5:1, and reduced-motion handling.</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title">4. Zero External Dependencies</h3>
+              <p class="card__text">No external npm dependencies, JavaScript UI toolkits, or CDN script trackers. Pure browser-native execution.</p>
+            </div>
+          </div>
+
+          <h2>5. Honest Technical Limitations</h2>
+          <p>
+            As a pure frontend HTML/CSS project, PixelCraft UI embraces the following transparent constraints:
+          </p>
+          <ul>
+            <li><strong>Static Form Demonstrations:</strong> Forms on this website do not store data, send emails, or authenticate accounts. Connecting them to a backend service (e.g. PHP, Node, or serverless functions) is required for real production submissions.</li>
+            <li><strong>Manual Code Selection:</strong> Because JavaScript is strictly prohibited, there is no automatic clipboard-copy button. Users select and copy code blocks manually.</li>
+            <li><strong>Category Navigation:</strong> In place of a simulated client-side search box, the library provides anchor-linked category navigation.</li>
+            <li><strong>Native Browser Printing:</strong> Rather than claiming automatic server PDF generation, printing relies directly on standard browser printing (<kbd>Ctrl+P</kbd> / <kbd>Cmd+P</kbd>) supported by our print stylesheet.</li>
+          </ul>
+
+          <hr style="border: none; border-top: 1px solid var(--border); margin-block: var(--space-10);" />
+
+          <!-- Brand Kit Section -->
+          <div id="brand-kit">
+            <span class="section-eyebrow">
+              <img src="assets/icons/palette.svg" alt="" width="14" height="14" aria-hidden="true" />
+              Brand Kit Guidelines
+            </span>
+            <h2>PixelCraft UI Brand Kit &amp; Identity Rules</h2>
+            <p>
+              The PixelCraft UI brand identity balances a contemporary developer-tool aesthetic with editorial clarity. Follow these guidelines when displaying the brand assets.
+            </p>
+
+            <h3>Logo Concept &amp; Symbol Anatomy</h3>
+            <p>
+              The PixelCraft UI mark is a rounded square with an electric violet (<code>#6C5CE7</code>) container (~22% border radius). Inside, a 3&times;3 grid of small rounded pixels creates the pixel-art letter <strong>P</strong> using 7 crisp white pixels. The remaining pixel at the bottom-right is rendered in teal (<code>#16B8A6</code>), representing the creative "craft" accent.
+            </p>
+
+            <div class="grid grid-cols-2" style="margin-block: var(--space-6);">
+              <div class="card text-center" style="align-items: center; justify-content: center; background: #FFFFFF;">
+                <span class="card__subtitle">Primary Logo (Light Surface)</span>
+                <img src="assets/images/logo.svg" alt="PixelCraft UI Logo on Light" style="max-width: 220px; margin-block: var(--space-4);" />
+                <span style="font-size: 0.75rem; color: var(--text-muted);">assets/images/logo.svg</span>
+              </div>
+              <div class="card text-center" style="align-items: center; justify-content: center; background: var(--dark); color: #fff;">
+                <span class="card__subtitle" style="color: var(--dark-text-muted);">Dark Variant (Dark Surface)</span>
+                <img src="assets/images/logo-dark.svg" alt="PixelCraft UI Logo on Dark" style="max-width: 220px; margin-block: var(--space-4);" />
+                <span style="font-size: 0.75rem; color: var(--dark-text-muted);">assets/images/logo-dark.svg</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2" style="margin-bottom: var(--space-6);">
+              <div class="card text-center" style="align-items: center; justify-content: center; background: #FFFFFF;">
+                <span class="card__subtitle">Standalone Symbol Mark (64&times;64)</span>
+                <img src="assets/images/logo-mark.svg" alt="PixelCraft UI Symbol Mark" style="width: 64px; height: 64px; margin-block: var(--space-4);" />
+                <span style="font-size: 0.75rem; color: var(--text-muted);">assets/images/logo-mark.svg</span>
+              </div>
+              <div class="card text-center" style="align-items: center; justify-content: center; background: #FFFFFF;">
+                <span class="card__subtitle">Crisp Favicon (32&times;32)</span>
+                <img src="assets/images/favicon.svg" alt="PixelCraft UI Favicon" style="width: 32px; height: 32px; margin-block: var(--space-4);" />
+                <span style="font-size: 0.75rem; color: var(--text-muted);">assets/images/favicon.svg</span>
+              </div>
+            </div>
+
+            <h3>Brand Rules</h3>
+            <ul>
+              <li><strong>Clear Space:</strong> Always maintain a clear margin around the logo equal to at least twice the height of one pixel grid cell (approximately 16px).</li>
+              <li><strong>Minimum Sizes:</strong> Minimum width for the horizontal wordmark is 120px; minimum width for the standalone symbol mark is 24px.</li>
+              <li><strong>Approved Backgrounds:</strong> The logo may only be placed on approved canvas backgrounds: <code>#F8F9FC</code>, <code>#FFFFFF</code>, <code>#151827</code>, or <code>#6C5CE7</code>.</li>
+              <li><strong>Prohibitions:</strong> Do not stretch, rotate, recolor, apply drop shadows, or place the logo over busy background imagery.</li>
+              <li><strong>Iconography Style:</strong> All brand icons must be clean outline SVGs, rendered with a single 1.75px stroke width, rounded caps and joins, and colored using <code>currentColor</code>.</li>
+            </ul>
+
+            <h3>Official Color Swatches</h3>
+            <div class="grid grid-cols-3" style="margin-block: var(--space-6);">
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #6C5CE7; margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Electric Violet</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#6C5CE7 &middot; Primary Accent</span>
+              </div>
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #A89BFA; margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Soft Lavender</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#A89BFA &middot; Secondary Accent</span>
+              </div>
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #16B8A6; margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Teal Highlight</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#16B8A6 &middot; Craft Accent</span>
+              </div>
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #151827; margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Deep Charcoal/Navy</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#151827 &middot; Dark Surface</span>
+              </div>
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #171923; margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Deep Slate Text</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#171923 &middot; High Contrast Text</span>
+              </div>
+              <div class="card" style="padding: var(--space-4);">
+                <div style="height: 48px; border-radius: var(--radius-sm); background: #F8F9FC; border: 1px solid var(--border); margin-bottom: var(--space-2);"></div>
+                <strong style="font-size: 0.875rem;">Canvas Background</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">#F8F9FC &middot; Page Base</span>
+              </div>
+            </div>
+
+            <h3>Typography Pairings</h3>
+            <p>
+              PixelCraft UI enforces a strict two-family typography system:
+            </p>
+            <ul>
+              <li><strong>Headings &amp; Display:</strong> <code>Space Grotesk</code> (weights 600, 700) with tight letter-spacing (-0.025em to -0.03em) for confident, editorial impact.</li>
+              <li><strong>Body Text &amp; UI Controls:</strong> <code>Inter</code> (weights 400, 500, 600) with a 1.65 line height for maximum readability on digital screens.</li>
+              <li><strong>Code &amp; Tokens:</strong> Monospace system font stack (<code>ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace</code>).</li>
+            </ul>
+          </div>
+
+          <!-- Related Links -->
+          <div style="margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+            <h3>Related Pages</h3>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="index.html" class="animated-link">Homepage &rarr;</a>
+              <a href="components.html" class="animated-link">Component Directory &rarr;</a>
+              <a href="getting-started.html" class="animated-link">Getting Started Guide &rarr;</a>
+              <a href="faq.html" class="animated-link">Frequently Asked Questions &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

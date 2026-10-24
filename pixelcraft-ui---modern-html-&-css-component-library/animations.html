@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure CSS Animations & Transitions Guide | PixelCraft UI</title>
+    <meta name="description" content="Explore 6 pure CSS animations and transitions: button ripples, card elevation, animated underline sweeps, CSS spinners, pulse bars, and prefers-reduced-motion." />
+    <link rel="canonical" href="https://example.com/animations.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pure CSS Animations & Transitions Guide | PixelCraft UI" />
+    <meta property="og:description" content="Accessible, zero-JavaScript CSS animation patterns with prefers-reduced-motion compliance." />
+    <meta property="og:url" content="https://example.com/animations.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Animations",
+          "item": "https://example.com/animations.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html" class="active">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html" aria-current="page">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Animations Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="#button-hover">1. Button Micro-Interactions</a></li>
+          <li><a href="#card-lift">2. Card Hover Elevation</a></li>
+          <li><a href="#underline-anim">3. Dynamic Underline Sweep</a></li>
+          <li><a href="#loading-spinners">4. Pure CSS Spinners</a></li>
+          <li><a href="#entrance-anim">5. Keyframe Entrance</a></li>
+          <li><a href="#reduced-motion">6. Reduced Motion Guide</a></li>
+          <li><a href="accessibility.html">Accessibility Rules &rarr;</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="components.html">Components</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">CSS Animations</li>
+          </ol>
+        </nav>
+
+        <!-- Intro -->
+        <section class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+          <span class="section-eyebrow">Micro-Interactions &amp; Motion</span>
+          <h1>Pure CSS Animations &amp; Transitions</h1>
+          <p class="lead" style="max-width: 820px;">
+            Motion in modern web design should provide functional feedback, clarify spatial relationships, and delight users without causing distraction or vestibular discomfort. These 6 CSS animation patterns animate only compositor properties (<code>transform</code> and <code>opacity</code>) with strict reduced-motion support.
+          </p>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="max-width: 840px;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>How Do You Implement CSS Animations Responsively and Accessibly?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                Keep transitions within 150ms–200ms using easing curves like <code>cubic-bezier(0.16, 1, 0.3, 1)</code>. Never animate layout geometry (such as <code>height</code> or <code>margin</code>), and always wrap keyframe animations in a <code>@media (prefers-reduced-motion: reduce)</code> query that resets animation duration to 0.01ms for sensitive users.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ANIMATION 1: Button Micro-Interactions -->
+        <article id="button-hover" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">1. Button Hover Lift &amp; Press Feedback</h2>
+              <p class="showcase-desc">Tactile micro-interaction that subtly lifts the button on hover and compresses it on click (active).</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Transform</span>
+              <span class="badge-tag">150ms Easing</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary btn-lg">Hover Over Me</button>
+            <button type="button" class="btn btn-secondary btn-lg">Click &amp; Hold Me</button>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Button Hover and Active Micro-Interaction --&gt;
+&lt;button class="btn btn-primary"&gt;Hover Over Me&lt;/button&gt;
+
+&lt;style&gt;
+.btn-primary {
+  background-color: #6c5ce7;
+  color: #ffffff;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 150ms ease;
+  box-shadow: 0 1px 3px rgba(108, 92, 231, 0.25);
+}
+
+/* Hover: Lift 1px and deepen shadow */
+.btn-primary:hover {
+  background-color: #5a4bd1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 92, 231, 0.35);
+}
+
+/* Active Press: Settle back to ground plane */
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(108, 92, 231, 0.2);
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>On mobile touchscreen taps, the active press provides immediate visual confirmation without sticky hover states.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Duration is budgeted at 150ms, well within human reaction time and eliminating any perception of UI latency.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANIMATION 2: Card Hover Elevation -->
+        <article id="card-lift" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">2. Card Hover Elevation &amp; Border Accent</h2>
+              <p class="showcase-desc">Subtle vertical elevation shift (translateY -3px) with soft shadow dissipation and border highlight.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Elevation</span>
+              <span class="badge-tag">Surface Transition</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <article class="card card-interactive" style="max-width: 400px; width: 100%; cursor: pointer;">
+              <span class="badge-tag primary" style="margin-bottom: 0.75rem;">Interactive Surface</span>
+              <h3 class="card-title">Hover Over This Card</h3>
+              <p class="card-text">
+                Notice how the card smoothly elevates 3px upward, deepens its shadow, and gently transitions its border color to electric lavender.
+              </p>
+              <div class="card-footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">200ms Transition</span>
+                <span style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Explore &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Card Hover Elevation --&gt;
+&lt;article class="card card-interactive"&gt;
+  &lt;h3&gt;Hover Over This Card&lt;/h3&gt;
+  &lt;p&gt;Smoothly elevates 3px upward on hover.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;style&gt;
+.card-interactive {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-interactive:hover {
+  transform: translateY(-3px);
+  border-color: #a89bfa;
+  box-shadow: 0 10px 20px -3px rgba(15, 23, 42, 0.08);
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>On small screens, touch users still receive visual focus indication without awkward jitter or delayed scrolling.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Because elevation uses <code>transform: translateY()</code>, neighboring elements do not reflow or experience layout shift.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANIMATION 3: Dynamic Underline Sweep -->
+        <article id="underline-anim" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">3. Dynamic Underline Sweep Animation</h2>
+              <p class="showcase-desc">Modern editorial navigation link underline that expands from left-to-right using CSS pseudo-elements.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Pseudo-Element</span>
+              <span class="badge-tag">scaleX Transform</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <a href="#underline-anim" class="animated-link" style="font-size: 1.15rem; font-weight: 600;">Hover This Link</a>
+            <a href="#underline-anim" class="animated-link" style="font-size: 1.15rem; font-weight: 600;">Explore Documentation</a>
+            <a href="#underline-anim" class="animated-link" style="font-size: 1.15rem; font-weight: 600;">Browse Tutorials</a>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Dynamic Underline Sweep Link --&gt;
+&lt;a href="/docs" class="animated-link"&gt;Explore Documentation&lt;/a&gt;
+
+&lt;style&gt;
+.animated-link {
+  position: relative;
+  text-decoration: none;
+  color: #6c5ce7;
+  font-weight: 600;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #6c5ce7;
+  transform-origin: bottom right;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Underline thickness is locked to 2px, providing high clarity across both standard and Retina mobile screens.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The link color itself meets WCAG AA contrast against white (4.8:1), ensuring readability even before hover.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANIMATION 4: Loading Indicators -->
+        <article id="loading-spinners" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">4. Pure CSS Loading Indicators</h2>
+              <p class="showcase-desc">CSS keyframe loading spinner and pulse bar for asynchronous feedback without external libraries.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">@keyframes</span>
+              <span class="badge-tag">Infinite Spin</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; gap: 3rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <!-- Spinner -->
+            <div style="text-align: center;">
+              <div class="spinner" style="width: 32px; height: 32px; border-width: 3px;"></div>
+              <span style="display: block; font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.75rem;">CSS Spinner</span>
+            </div>
+
+            <!-- Pulse Bar -->
+            <div style="text-align: center;">
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <span style="width: 8px; height: 24px; background: var(--primary); border-radius: 4px; animation: bounceSlow 1s infinite ease-in-out;"></span>
+                <span style="width: 8px; height: 32px; background: var(--secondary); border-radius: 4px; animation: bounceSlow 1s infinite ease-in-out 0.15s;"></span>
+                <span style="width: 8px; height: 24px; background: var(--highlight); border-radius: 4px; animation: bounceSlow 1s infinite ease-in-out 0.3s;"></span>
+              </div>
+              <span style="display: block; font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.75rem;">Pulse Bars</span>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Pure CSS Spinners and Pulse Bars --&gt;
+&lt;div class="spinner" aria-label="Loading..." role="status"&gt;&lt;/div&gt;
+
+&lt;style&gt;
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(108, 92, 231, 0.2);
+  border-top-color: #6c5ce7;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Scales fluidly via standard width and height dimensions, fitting neatly inside buttons, cards, or standalone viewports.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Contains <code>role="status"</code> and <code>aria-label="Loading"</code> so assistive tech announces active state updates.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANIMATION 5: Keyframe Entrance -->
+        <article id="entrance-anim" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">5. Subtle Fade-In-Up Page Entrance</h2>
+              <p class="showcase-desc">Restrained entrance animation that smoothly fades content in with an optical 8px rise.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">Optical Rise</span>
+              <span class="badge-tag">Opacity &amp; Y</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage" style="display: flex; justify-content: center;">
+            <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; max-width: 440px; text-align: center; animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <h4 style="margin-top: 0; color: var(--text-main);">Notice the Smooth Entry</h4>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">
+                Content smoothly materializes without disorienting layout jumps or overwhelming flash effects.
+              </p>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Subtle Fade-In-Up CSS Animation --&gt;
+&lt;div class="fade-in-card"&gt;
+  &lt;h4&gt;Smooth Entry Notice&lt;/h4&gt;
+  &lt;p&gt;Materializes without layout jumps.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-card {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Translates by only 8px, ensuring mobile viewports do not experience excessive vertical scroll bouncing.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Critical instructions are immediately in the DOM, so content remains fully accessible even if animations are suppressed.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANIMATION 6: Reduced Motion Guide -->
+        <article id="reduced-motion" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">6. The prefers-reduced-motion Standard</h2>
+              <p class="showcase-desc">WCAG 2.3.3 compliance rule ensuring animations respect operating system vestibular preferences.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">WCAG 2.3.3</span>
+              <span class="badge-tag">Accessibility Mandatory</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <div class="notice-box info" style="margin: 0;">
+              <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong style="color: var(--text-main);">Why Reduced-Motion Queries are Mandatory:</strong>
+                <p style="margin: 0.25rem 0 0 0;">
+                  Users with vestibular disorders can experience nausea, dizziness, or migraines from motion on web pages. PixelCraft UI includes a global reduced-motion rule that suppresses transitions and infinite spinners whenever a user activates "Reduce Motion" in their system settings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">Global CSS Rule</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>/* Mandatory Global Accessibility Reset */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Testing Instructions</h4>
+              <p>In Chrome/Edge DevTools, press Cmd+Shift+P, type "Emulate CSS prefers-reduced-motion: reduce", and observe that all animations stop immediately.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Compliance Impact</h4>
+              <p>Directly satisfies WCAG Success Criterion 2.3.3 (Animation from Interactions) at the highest AAA level.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Guides CTA -->
+        <section class="section" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem;">
+          <h3 style="margin-top: 0;">Next Step: In-Depth Responsive Design Guide</h3>
+          <p>Learn how to apply media queries, CSS Grid, and fluid clamp typography in our comprehensive design guide.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="responsive-design.html" class="btn btn-primary">Read Responsive Design Guide &rarr;</a>
+            <a href="accessibility.html" class="btn btn-secondary">Read Accessibility Guide &rarr;</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

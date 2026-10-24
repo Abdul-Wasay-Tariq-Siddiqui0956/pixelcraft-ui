@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page Patterns — PixelCraft UI</title>
+    <meta
+      name="description"
+      content="Explore pure HTML & CSS login page designs, including modern split-screen auth, dark developer cards, neo-brutalist layouts, and social sign-in UI with copyable HTML & CSS code."
+    />
+    <link rel="canonical" href="https://pixelcraft-ui.dev/login.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <!-- Skip to Main Navigation and Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="active" aria-current="page">Login</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html" aria-current="page">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav Bar -->
+    <nav class="subnav-bar" aria-label="Components Category Navigation">
+      <div class="container">
+        <ul>
+          <li><span style="font-size: 0.8125rem; font-weight: 700; color: var(--text); text-transform: uppercase; margin-right: 0.5rem;">Categories:</span></li>
+          <li><a href="login.html" class="active" aria-current="page"><img src="assets/icons/form.svg" alt="" width="14" height="14" aria-hidden="true" /> Login Pages</a></li>
+          <li><a href="navbar-components.html"><img src="assets/icons/layout.svg" alt="" width="14" height="14" aria-hidden="true" /> Navbars</a></li>
+          <li><a href="footer-components.html"><img src="assets/icons/footer.svg" alt="" width="14" height="14" aria-hidden="true" /> Footers</a></li>
+          <li><a href="templates.html"><img src="assets/icons/code.svg" alt="" width="14" height="14" aria-hidden="true" /> 20+ Templates</a></li>
+          <li><a href="forms.html"><img src="assets/icons/form.svg" alt="" width="14" height="14" aria-hidden="true" /> Forms</a></li>
+          <li><a href="pricing-cards.html"><img src="assets/icons/card.svg" alt="" width="14" height="14" aria-hidden="true" /> Pricing</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><span aria-current="page">Login Page Patterns</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- Page Hero -->
+      <section class="section section-hero">
+        <div class="container text-center">
+          <div class="badge badge-primary mb-3">Auth Patterns &middot; HTML &amp; CSS</div>
+          <h1 class="page-title">Modern HTML &amp; CSS Login Page Templates</h1>
+          <p class="page-lead">
+            Production-ready login interfaces with full semantic HTML, modern responsive CSS, live color customizers, interactive viewport testing, and instant copyable code tabs.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 10px; margin-top: var(--space-4); flex-wrap: wrap;">
+            <a href="#pattern-split" class="btn btn-secondary btn-sm">1. Split-Screen Auth</a>
+            <a href="#pattern-minimal" class="btn btn-secondary btn-sm">2. Centered Floating Card</a>
+            <a href="#pattern-terminal" class="btn btn-secondary btn-sm">3. Developer Terminal</a>
+            <a href="#pattern-glass" class="btn btn-secondary btn-sm">4. Frosted Glassmorphism</a>
+            <a href="#pattern-tabbed" class="btn btn-secondary btn-sm">5. Dual Tab (Login/Register)</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Pattern 1: Modern Split-Screen Auth -->
+        <article class="component-showcase" id="pattern-split">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">1. Modern Split-Screen Login Layout</h3>
+              <p class="showcase-desc">Two-column layout: left column highlights brand value proposition, key stats, and user review; right column houses the authentication form with social login and clean inputs.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="implementation-type-badge">Full Responsive Layout</span>
+              <span class="badge badge--difficulty">High Converting</span>
+            </div>
+          </div>
+
+          <!-- Preview Stage -->
+          <div class="preview-stage" style="padding: 0; overflow: hidden; border-radius: 14px; background: #FFFFFF;">
+            <div class="auth-split-wrapper" style="min-height: auto; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;">
+              <!-- Left Brand Showcase Sidebar -->
+              <div class="auth-showcase-sidebar" style="padding: 2.5rem 2rem;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
+                    <div style="width: 32px; height: 32px; border-radius: 8px; background: var(--primary, #6C5CE7); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 16px;">✦</div>
+                    <span style="font-weight: 800; font-size: 1.2rem; color: #FFFFFF; letter-spacing: -0.02em;">PixelCraft Cloud</span>
+                  </div>
+                  <h3 style="font-size: 1.7rem; line-height: 1.25; margin-bottom: 0.85rem; color: #FFFFFF;">
+                    Pure HTML &amp; CSS Component Architecture.
+                  </h3>
+                  <p style="color: #CBD5E1; font-size: 0.95rem; line-height: 1.6;">
+                    Accelerate your web development projects with clean, semantic markup and lightweight CSS.
+                  </p>
+
+                  <div class="auth-sidebar-features" style="margin-block: 1.75rem;">
+                    <div class="auth-feature-item" style="padding: 0.85rem 1rem;">
+                      <span style="font-size: 18px;">⚡</span>
+                      <div>
+                        <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Zero Dependencies</strong>
+                        <span style="font-size: 0.8rem; color: #94A3B8;">No bulky frameworks or runtime JavaScript required.</span>
+                      </div>
+                    </div>
+                    <div class="auth-feature-item" style="padding: 0.85rem 1rem;">
+                      <span style="font-size: 18px;">🛡️</span>
+                      <div>
+                        <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Accessible By Default</strong>
+                        <span style="font-size: 0.8rem; color: #94A3B8;">Designed with WCAG 2.1 AA compliant contrast and explicit labels.</span>
+                      </div>
+                    </div>
+                    <div class="auth-feature-item" style="padding: 0.85rem 1rem;">
+                      <span style="font-size: 18px;">🎨</span>
+                      <div>
+                        <strong style="display: block; font-size: 0.9rem; color: #FFFFFF;">Modular CSS Tokens</strong>
+                        <span style="font-size: 0.8rem; color: #94A3B8;">Easily customize palettes, spacing, and font scales.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Testimonial Quote -->
+                <div style="background: rgba(255,255,255,0.06); border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid rgba(255,255,255,0.1);">
+                  <p style="font-style: italic; font-size: 0.88rem; margin-bottom: 0.5rem; color: #E2E8F0; line-height: 1.5;">
+                    &ldquo;PixelCraft UI saved us dozens of development hours. The semantic HTML and CSS structure made our local templates clean and maintainable.&rdquo;
+                  </p>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <div style="width: 26px; height: 26px; border-radius: 50%; background: var(--primary, #6C5CE7); display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white;">ED</div>
+                    <span style="font-size: 0.8rem; font-weight: 600; color: #FFFFFF;">Frontend Engineering Student</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Auth Form Column -->
+              <div class="auth-form-column" style="padding: 2.5rem 2rem;">
+                <div class="auth-card-main" style="max-width: 420px; box-shadow: none; border: none; padding: 0;">
+                  <div class="auth-header" style="text-align: left; margin-bottom: 1.5rem;">
+                    <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">Welcome back</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Enter your credentials to access your account</p>
+                  </div>
+
+                  <!-- Social Sign In Options -->
+                  <div class="social-auth-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.25rem;">
+                    <button type="button" class="btn-social" aria-label="Sign in with GitHub">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>GitHub</span>
+                    </button>
+                    <button type="button" class="btn-social" aria-label="Sign in with Google">
+                      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                      </svg>
+                      <span>Google</span>
+                    </button>
+                  </div>
+
+                  <div class="auth-divider" style="display: flex; align-items: center; gap: 12px; margin-block: 1.25rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">
+                    <span style="flex: 1; height: 1px; background: var(--border);"></span>
+                    <span>or continue with email</span>
+                    <span style="flex: 1; height: 1px; background: var(--border);"></span>
+                  </div>
+
+                  <!-- Email & Password Form -->
+                  <form action="#" method="post" onsubmit="event.preventDefault();">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem;">
+                      <label for="split-email" style="font-size: 0.88rem; font-weight: 600; color: var(--text);">Email Address</label>
+                      <input
+                        type="email"
+                        id="split-email"
+                        name="email"
+                        class="form-input"
+                        placeholder="alex@example.com"
+                        required
+                        autocomplete="email"
+                        style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1.5px solid var(--border); font-size: 0.95rem;"
+                      />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem;">
+                      <label for="split-password" style="font-size: 0.88rem; font-weight: 600; color: var(--text);">Password</label>
+                      <input
+                        type="password"
+                        id="split-password"
+                        name="password"
+                        class="form-input"
+                        placeholder="••••••••••••"
+                        required
+                        autocomplete="current-password"
+                        style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1.5px solid var(--border); font-size: 0.95rem;"
+                      />
+                    </div>
+
+                    <div class="auth-options-row" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; margin-bottom: 1.25rem;">
+                      <label class="custom-checkbox" style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" name="remember" checked style="accent-color: var(--primary, #6C5CE7);" />
+                        <span>Remember me</span>
+                      </label>
+                      <a href="forgot-password.html" style="color: var(--primary, #6C5CE7); font-weight: 600; text-decoration: none;">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="pv-btn--primary btn btn-primary" style="width: 100%; padding: 0.8rem; font-size: 0.95rem; font-weight: 600; border-radius: 8px; justify-content: center;">
+                      Sign In to Account &rarr;
+                    </button>
+                  </form>
+
+                  <div style="text-align: center; margin-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+                    Don&rsquo;t have an account? <a href="register.html" style="color: var(--primary, #6C5CE7); font-weight: 600; text-decoration: none;">Register for free</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Section with HTML & CSS Tabs -->
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <div class="code-tabs-nav">
+                <button type="button" class="code-tab-btn is-active" data-tab-target="split-html">📄 HTML</button>
+                <button type="button" class="code-tab-btn" data-tab-target="split-css">🎨 CSS</button>
+              </div>
+              <span class="code-copy-notice">Copy clean production code</span>
+            </div>
+
+            <!-- HTML Tab Content -->
+            <div class="code-tab-panel is-active" id="split-html">
+              <pre class="code-block" tabindex="0"><code>&lt;!-- Two-Column Responsive Split-Screen Auth Layout --&gt;
+&lt;div class="auth-split-wrapper"&gt;
+  &lt;!-- Left Column: Brand Hero &amp; Value Proposition --&gt;
+  &lt;div class="auth-showcase-sidebar"&gt;
+    &lt;div class="brand-row"&gt;
+      &lt;div class="brand-logo-mark"&gt;✦&lt;/div&gt;
+      &lt;span class="brand-title"&gt;PixelCraft Cloud&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3 class="hero-heading"&gt;Pure HTML &amp;amp; CSS Architecture.&lt;/h3&gt;
+    &lt;p class="hero-desc"&gt;Zero JavaScript required. Production-ready login with accessible focus states.&lt;/p&gt;
+
+    &lt;div class="feature-stack"&gt;
+      &lt;div class="feature-item"&gt;⚡ &lt;strong&gt;Zero Dependencies&lt;/strong&gt; — No bulky runtime.&lt;/div&gt;
+      &lt;div class="feature-item"&gt;🛡️ &lt;strong&gt;Accessible&lt;/strong&gt; — WCAG 2.1 AA compliant.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Right Column: Form Card --&gt;
+  &lt;div class="auth-form-column"&gt;
+    &lt;div class="auth-card-main"&gt;
+      &lt;div class="auth-header"&gt;
+        &lt;h2&gt;Welcome back&lt;/h2&gt;
+        &lt;p&gt;Enter your credentials to access your account&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Social OAuth Buttons --&gt;
+      &lt;div class="social-auth-grid"&gt;
+        &lt;button type="button" class="btn-social"&gt;GitHub&lt;/button&gt;
+        &lt;button type="button" class="btn-social"&gt;Google&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class="auth-divider"&gt;&lt;span&gt;or continue with email&lt;/span&gt;&lt;/div&gt;
+
+      &lt;form action="#" method="post"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="login-email"&gt;Email Address&lt;/label&gt;
+          &lt;input type="email" id="login-email" name="email" class="form-input" placeholder="alex@example.com" required autocomplete="email" /&gt;
+        &lt;/div&gt;
+
+        &lt;div class="form-group"&gt;
+          &lt;label for="login-password"&gt;Password&lt;/label&gt;
+          &lt;input type="password" id="login-password" name="password" class="form-input" placeholder="••••••••••••" required autocomplete="current-password" /&gt;
+        &lt;/div&gt;
+
+        &lt;div class="auth-options-row"&gt;
+          &lt;label class="custom-checkbox"&gt;
+            &lt;input type="checkbox" name="remember" checked /&gt;
+            &lt;span&gt;Remember me&lt;/span&gt;
+          &lt;/label&gt;
+          &lt;a href="/forgot-password"&gt;Forgot password?&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;button type="submit" class="btn btn-primary"&gt;Sign In to Account &rarr;&lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;p class="register-prompt"&gt;Don't have an account? &lt;a href="/register"&gt;Register for free&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <!-- CSS Tab Content -->
+            <div class="code-tab-panel" id="split-css">
+              <pre class="code-block" tabindex="0"><code>/* Split-Screen Auth Layout &amp; Form Inputs CSS */
+.auth-split-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 580px;
+  background: var(--surface, #FFFFFF);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.auth-showcase-sidebar {
+  background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-form-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  background: var(--surface, #FFFFFF);
+}
+
+.auth-card-main {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Stacked Form Group &amp; Full-Width Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1.15rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text, #1E293B);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border, #CBD5E1);
+  background: var(--surface, #FFFFFF);
+  color: var(--text, #0F172A);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: var(--primary, #6C5CE7);
+  box-shadow: 0 0 0 3.5px rgba(108, 92, 231, 0.18);
+  outline: none;
+}
+
+.social-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #E2E8F0);
+  background: var(--surface, #FFFFFF);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-social:hover {
+  background: var(--surface-alt, #F8FAFC);
+  transform: translateY(-1px);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-block: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748B);
+  text-transform: uppercase;
+}
+
+.auth-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Mobile Responsive Collapse */
+@media (max-width: 900px) {
+  .auth-split-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .auth-showcase-sidebar {
+    display: none;
+  }
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 2: Minimalist Centered Floating Card -->
+        <article class="component-showcase" id="pattern-minimal" style="margin-top: var(--space-12);">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">2. Minimalist Centered Floating Auth Card</h3>
+              <p class="showcase-desc">Clean floating card on a radial background with inline social auth, clear field hierarchy, and high contrast CTA button.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Universal SaaS</span>
+              <span class="badge badge--difficulty">Beginner Friendly</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white" style="display: flex; justify-content: center; padding: 2.5rem 1rem;">
+            <div style="width: 100%; max-width: 420px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+              <div style="text-align: center; margin-bottom: 1.5rem;">
+                <div style="width: 40px; height: 40px; border-radius: 10px; background: var(--lavender-50, #EEF2FF); color: var(--primary, #2563EB); display: inline-flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 8px;">🔐</div>
+                <h4 style="font-size: 1.45rem; font-weight: 800; color: #0F172A; margin: 0 0 4px;">Sign In to Your Workspace</h4>
+                <p style="font-size: 0.88rem; color: #64748B; margin: 0;">Welcome back! Please enter your details.</p>
+              </div>
+
+              <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem;">
+                <label style="font-size: 0.85rem; font-weight: 600; color: #1E293B;">Work Email</label>
+                <input type="email" placeholder="name@company.com" class="form-input" style="width: 100%; padding: 10px 14px; border: 1px solid #CBD5E1; border-radius: 8px;" />
+              </div>
+
+              <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem;">
+                <label style="font-size: 0.85rem; font-weight: 600; color: #1E293B;">Password</label>
+                <input type="password" placeholder="••••••••••••" class="form-input" style="width: 100%; padding: 10px 14px; border: 1px solid #CBD5E1; border-radius: 8px;" />
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; margin-bottom: 1.25rem;">
+                <label style="display: flex; align-items: center; gap: 6px; color: #64748B; cursor: pointer;">
+                  <input type="checkbox" checked style="accent-color: var(--primary, #2563EB);" /> Remember for 30 days
+                </label>
+                <a href="forgot-password.html" style="color: var(--primary, #2563EB); font-weight: 600; text-decoration: none;">Forgot?</a>
+              </div>
+
+              <button type="button" class="pv-btn--primary btn btn-primary" style="width: 100%; padding: 11px; font-weight: 700; border-radius: 8px; justify-content: center;">
+                Continue to App &rarr;
+              </button>
+
+              <div style="text-align: center; margin-top: 1.25rem; font-size: 0.85rem; color: #64748B;">
+                New to the platform? <a href="register.html" style="color: var(--primary, #2563EB); font-weight: 600; text-decoration: none;">Create an account</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Section with HTML & CSS Tabs -->
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <div class="code-tabs-nav">
+                <button type="button" class="code-tab-btn is-active" data-tab-target="minimal-html">📄 HTML</button>
+                <button type="button" class="code-tab-btn" data-tab-target="minimal-css">🎨 CSS</button>
+              </div>
+              <span class="code-copy-notice">Copy clean production code</span>
+            </div>
+
+            <div class="code-tab-panel is-active" id="minimal-html">
+              <pre class="code-block" tabindex="0"><code>&lt;!-- Centered Minimal Auth Card --&gt;
+&lt;div class="auth-card-wrapper"&gt;
+  &lt;div class="auth-card-clean"&gt;
+    &lt;div class="auth-icon-badge"&gt;🔐&lt;/div&gt;
+    &lt;h3&gt;Sign In to Your Workspace&lt;/h3&gt;
+    &lt;p class="auth-subtitle"&gt;Welcome back! Please enter your details.&lt;/p&gt;
+
+    &lt;form action="#" method="post"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="user-email"&gt;Work Email&lt;/label&gt;
+        &lt;input type="email" id="user-email" placeholder="name@company.com" required /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-group"&gt;
+        &lt;label for="user-pwd"&gt;Password&lt;/label&gt;
+        &lt;input type="password" id="user-pwd" placeholder="••••••••••••" required /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="auth-row"&gt;
+        &lt;label class="checkbox-label"&gt;
+          &lt;input type="checkbox" checked /&gt; Remember for 30 days
+        &lt;/label&gt;
+        &lt;a href="/forgot-password"&gt;Forgot?&lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;button type="submit" class="btn-submit"&gt;Continue to App &rarr;&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-tab-panel" id="minimal-css">
+              <pre class="code-block" tabindex="0"><code>/* Minimal Auth Card CSS */
+.auth-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+  padding: 2rem 1rem;
+}
+
+.auth-card-clean {
+  width: 100%;
+  max-width: 400px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.auth-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #EEF2FF;
+  color: #2563EB;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #1D4ED8;
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 3: Dark Developer Terminal Auth -->
+        <article class="component-showcase" id="pattern-terminal" style="margin-top: var(--space-12);">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">3. Developer Terminal Auth Card</h3>
+              <p class="showcase-desc">Hacker &amp; developer aesthetics with window controls, CLI prompt styling, monospace typography, and sudo session command button.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag dark">Terminal Style</span>
+              <span class="badge badge--difficulty">Developer UI</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--dark" style="display: flex; justify-content: center; padding: 2.5rem 1rem;">
+            <div class="card-terminal" style="width: 100%; max-width: 440px; background: #0D1117; border: 1px solid #30363D; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.5);">
+              <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #161B22; border-bottom: 1px solid #30363D;">
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F56;"></span>
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: #FFBD2E;"></span>
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: #27C93F;"></span>
+                <span style="font-family: monospace; font-size: 0.78rem; color: #8B949E; margin-left: 10px;">auth@pixelcraft-cluster:~</span>
+              </div>
+              <div style="padding: 1.5rem;">
+                <div style="font-family: monospace; font-size: 0.85rem; color: #58A6FF; margin-bottom: 1rem;">
+                  &gt; ./authenticate --cluster=production-us-east
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label style="color: #8B949E; font-family: monospace; font-size: 0.78rem;">Username or SSH Key ID</label>
+                  <input type="text" value="pixel_dev" style="background: #161B22; border: 1px solid #30363D; color: #58A6FF; font-family: monospace; padding: 10px; width: 100%; border-radius: 6px;" />
+                </div>
+                <div class="form-group" style="margin-bottom: 1.25rem;">
+                  <label style="color: #8B949E; font-family: monospace; font-size: 0.78rem;">Passphrase</label>
+                  <input type="password" value="secretpass123" style="background: #161B22; border: 1px solid #30363D; color: #58A6FF; font-family: monospace; padding: 10px; width: 100%; border-radius: 6px;" />
+                </div>
+                <button type="button" class="pv-btn--primary" style="width: 100%; padding: 11px; background: #238636; color: #FFFFFF; font-family: monospace; font-weight: 700; border: none; border-radius: 6px; cursor: pointer;">
+                  $ sudo session-start &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <div class="code-tabs-nav">
+                <button type="button" class="code-tab-btn is-active" data-tab-target="terminal-html">📄 HTML</button>
+                <button type="button" class="code-tab-btn" data-tab-target="terminal-css">🎨 CSS</button>
+              </div>
+              <span class="code-copy-notice">Copy clean production code</span>
+            </div>
+
+            <div class="code-tab-panel is-active" id="terminal-html">
+              <pre class="code-block" tabindex="0"><code>&lt;!-- Terminal Developer Login Card --&gt;
+&lt;div class="card-terminal"&gt;
+  &lt;div class="terminal-bar"&gt;
+    &lt;span class="dot dot-red"&gt;&lt;/span&gt;
+    &lt;span class="dot dot-yellow"&gt;&lt;/span&gt;
+    &lt;span class="dot dot-green"&gt;&lt;/span&gt;
+    &lt;span class="terminal-title"&gt;auth@cluster:~&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="terminal-body"&gt;
+    &lt;div class="cli-cmd"&gt;&gt; ./authenticate --cluster=production&lt;/div&gt;
+    &lt;form action="#" method="post"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;Username or SSH Key ID&lt;/label&gt;
+        &lt;input type="text" value="pixel_dev" class="cli-input" /&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;Passphrase&lt;/label&gt;
+        &lt;input type="password" value="••••••••" class="cli-input" /&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="cli-btn"&gt;$ sudo session-start &rarr;&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-tab-panel" id="terminal-css">
+              <pre class="code-block" tabindex="0"><code>/* Terminal Developer Auth CSS */
+.card-terminal {
+  width: 100%;
+  max-width: 440px;
+  background: #0D1117;
+  border: 1px solid #30363D;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  font-family: monospace;
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #161B22;
+  border-bottom: 1px solid #30363D;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-red { background: #FF5F56; }
+.dot-yellow { background: #FFBD2E; }
+.dot-green { background: #27C93F; }
+
+.terminal-title {
+  color: #8B949E;
+  font-size: 0.78rem;
+  margin-left: 8px;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+}
+
+.cli-cmd {
+  color: #58A6FF;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.cli-input {
+  background: #161B22;
+  border: 1px solid #30363D;
+  color: #58A6FF;
+  font-family: monospace;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.cli-input:focus {
+  border-color: #58A6FF;
+  outline: none;
+}
+
+.cli-btn {
+  width: 100%;
+  padding: 11px;
+  background: #238636;
+  color: #FFFFFF;
+  font-family: monospace;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.cli-btn:hover {
+  background: #2EA043;
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 4: Glassmorphic Floating Auth Modal -->
+        <article class="component-showcase" id="pattern-glass" style="margin-top: var(--space-12);">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">4. Frosted Glassmorphism Login Modal</h3>
+              <p class="showcase-desc">Modern frosted glass card with backdrop-filter blur, subtle luminous borders, translucent inputs, and glowing neon submit button.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Glassmorphism</span>
+              <span class="badge badge--difficulty">Modern Web 2026</span>
+            </div>
+          </div>
+
+          <div class="preview-stage" style="display: flex; justify-content: center; padding: 3rem 1rem; background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4C1D95 100%);">
+            <div style="width: 100%; max-width: 400px; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 18px; padding: 2rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+              <div style="text-align: center; margin-bottom: 1.5rem;">
+                <span style="font-size: 24px;">✨</span>
+                <h4 style="font-size: 1.45rem; font-weight: 800; color: #FFFFFF; margin: 6px 0 4px;">Welcome Back</h4>
+                <p style="font-size: 0.88rem; color: #E0E7FF; margin: 0;">Sign in to your creative workspace</p>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label style="color: #FFFFFF; font-size: 0.85rem; font-weight: 600;">Email Address</label>
+                <input type="email" placeholder="creator@studio.design" style="width: 100%; padding: 11px 14px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 8px; color: #FFFFFF; font-size: 0.92rem;" />
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label style="color: #FFFFFF; font-size: 0.85rem; font-weight: 600;">Password</label>
+                <input type="password" placeholder="••••••••••••" style="width: 100%; padding: 11px 14px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 8px; color: #FFFFFF; font-size: 0.92rem;" />
+              </div>
+
+              <button type="button" class="pv-btn--primary" style="width: 100%; padding: 12px; background: var(--primary, #8B5CF6); color: #FFFFFF; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);">
+                Enter Studio &rarr;
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <div class="code-tabs-nav">
+                <button type="button" class="code-tab-btn is-active" data-tab-target="glass-html">📄 HTML</button>
+                <button type="button" class="code-tab-btn" data-tab-target="glass-css">🎨 CSS</button>
+              </div>
+              <span class="code-copy-notice">Copy clean production code</span>
+            </div>
+
+            <div class="code-tab-panel is-active" id="glass-html">
+              <pre class="code-block" tabindex="0"><code>&lt;!-- Frosted Glassmorphism Login Card --&gt;
+&lt;div class="glass-auth-container"&gt;
+  &lt;div class="glass-card"&gt;
+    &lt;div class="glass-header"&gt;
+      &lt;span class="glass-icon"&gt;✨&lt;/span&gt;
+      &lt;h3&gt;Welcome Back&lt;/h3&gt;
+      &lt;p&gt;Sign in to your creative workspace&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;form action="#" method="post"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;Email Address&lt;/label&gt;
+        &lt;input type="email" placeholder="creator@studio.design" class="glass-input" required /&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input type="password" placeholder="••••••••••••" class="glass-input" required /&gt;
+      &lt;/div&gt;
+
+      &lt;button type="submit" class="glass-btn"&gt;Enter Studio &rarr;&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-tab-panel" id="glass-css">
+              <pre class="code-block" tabindex="0"><code>/* Frosted Glassmorphism Auth CSS */
+.glass-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4C1D95 100%);
+  padding: 2rem;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.glass-input {
+  width: 100%;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  box-sizing: border-box;
+}
+
+.glass-input:focus {
+  border-color: #A78BFA;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.3);
+  outline: none;
+}
+
+.glass-btn {
+  width: 100%;
+  padding: 12px;
+  background: #8B5CF6;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  transition: all 0.2s ease;
+}
+
+.glass-btn:hover {
+  background: #7C3AED;
+  transform: translateY(-1px);
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pattern 5: Dual Tab (Sign In / Register) Card -->
+        <article class="component-showcase" id="pattern-tabbed" style="margin-top: var(--space-12);">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h3 class="showcase-title">5. Dual-Tab (Sign In / Sign Up) Switcher Card</h3>
+              <p class="showcase-desc">Interactive tabbed authentication switcher powered completely by CSS without JavaScript. Seamlessly switch between Sign In and Create Account.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Tabbed UX</span>
+              <span class="badge badge--difficulty">Pure CSS Tabs</span>
+            </div>
+          </div>
+
+          <div class="preview-stage pv-frame--white" style="display: flex; justify-content: center; padding: 2.5rem 1rem;">
+            <div style="width: 100%; max-width: 440px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+              <div style="display: flex; background: #F1F5F9; padding: 4px; border-radius: 10px; margin-bottom: 1.5rem;">
+                <button type="button" style="flex: 1; padding: 8px; border: none; border-radius: 7px; background: #FFFFFF; font-weight: 700; font-size: 0.88rem; color: var(--primary, #2563EB); box-shadow: 0 1px 3px rgba(0,0,0,0.08); cursor: pointer;">Sign In</button>
+                <button type="button" style="flex: 1; padding: 8px; border: none; border-radius: 7px; background: transparent; font-weight: 600; font-size: 0.88rem; color: #64748B; cursor: pointer;">Create Account</button>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label style="font-size: 0.85rem; font-weight: 600; color: #1E293B;">Email Address</label>
+                <input type="email" placeholder="alex@company.com" class="form-input" style="width: 100%; padding: 10px 14px; border: 1px solid #CBD5E1; border-radius: 8px;" />
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label style="font-size: 0.85rem; font-weight: 600; color: #1E293B;">Password</label>
+                <input type="password" placeholder="••••••••••••" class="form-input" style="width: 100%; padding: 10px 14px; border: 1px solid #CBD5E1; border-radius: 8px;" />
+              </div>
+
+              <button type="button" class="pv-btn--primary btn btn-primary" style="width: 100%; padding: 11px; font-weight: 700; border-radius: 8px; justify-content: center;">
+                Log In to Account &rarr;
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <div class="code-tabs-nav">
+                <button type="button" class="code-tab-btn is-active" data-tab-target="tabbed-html">📄 HTML</button>
+                <button type="button" class="code-tab-btn" data-tab-target="tabbed-css">🎨 CSS</button>
+              </div>
+              <span class="code-copy-notice">Copy clean production code</span>
+            </div>
+
+            <div class="code-tab-panel is-active" id="tabbed-html">
+              <pre class="code-block" tabindex="0"><code>&lt;!-- Pure CSS Tabbed Auth Card --&gt;
+&lt;div class="auth-tabbed-card"&gt;
+  &lt;!-- Tab Controls --&gt;
+  &lt;div class="tab-controls"&gt;
+    &lt;button class="tab-btn active"&gt;Sign In&lt;/button&gt;
+    &lt;button class="tab-btn"&gt;Create Account&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;form action="#" method="post"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;Email Address&lt;/label&gt;
+      &lt;input type="email" placeholder="alex@company.com" required /&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;Password&lt;/label&gt;
+      &lt;input type="password" placeholder="••••••••••••" required /&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn-primary"&gt;Log In to Account &rarr;&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-tab-panel" id="tabbed-css">
+              <pre class="code-block" tabindex="0"><code>/* Tabbed Auth CSS */
+.auth-tabbed-card {
+  width: 100%;
+  max-width: 440px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.tab-controls {
+  display: flex;
+  background: #F1F5F9;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #FFFFFF;
+  color: #2563EB;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}</code></pre>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Educational Guidance Section -->
+      <section class="section" style="margin-top: var(--space-8);">
+        <div class="container">
+          <div class="grid-2" style="align-items: center; gap: var(--space-8);">
+            <div>
+              <div class="badge badge-secondary mb-2">Form Best Practices</div>
+              <h2>How to Build Accessible Authentication Forms</h2>
+              <p>
+                Authentication forms are critical paths where user trust and accessibility intersect. A great login experience requires deliberate HTML structure:
+              </p>
+              <ul style="padding-left: 1.25rem; line-height: 1.7; color: var(--text-muted);">
+                <li><strong>Always pair labels with inputs</strong> using matching <code>for</code> and <code>id</code> attributes so screen readers announce them properly.</li>
+                <li><strong>Use autocomplete tokens</strong> like <code>autocomplete="email"</code> and <code>autocomplete="current-password"</code> to support browser credential managers.</li>
+                <li><strong>Provide clear focus indicators</strong> so keyboard and switch users always know which input is currently active.</li>
+                <li><strong>Maintain high contrast ratios</strong> (minimum 4.5:1) for placeholder text and error messages.</li>
+              </ul>
+              <div style="margin-top: var(--space-4);">
+                <a href="forms.html" class="btn btn-secondary">Explore All Form Patterns &rarr;</a>
+              </div>
+            </div>
+            <div>
+              <div class="card card-glow" style="padding: var(--space-6);">
+                <h4 style="margin-top: 0; color: var(--primary);">Security &amp; UX Checklist</h4>
+                <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4);">
+                  <div style="display: flex; gap: 8px; align-items: flex-start;">
+                    <span style="color: #10B981; font-weight: 800;">✓</span>
+                    <span style="font-size: 0.9rem;"><code>type="email"</code> triggers specialized mobile keyboard layout.</span>
+                  </div>
+                  <div style="display: flex; gap: 8px; align-items: flex-start;">
+                    <span style="color: #10B981; font-weight: 800;">✓</span>
+                    <span style="font-size: 0.9rem;">Clean <code>name</code> attributes prepare form for standard POST payloads.</span>
+                  </div>
+                  <div style="display: flex; gap: 8px; align-items: flex-start;">
+                    <span style="color: #10B981; font-weight: 800;">✓</span>
+                    <span style="font-size: 0.9rem;">Non-destructive styling ensures form functions without JavaScript.</span>
+                  </div>
+                  <div style="display: flex; gap: 8px; align-items: flex-start;">
+                    <span style="color: #10B981; font-weight: 800;">✓</span>
+                    <span style="font-size: 0.9rem;">Direct link to Registration reduces onboarding friction.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+              <img src="assets/images/logo.svg" alt="PixelCraft UI" width="160" height="34" />
+            </a>
+            <p class="footer-tagline">
+              Beautiful Components. Pure HTML &amp; CSS. An open developer resource designed for clean, accessible web development.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Auth &amp; Forms</h4>
+            <ul class="footer-links">
+              <li><a href="login.html">Login Page</a></li>
+              <li><a href="register.html">Register Page</a></li>
+              <li><a href="forms.html">Form Components</a></li>
+              <li><a href="card-gallery.html">100+ Card Divs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Components</h4>
+            <ul class="footer-links">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="templates.html">20+ Templates</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Guides</h4>
+            <ul class="footer-links">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 PixelCraft UI. Academic Open Resource. Pure HTML &amp; CSS.</p>
+          <div class="footer-bottom-links">
+            <a href="about.html">Brand Kit</a>
+            <a href="getting-started.html">Quick Start</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

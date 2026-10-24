@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design Guide with Pure CSS | PixelCraft UI</title>
+    <meta name="description" content="Master mobile-first CSS architecture, CSS Grid, Flexbox, fluid clamp typography, container bounds, and responsive navigation without JavaScript." />
+    <link rel="canonical" href="https://example.com/responsive-design.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Responsive Web Design Guide with Pure CSS | PixelCraft UI" />
+    <meta property="og:description" content="A comprehensive architectural guide to building responsive, modern layouts using only HTML5 and CSS3." />
+    <meta property="og:url" content="https://example.com/responsive-design.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Responsive Web Design Guide with Pure CSS",
+      "description": "Comprehensive guide to mobile-first CSS architecture, CSS Grid, Flexbox, and fluid typography.",
+      "author": {
+        "@type": "Organization",
+        "name": "PixelCraft UI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PixelCraft UI",
+        "url": "https://example.com/"
+      },
+      "datePublished": "2026-10-20",
+      "mainEntityOfPage": "https://example.com/responsive-design.html"
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html" aria-current="page">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Guides Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="responsive-design.html" class="active">Responsive Design Guide</a></li>
+          <li><a href="accessibility.html">Accessibility Guide</a></li>
+          <li><a href="about.html">About PixelCraft</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="getting-started.html">Guides</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Responsive Design Guide</li>
+          </ol>
+        </nav>
+
+        <!-- Article Container -->
+        <article class="guide-article section" style="padding-top: 1.5rem;">
+          <header style="margin-bottom: 2rem;">
+            <span class="section-eyebrow">Architectural Curriculum</span>
+            <h1>The Complete Guide to Responsive Web Design with Pure CSS</h1>
+            <div class="guide-meta">
+              <span>Published by PixelCraft UI Editorial</span>
+              <span aria-hidden="true">&bull;</span>
+              <span>12 Min Read</span>
+              <span aria-hidden="true">&bull;</span>
+              <span>Updated October 2026</span>
+            </div>
+            <p class="lead">
+              Responsive web design is the foundational discipline of creating interfaces that adapt seamlessly across devices, from 320px mobile phones to 1440px desktop workstations. This guide explains how to achieve rock-solid responsive layouts using mobile-first CSS, CSS Grid, Flexbox, and fluid clamp math without framework overhead.
+            </p>
+          </header>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="margin-bottom: 2.5rem;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>What Is the Modern Mobile-First CSS Architecture?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                Mobile-first CSS means writing your default stylesheet for narrow viewports first (single-column flows, 100% widths, vertical stacking), and progressively enhancing the layout for wider screens using <code>min-width</code> media queries (e.g. <code>@media (min-width: 768px)</code>). This ensures smaller devices load only minimal style overrides and eliminates unwanted horizontal scrolling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 1: Mobile-First Strategy -->
+          <section>
+            <h2>1. The Mobile-First Mindset &amp; Viewport Meta Tag</h2>
+            <p>
+              Every responsive web page begins with the viewport meta tag in the <code>&lt;head&gt;</code> element:
+            </p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            <p>
+              Without this tag, mobile browsers assume a desktop viewport of 980px and scale the entire page down into unreadable, microscopic type. Once this tag is present, the browser interprets CSS pixels relative to the physical device screen.
+            </p>
+            <p>
+              In traditional desktop-first approaches, developers wrote large desktop grids and spent hours overriding them with complex <code>max-width</code> queries to fix broken mobile screens. In mobile-first design, the simplest single-column layout is your starting baseline.
+            </p>
+          </section>
+
+          <!-- Section 2: Standard Breakpoints -->
+          <section>
+            <h2>2. Standard Responsive Breakpoint Scale</h2>
+            <p>
+              Rather than targeting specific hardware devices (such as iPhone or Galaxy), modern responsive architectures target natural layout transitions based on viewport boundaries:
+            </p>
+
+            <div class="comparison-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Breakpoint</th>
+                    <th>Target Device Class</th>
+                    <th>Typical Layout Behavior</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>&lt; 480px</code></td>
+                    <td>Mobile Phones (Portrait)</td>
+                    <td>Single column, 100% width cards, full touch buttons (&ge;44px).</td>
+                  </tr>
+                  <tr>
+                    <td><code>480px &ndash; 767px</code></td>
+                    <td>Large Phones / Phablets</td>
+                    <td>Fluid containers with 16px margins, compact 2-column forms.</td>
+                  </tr>
+                  <tr>
+                    <td><code>768px &ndash; 1023px</code></td>
+                    <td>Tablets (Portrait)</td>
+                    <td>2-column card grids, horizontal headers with compressed actions.</td>
+                  </tr>
+                  <tr>
+                    <td><code>1024px &ndash; 1399px</code></td>
+                    <td>Laptops &amp; Small Desktops</td>
+                    <td>3-column cards, full horizontal nav, bento feature layouts.</td>
+                  </tr>
+                  <tr>
+                    <td><code>&ge; 1440px</code></td>
+                    <td>Large Desktops &amp; Monitors</td>
+                    <td>Constrained maximum container (1200px) with centered margins.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 3: Responsive Containers -->
+          <section>
+            <h2>3. Responsive Container Boundaries</h2>
+            <p>
+              Unconstrained full-width text lines on ultra-wide monitors reduce reading comprehension. The human eye struggles to track lines exceeding 75 characters. Always wrap content in a max-width container with auto inline margins:
+            </p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto; /* Equivalent to margin-left: auto; margin-right: auto; */
+  padding-inline: 1.5rem; /* 24px safety buffer on mobile edges */
+}</code></pre>
+          </section>
+
+          <!-- Section 4: Flexbox vs Grid -->
+          <section>
+            <h2>4. Choosing Between Flexbox &amp; CSS Grid</h2>
+            <p>
+              A common misconception among beginner developers is that CSS Grid replaces Flexbox. In reality, modern architecture pairs them harmoniously:
+            </p>
+            <div class="guide-callout">
+              <h4>The 1D vs 2D Principle</h4>
+              <p>
+                <strong>Flexbox is for 1-dimensional layouts</strong>: Aligning items along a single axis (either row or column), such as navigation links in a header, button groups, and form inputs.
+              </p>
+              <p style="margin-top: 0.5rem;">
+                <strong>CSS Grid is for 2-dimensional layouts</strong>: Distributing items across simultaneous rows and columns, such as card directories, bento boards, and complex application templates.
+              </p>
+            </div>
+
+            <p>Here is the legendary CSS Grid auto-fit rule used throughout PixelCraft UI:</p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>/* Self-Responsive Grid (Zero Media Queries Required!) */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+            <p>
+              This single CSS rule automatically calculates the number of columns that can fit into the current screen width. On a 320px phone, it produces 1 column. On a 768px tablet, it produces 2 columns. On a 1200px desktop, it renders 4 columns—all without writing a single media query!
+            </p>
+          </section>
+
+          <!-- Section 5: Fluid Typography -->
+          <section>
+            <h2>5. Fluid Typography with CSS clamp()</h2>
+            <p>
+              Instead of manually updating heading font sizes across 4 separate breakpoints, modern CSS uses <code>clamp(min, preferred, max)</code>:
+            </p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>/* Fluid H1 Heading */
+h1 {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  line-height: 1.2;
+}</code></pre>
+            <p>
+              In this formula:
+            </p>
+            <ul>
+              <li><strong>2rem (32px)</strong>: The minimum size on small mobile screens.</li>
+              <li><strong>3.8vw</strong>: The fluid viewport scaler that smoothly grows with the screen width.</li>
+              <li><strong>3.25rem (52px)</strong>: The maximum ceiling on large desktop displays.</li>
+            </ul>
+          </section>
+
+          <!-- Section 6: Common Responsive Mistakes -->
+          <section>
+            <h2>6. Top 5 Responsive Design Mistakes to Avoid</h2>
+            <ol>
+              <li>
+                <strong>Fixed Pixel Widths</strong>: Setting <code>width: 600px;</code> on a card or image breaks immediately on phones with 375px screens. Always use <code>max-width: 600px; width: 100%;</code> instead.
+              </li>
+              <li>
+                <strong>Neglecting Overflow-X</strong>: Unconstrained code blocks, large data tables, or long URLs can force the entire body to scroll horizontally. Always apply <code>overflow-x: auto;</code> to pre blocks and data tables.
+              </li>
+              <li>
+                <strong>Hover-Only Navigation</strong>: Touchscreens cannot hover. If a dropdown menu only reveals on <code>:hover</code>, mobile users cannot open it. Use native HTML <code>&lt;details&gt;&lt;summary&gt;</code> instead.
+              </li>
+              <li>
+                <strong>Tiny Touch Targets</strong>: Buttons smaller than 40px lead to frustrating mis-taps. Ensure buttons have comfortable padding (minimum 10px vertical, 18px horizontal).
+              </li>
+              <li>
+                <strong>Using PX for Line-Height</strong>: Setting <code>line-height: 24px;</code> causes text overlapping if user browser preferences enlarge the base font size. Use unitless line heights like <code>line-height: 1.6;</code>.
+              </li>
+            </ol>
+          </section>
+
+          <!-- Navigation CTA -->
+          <footer style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <a href="getting-started.html" class="btn btn-secondary">&larr; Getting Started Guide</a>
+            <a href="accessibility.html" class="btn btn-primary">Next: Web Accessibility Guide &rarr;</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

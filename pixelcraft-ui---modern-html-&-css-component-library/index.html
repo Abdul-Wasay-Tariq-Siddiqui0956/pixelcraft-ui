@@ -1,0 +1,1479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelCraft UI — Free HTML &amp; CSS Component Library</title>
+    <meta name="description" content="A free, modern HTML5 and CSS3 component library with 15 interconnected pages, zero JavaScript, accessible patterns, and responsive layouts." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/index.html" />
+    
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <!-- Master Stylesheet (Local + Web Server Safe) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script><!-- Open Graph & Twitter Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PixelCraft UI — Free HTML &amp; CSS Component Library" />
+    <meta property="og:description" content="Modern, framework-free component library built with semantic HTML5 and accessible CSS3. 15 interconnected pages and guides." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/index.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <!-- Google Fonts Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- Structured Data (JSON-LD WebSite) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PixelCraft UI",
+      "url": "https://example.com/pixelcraft-ui/",
+      "description": "Free, accessible HTML5 and CSS3 component library for students and developers.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/pixelcraft-ui/components.html#categories",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to Content Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="templates.html">Templates (30+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main">
+      <!-- Hero Section -->
+      <section class="section section--hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div style="max-width: 860px; margin-inline: auto; text-align: center;">
+            <span class="section-eyebrow">
+              <img src="assets/icons/layers.svg" alt="" width="14" height="14" aria-hidden="true" />
+              Academic Design System &middot; Pure HTML5 &amp; CSS3
+            </span>
+            <h1 id="hero-title">Build Better Interfaces with Pure HTML &amp; CSS</h1>
+            <p class="lead" style="margin-bottom: var(--space-8);">
+              PixelCraft UI is a free, modern component library designed for web design students, beginner frontend developers, and freelance creators. Learn how to craft responsive, accessible layouts and design systems using clean web standards—with zero JavaScript runtime overhead.
+            </p>
+            <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-8);">
+              <a href="templates.html" class="btn btn-primary btn-lg">
+                Explore 30+ Website Templates
+                <img src="assets/icons/arrow-right.svg" alt="" width="18" height="18" aria-hidden="true" style="stroke: #FFFFFF;" />
+              </a>
+              <a href="components.html" class="btn btn-secondary btn-lg">
+                Component Library (40+)
+              </a>
+              <a href="card-gallery.html" class="btn btn-secondary btn-lg">
+                100+ Cards Gallery
+              </a>
+            </div>
+
+            <!-- Direct-Answer AEO Intro Box -->
+            <div class="alert alert--info" style="text-align: left; box-shadow: var(--shadow-1);">
+              <img src="assets/icons/book.svg" alt="" class="notice-icon" aria-hidden="true" />
+              <div>
+                <strong style="color: var(--text); display: block; margin-bottom: 0.25rem;">What is PixelCraft UI and who does it help?</strong>
+                <span>PixelCraft UI is an open educational resource offering 15 interconnected HTML pages and dozens of modular CSS components. It helps learners master semantic markup, Flexbox, CSS Grid, mobile-first queries, and WCAG 2.1 AA accessibility through real, readable code that runs natively in any browser.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Component Categories Section -->
+      <section class="section" id="categories" style="background-color: var(--surface); border-bottom: 1px solid var(--border);" aria-labelledby="categories-heading">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 720px; margin-inline: auto;">
+            <span class="section-eyebrow">Component Collections</span>
+            <h2 id="categories-heading">Explore Core Component Collections</h2>
+            <p>Every pattern is crafted with valid semantic HTML5 elements and CSS custom properties. Inspect the live preview, select the code snippet, and paste directly into your project.</p>
+          </div>
+
+          <div class="grid grid-cards">
+            <!-- Navigation Bars Card -->
+            <article class="card card--interactive">
+              <div class="mini-preview">
+                <div style="background: #FFFFFF; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; width: 92%; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow-1);">
+                  <div style="display: flex; align-items: center; gap: 4px;">
+                    <span style="width: 10px; height: 10px; border-radius: 2px; background: var(--primary);"></span>
+                    <span style="font-size: 10px; font-weight: 700;">Brand</span>
+                  </div>
+                  <div style="display: flex; gap: 6px; font-size: 8px; color: var(--text-muted);">
+                    <span>Home</span>
+                    <span>Docs</span>
+                  </div>
+                  <span style="background: var(--primary); color: #fff; font-size: 7px; padding: 2px 6px; border-radius: 3px; font-weight: 600;">Action</span>
+                </div>
+              </div>
+              <span class="badge badge--primary" style="margin-bottom: var(--space-3); width: fit-content;">5 Patterns</span>
+              <h3 class="card__title"><a href="navbar-components.html">Navigation Bars</a></h3>
+              <p class="card__text">Accessible header patterns including minimal bars, SaaS layouts, e-commerce headers, and CSS-only mobile navigation drawers.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Semantic &lt;header&gt;</span>
+                <a href="navbar-components.html" class="btn btn-secondary btn-sm">View Navbars &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Forms Card -->
+            <article class="card card--interactive">
+              <div class="mini-preview">
+                <div style="background: #FFFFFF; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; width: 88%; box-shadow: var(--shadow-1);">
+                  <div style="font-size: 8px; font-weight: 700; margin-bottom: 4px;">Sign In</div>
+                  <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: 3px; height: 14px; margin-bottom: 4px; display: flex; align-items: center; padding-left: 4px; font-size: 7px; color: var(--text-muted);">email@example.com</div>
+                  <div style="background: var(--primary); border-radius: 3px; height: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 7px; font-weight: 600;">Submit</div>
+                </div>
+              </div>
+              <span class="badge badge--accent" style="margin-bottom: var(--space-3); width: fit-content;">5 Form Types</span>
+              <h3 class="card__title"><a href="forms.html">Login &amp; Signup Forms</a></h3>
+              <p class="card__text">Accessible authentication and contact forms with explicit labels, native HTML5 validation, and high-contrast focus rings.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Frontend UI Demo</span>
+                <a href="forms.html" class="btn btn-secondary btn-sm">View Forms &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Pricing Cards -->
+            <article class="card card--interactive">
+              <div class="mini-preview">
+                <div style="display: flex; gap: 6px; width: 92%; justify-content: center;">
+                  <div style="background: #FFFFFF; border: 1px solid var(--border); border-radius: 4px; padding: 6px; flex: 1; text-align: center; box-shadow: var(--shadow-1);">
+                    <div style="font-size: 7px; color: var(--text-muted);">Free</div>
+                    <div style="font-size: 11px; font-weight: 700; color: var(--text);">$0</div>
+                  </div>
+                  <div style="background: #FFFFFF; border: 1px solid var(--primary); border-radius: 4px; padding: 6px; flex: 1; text-align: center; box-shadow: var(--shadow-2);">
+                    <div style="font-size: 7px; color: var(--primary); font-weight: 700;">Pro</div>
+                    <div style="font-size: 11px; font-weight: 700; color: var(--primary);">$19</div>
+                  </div>
+                </div>
+              </div>
+              <span class="badge badge--primary" style="margin-bottom: var(--space-3); width: fit-content;">4 Tier Layouts</span>
+              <h3 class="card__title"><a href="pricing-cards.html">Pricing Cards</a></h3>
+              <p class="card__text">Three-tier SaaS pricing cards, featured plan highlights, and feature comparison tables built with responsive CSS Grid.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">CSS Grid Layout</span>
+                <a href="pricing-cards.html" class="btn btn-secondary btn-sm">View Pricing &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Footers Card -->
+            <article class="card card--interactive">
+              <div class="mini-preview">
+                <div style="background: var(--dark); border-radius: 6px; padding: 8px 12px; width: 92%; color: #fff; box-shadow: var(--shadow-1);">
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                    <div style="width: 25px; height: 4px; background: #fff; border-radius: 1px;"></div>
+                    <div style="display: flex; gap: 4px;">
+                      <div style="width: 12px; height: 3px; background: #626B7A; border-radius: 1px;"></div>
+                      <div style="width: 12px; height: 3px; background: #626B7A; border-radius: 1px;"></div>
+                    </div>
+                  </div>
+                  <div style="width: 100%; height: 1px; background: #242E4C; margin-bottom: 4px;"></div>
+                  <div style="font-size: 6px; color: #626B7A;">&copy; 2026 PixelCraft UI</div>
+                </div>
+              </div>
+              <span class="badge badge--accent" style="margin-bottom: var(--space-3); width: fit-content;">5 Footers</span>
+              <h3 class="card__title"><a href="footer-components.html">Footer Components</a></h3>
+              <p class="card__text">Semantic footer components with multi-column layouts, newsletter forms, accessible links, and responsive auto-stacking.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Semantic &lt;footer&gt;</span>
+                <a href="footer-components.html" class="btn btn-secondary btn-sm">View Footers &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Complete Website Templates Showcase (24+ Layouts) -->
+      <section class="section" id="featured-templates" style="border-bottom: 1px solid var(--border);" aria-labelledby="featured-templates-heading">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 800px; margin-inline: auto;">
+            <span class="section-eyebrow">
+              <img src="assets/icons/layout.svg" alt="" width="14" height="14" aria-hidden="true" />
+              Complete Website Templates (30+ Full Layouts)
+            </span>
+            <h2 id="featured-templates-heading">Production-Ready Website Architectures</h2>
+            <p>Every template is an end-to-end web layout engineered with semantic <code>&lt;header&gt;</code>, content landmarks, and full multi-column <code>&lt;footer&gt;</code>. Ready to inspect, customize, and copy with zero JavaScript dependencies.</p>
+          </div>
+
+          <!-- Interactive Category Filter Tabs -->
+          <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-8); flex-wrap: wrap;">
+            <button type="button" class="filter-tab-pill is-active" data-filter="all">All Templates (32)</button>
+            <button type="button" class="filter-tab-pill" data-filter="saas">SaaS &amp; AI Tech</button>
+            <button type="button" class="filter-tab-pill" data-filter="ecommerce">E-Commerce &amp; Retail</button>
+            <button type="button" class="filter-tab-pill" data-filter="agency">Agency &amp; Creative</button>
+            <button type="button" class="filter-tab-pill" data-filter="portal">Dashboards &amp; Docs</button>
+          </div>
+
+          <!-- Template Cards Grid -->
+          <div class="grid grid-cols-2" style="gap: var(--space-6);">
+            <!-- Card 1: FlowScale Cloud SaaS -->
+            <article class="template-browser-frame" data-template-category="saas">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://flowscale.cloud/preview</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #FAFAFA;">
+                <!-- Mini FlowScale Layout -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                  <!-- Sticky Header -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid #F1F5F9; background: #FFFFFF;">
+                    <div style="font-weight: 800; font-size: 0.9rem; color: #0F172A; display: flex; align-items: center; gap: 6px;">
+                      <span style="color: #6C5CE7; font-size: 14px;">◆</span> FlowScale
+                    </div>
+                    <div style="display: flex; gap: 10px; font-size: 0.72rem; color: #64748B;">
+                      <span style="color: #0F172A; font-weight: 600;">Features</span>
+                      <span>Pricing</span>
+                      <span>Docs</span>
+                    </div>
+                    <span style="background: #6C5CE7; color: #FFF; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; font-weight: 600;">Get Started</span>
+                  </div>
+                  <!-- Hero & Features -->
+                  <div style="padding: 18px 14px; text-align: center; background: radial-gradient(circle at top, rgba(108,92,231,0.08), transparent 70%);">
+                    <span style="font-size: 0.68rem; background: #EEF2FF; color: #4F46E5; padding: 2px 8px; border-radius: 9999px; font-weight: 700;">v4.2 Cloud Engine Live</span>
+                    <h4 style="font-size: 1.1rem; font-weight: 800; margin: 6px 0 4px; color: #0F172A;">Scale APIs with Zero Infrastructure Fatigue</h4>
+                    <p style="font-size: 0.76rem; color: #64748B; margin: 0 0 10px;">Automated auto-scaling, distributed caching, and real-time observability.</p>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; text-align: left;">
+                      <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.68rem;">
+                        <strong style="display: block; color: #0F172A;">99.99%</strong> Uptime SLA
+                      </div>
+                      <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.68rem;">
+                        <strong style="display: block; color: #0F172A;">&lt; 12ms</strong> P99 Latency
+                      </div>
+                      <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.68rem;">
+                        <strong style="display: block; color: #0F172A;">Zero</strong> Lock-in
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Complete Mini Footer -->
+                  <div style="background: #0F172A; color: #94A3B8; padding: 12px 14px; font-size: 0.65rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                      <div><strong style="color: #FFF;">FlowScale Cloud</strong> &middot; Multi-Region Serverless</div>
+                      <div style="display: flex; gap: 8px;"><span>Privacy</span><span>Terms</span><span>Status</span></div>
+                    </div>
+                    <div style="color: #64748B;">&copy; 2026 FlowScale Technologies, Inc. All rights reserved.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">1. FlowScale SaaS Platform</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Sticky Header + Hero + 3 Metrics + 4-Col Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-saas" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-saas">Copy Full HTML</button>
+                </div>
+              </div>
+              <!-- Embedded Pure HTML Code for 1-Click Copy -->
+              <pre id="code-tpl-saas" style="display: none;"><code>&lt;!-- FlowScale SaaS Complete Template Architecture --&gt;
+&lt;header class="saas-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;div class="brand"&gt;&lt;span&gt;◆&lt;/span&gt; FlowScale&lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#features"&gt;Features&lt;/a&gt;
+      &lt;a href="#pricing"&gt;Pricing&lt;/a&gt;
+      &lt;a href="#docs"&gt;Docs&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;a href="#signup" class="btn btn-primary"&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section class="saas-hero"&gt;
+    &lt;span class="badge"&gt;v4.2 Cloud Engine Live&lt;/span&gt;
+    &lt;h1&gt;Scale APIs with Zero Infrastructure Fatigue&lt;/h1&gt;
+    &lt;p&gt;Automated auto-scaling, distributed caching, and real-time observability.&lt;/p&gt;
+    &lt;div class="metrics-grid"&gt;
+      &lt;div class="metric"&gt;&lt;strong&gt;99.99%&lt;/strong&gt; Uptime SLA&lt;/div&gt;
+      &lt;div class="metric"&gt;&lt;strong&gt;&amp;lt; 12ms&lt;/strong&gt; P99 Latency&lt;/div&gt;
+      &lt;div class="metric"&gt;&lt;strong&gt;Zero&lt;/strong&gt; Vendor Lock-in&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer class="saas-footer"&gt;
+  &lt;div class="container footer-top"&gt;
+    &lt;div&gt;&lt;h4&gt;FlowScale Cloud&lt;/h4&gt;&lt;p&gt;Multi-region cloud runtime.&lt;/p&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;a href="#privacy"&gt;Privacy&lt;/a&gt;&lt;a href="#terms"&gt;Terms&lt;/a&gt;&lt;a href="#status"&gt;Status&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer-bottom container"&gt;
+    &lt;p&gt;&amp;copy; 2026 FlowScale Technologies, Inc. All rights reserved.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+
+            <!-- Card 2: Synthetix Neural AI Engine -->
+            <article class="template-browser-frame" data-template-category="saas">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://synthetix.ai/engine</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #0A0D14;">
+                <!-- Mini Synthetix Layout (Dark Theme) -->
+                <div style="background: #111625; border: 1px solid #1E293B; border-radius: 8px; overflow: hidden; color: #FFF;">
+                  <!-- Glass Header -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid #1E293B; background: rgba(17,22,37,0.9);">
+                    <div style="font-weight: 800; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
+                      <span style="color: #38BDF8;">✦</span> SYNTHETIX.AI
+                    </div>
+                    <div style="display: flex; gap: 10px; font-size: 0.72rem; color: #94A3B8;">
+                      <span>Models</span>
+                      <span>Playground</span>
+                      <span>Docs</span>
+                    </div>
+                    <span style="background: #38BDF8; color: #0F172A; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; font-weight: 700;">Launch App</span>
+                  </div>
+                  <!-- Hero & Terminal -->
+                  <div style="padding: 18px 14px; text-align: center;">
+                    <span style="font-size: 0.68rem; background: rgba(56,189,248,0.15); color: #38BDF8; padding: 2px 8px; border-radius: 9999px; font-weight: 700;">Omni-Modal Frontier 2.5</span>
+                    <h4 style="font-size: 1.1rem; font-weight: 800; margin: 6px 0 4px; color: #FFF;">Autonomous Multi-Agent Orchestration</h4>
+                    <p style="font-size: 0.76rem; color: #94A3B8; margin: 0 0 10px;">Sub-50ms reasoning inference with integrated tool evaluation.</p>
+                    <div style="background: #080A10; border: 1px solid #1E293B; border-radius: 6px; padding: 8px 10px; text-align: left; font-family: monospace; font-size: 0.68rem; color: #38BDF8;">
+                      $ synthetix deploy --cluster=gpu-h100-8x<br />
+                      <span style="color: #34D399;">✓ Inference cluster ready (Latency: 24ms)</span>
+                    </div>
+                  </div>
+                  <!-- Mini Status Footer -->
+                  <div style="background: #080A10; border-top: 1px solid #1E293B; padding: 10px 14px; font-size: 0.65rem; color: #64748B; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: #34D399;">● All Inference Clusters Operational</span>
+                    <span>&copy; 2026 Synthetix AI Labs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">2. Synthetix AI Startup</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Dark Aesthetic + Terminal Box + System Health Status Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-ai" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-ai">Copy Full HTML</button>
+                </div>
+              </div>
+              <pre id="code-tpl-ai" style="display: none;"><code>&lt;!-- Synthetix AI Complete Template Architecture --&gt;
+&lt;header class="ai-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;div class="brand"&gt;&lt;span&gt;✦&lt;/span&gt; SYNTHETIX.AI&lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#models"&gt;Models&lt;/a&gt;
+      &lt;a href="#playground"&gt;Playground&lt;/a&gt;
+      &lt;a href="#docs"&gt;Docs&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;a href="#app" class="btn btn-primary"&gt;Launch App&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section class="ai-hero"&gt;
+    &lt;span class="badge"&gt;Omni-Modal Frontier 2.5&lt;/span&gt;
+    &lt;h1&gt;Autonomous Multi-Agent Orchestration&lt;/h1&gt;
+    &lt;div class="terminal-box"&gt;
+      &lt;code&gt;$ synthetix deploy --cluster=gpu-h100-8x&lt;/code&gt;
+      &lt;span class="status"&gt;✓ Cluster ready (Latency: 24ms)&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer class="ai-footer"&gt;
+  &lt;div class="container footer-wrap"&gt;
+    &lt;span class="status-indicator"&gt;● All Inference Clusters Operational&lt;/span&gt;
+    &lt;p&gt;&amp;copy; 2026 Synthetix AI Labs Inc.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+
+            <!-- Card 3: Lumina Gear E-Commerce Store -->
+            <article class="template-browser-frame" data-template-category="ecommerce">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://luminagear.shop/collection</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #FAFAFA;">
+                <!-- Mini Lumina Gear Layout -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden;">
+                  <!-- Announcement Bar -->
+                  <div style="background: #0F172A; color: #FFF; text-align: center; padding: 4px; font-size: 0.65rem; font-weight: 700;">
+                    ⚡ SPRING SALE: 25% OFF CODE "PIXEL25" + FREE SHIPPING
+                  </div>
+                  <!-- Nav -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; border-bottom: 1px solid #F1F5F9;">
+                    <strong style="font-size: 0.88rem; color: #0F172A;">LUMINA GEAR</strong>
+                    <div style="display: flex; gap: 8px; font-size: 0.7rem; color: #64748B;">
+                      <span>Apparel</span><span>Gear</span><span style="color: #EF4444; font-weight: 700;">Sale</span>
+                    </div>
+                    <span style="background: #EEF2FF; color: #2563EB; font-size: 0.68rem; padding: 2px 6px; border-radius: 4px; font-weight: 700;">🛒 2 Items</span>
+                  </div>
+                  <!-- Product Showcase -->
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px;">
+                    <div style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 8px; background: #FFF;">
+                      <div style="height: 50px; background: #F1F5F9; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 4px;">🎒</div>
+                      <div style="font-weight: 700; font-size: 0.72rem;">Urban Commuter</div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                        <span style="font-weight: 800; font-size: 0.75rem;">$89.00</span>
+                        <span style="background: #2563EB; color: #FFF; font-size: 0.62rem; padding: 2px 6px; border-radius: 3px;">+ Add</span>
+                      </div>
+                    </div>
+                    <div style="border: 1px solid #E2E8F0; border-radius: 6px; padding: 8px; background: #FFF;">
+                      <div style="height: 50px; background: #F1F5F9; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 4px;">👟</div>
+                      <div style="font-weight: 700; font-size: 0.72rem;">Carbon Trail Runner</div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                        <span style="font-weight: 800; font-size: 0.75rem;">$124.00</span>
+                        <span style="background: #2563EB; color: #FFF; font-size: 0.62rem; padding: 2px 6px; border-radius: 3px;">+ Add</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Mini Retail Footer -->
+                  <div style="background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 10px 14px; font-size: 0.65rem; color: #64748B; display: flex; justify-content: space-between; align-items: center;">
+                    <span>&copy; 2026 Lumina Gear International Co.</span>
+                    <span>Cards: VISA • Mastercard • PayPal</span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">4. Modern E-Commerce Storefront</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Promo Topbar + Product Cards + 4-Column Commercial Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-ecommerce" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-ecom">Copy Full HTML</button>
+                </div>
+              </div>
+              <pre id="code-tpl-ecom" style="display: none;"><code>&lt;!-- Lumina Gear E-Commerce Complete Architecture --&gt;
+&lt;div class="announcement-bar"&gt;
+  &lt;p&gt;⚡ SPRING SALE: 25% OFF CODE "PIXEL25" + FREE SHIPPING&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;header class="store-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;a href="#" class="brand"&gt;LUMINA GEAR&lt;/a&gt;
+    &lt;nav&gt;
+      &lt;a href="#apparel"&gt;Apparel&lt;/a&gt;
+      &lt;a href="#accessories"&gt;Accessories&lt;/a&gt;
+      &lt;a href="#sale" class="sale"&gt;Sale&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;a href="#cart" class="cart-pill"&gt;🛒 2 Items&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main class="store-main container"&gt;
+  &lt;div class="products-grid"&gt;
+    &lt;article class="product-card"&gt;
+      &lt;div class="img-wrap"&gt;🎒&lt;/div&gt;
+      &lt;h3&gt;Urban Commuter Backpack&lt;/h3&gt;
+      &lt;div class="price-row"&gt;&lt;span&gt;$89.00&lt;/span&gt;&lt;button&gt;Add to Cart&lt;/button&gt;&lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;footer class="store-footer"&gt;
+  &lt;div class="container footer-wrap"&gt;
+    &lt;div&gt;&lt;h4&gt;Lumina Gear&lt;/h4&gt;&lt;p&gt;Technical lifestyle apparel.&lt;/p&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;p&gt;VISA • Mastercard • Apple Pay • PayPal&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+
+            <!-- Card 4: Nova Creative Agency -->
+            <article class="template-browser-frame" data-template-category="agency">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://novastudio.design/agency</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #FFFFFF;">
+                <!-- Mini Nova Layout -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden;">
+                  <!-- Nav -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid #F1F5F9;">
+                    <strong style="font-size: 0.9rem; color: #0F172A; letter-spacing: -0.02em;">NOVA STUDIO</strong>
+                    <div style="display: flex; gap: 10px; font-size: 0.72rem; color: #64748B;">
+                      <span style="color: #0F172A; font-weight: 700;">Cases</span><span>Studio</span><span>Insights</span>
+                    </div>
+                    <span style="border: 1px solid #0F172A; color: #0F172A; font-size: 0.68rem; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Start Project</span>
+                  </div>
+                  <!-- Hero -->
+                  <div style="padding: 18px 14px; background: radial-gradient(circle at top right, rgba(108,92,231,0.06), transparent 70%);">
+                    <span style="font-size: 0.68rem; color: #6C5CE7; font-weight: 800; text-transform: uppercase;">✦ Brand Strategy &amp; Experience</span>
+                    <h4 style="font-size: 1.15rem; font-weight: 900; margin: 4px 0 6px; color: #0F172A;">We craft iconic identities for tomorrow's leaders.</h4>
+                    <p style="font-size: 0.75rem; color: #64748B; margin: 0 0 10px;">Human-centric research, brand design systems, and rapid prototyping.</p>
+                    <div style="display: flex; gap: 6px;">
+                      <span style="background: #0F172A; color: #FFF; font-size: 0.68rem; padding: 3px 8px; border-radius: 4px; font-weight: 600;">Selected Works (42)</span>
+                      <span style="border: 1px solid #E2E8F0; color: #475569; font-size: 0.68rem; padding: 3px 8px; border-radius: 4px;">About Studio</span>
+                    </div>
+                  </div>
+                  <!-- Mini Agency Footer -->
+                  <div style="background: #0F172A; color: #94A3B8; padding: 10px 14px; font-size: 0.65rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div><strong style="color: #FFF;">NOVA STUDIO</strong> &middot; London &bull; New York &bull; Tokyo</div>
+                    <div style="color: #6C5CE7; font-weight: 700;">hello@novastudio.design</div>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">5. Creative Agency &amp; Studio</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Editorial Header + Case Studies + Global Studio Inquiries Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-agency" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-agency">Copy Full HTML</button>
+                </div>
+              </div>
+              <pre id="code-tpl-agency" style="display: none;"><code>&lt;!-- Nova Creative Agency Complete Architecture --&gt;
+&lt;header class="agency-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;a href="#" class="brand"&gt;NOVA STUDIO&lt;/a&gt;
+    &lt;nav&gt;&lt;a href="#cases"&gt;Cases&lt;/a&gt;&lt;a href="#studio"&gt;Studio&lt;/a&gt;&lt;/nav&gt;
+    &lt;a href="#contact" class="btn"&gt;Start Project&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section class="agency-hero"&gt;
+    &lt;h1&gt;We craft iconic identities for tomorrow's leaders.&lt;/h1&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer class="agency-footer"&gt;
+  &lt;div class="container footer-wrap"&gt;
+    &lt;p&gt;London &middot; New York &middot; Tokyo &middot; hello@novastudio.design&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+
+            <!-- Card 5: Pulse SaaS Admin Workspace -->
+            <article class="template-browser-frame" data-template-category="portal">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://pulse.workspace.app/analytics</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #F8FAFC;">
+                <!-- Mini Pulse Admin Layout -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden;">
+                  <!-- Topbar -->
+                  <div style="background: #0F172A; color: #FFF; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem;">
+                    <div style="display: flex; align-items: center; gap: 6px; font-weight: 800;">
+                      <span style="color: #6366F1;">⚡</span> PULSE WORKSPACE
+                    </div>
+                    <span style="background: #1E293B; padding: 2px 6px; border-radius: 3px; font-size: 0.65rem; color: #94A3B8;">Search (⌘K)</span>
+                    <span style="width: 20px; height: 20px; border-radius: 50%; background: #6366F1; display: inline-flex; align-items: center; justify-content: center; font-weight: 700;">JS</span>
+                  </div>
+                  <!-- Content Body -->
+                  <div style="display: grid; grid-template-columns: 80px 1fr; min-height: 120px;">
+                    <div style="background: #FAFAFA; border-right: 1px solid #E2E8F0; padding: 8px; font-size: 0.65rem; display: flex; flex-direction: column; gap: 6px;">
+                      <strong style="color: #4F46E5;">📊 Hub</strong>
+                      <span style="color: #64748B;">👥 Users</span>
+                      <span style="color: #64748B;">💳 Plans</span>
+                      <span style="color: #64748B;">🔑 API</span>
+                    </div>
+                    <div style="padding: 10px;">
+                      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px;">
+                        <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.65rem;">
+                          <div style="color: #64748B;">MRR</div>
+                          <strong style="font-size: 0.82rem; color: #0F172A;">$42.8k</strong>
+                        </div>
+                        <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.65rem;">
+                          <div style="color: #64748B;">Users</div>
+                          <strong style="font-size: 0.82rem; color: #0F172A;">1,280</strong>
+                        </div>
+                        <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px; font-size: 0.65rem;">
+                          <div style="color: #64748B;">Latency</div>
+                          <strong style="font-size: 0.82rem; color: #10B981;">24ms</strong>
+                        </div>
+                      </div>
+                      <div style="border: 1px solid #F1F5F9; border-radius: 4px; padding: 6px; font-size: 0.65rem; display: flex; justify-content: space-between;">
+                        <span>Acme Corp &middot; Enterprise Tier</span>
+                        <strong style="color: #10B981;">$1,200/mo</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Admin Footer -->
+                  <div style="background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 6px 12px; font-size: 0.62rem; color: #64748B; display: flex; justify-content: space-between;">
+                    <span style="color: #10B981;">● All nodes operational &middot; 18ms</span>
+                    <span>Pulse v3.2.0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">23. SaaS Admin Web App Workspace</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Topbar + Sidebar Nav + KPI Cards + Data Table + Cluster Health Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-admin-workspace" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-admin">Copy Full HTML</button>
+                </div>
+              </div>
+              <pre id="code-tpl-admin" style="display: none;"><code>&lt;!-- SaaS Admin Workspace Architecture --&gt;
+&lt;header class="admin-topbar"&gt;
+  &lt;div class="brand"&gt;&lt;span&gt;⚡&lt;/span&gt; PULSE WORKSPACE&lt;/div&gt;
+  &lt;div class="search"&gt;&lt;input type="search" placeholder="Quick search..." /&gt;&lt;/div&gt;
+  &lt;div class="avatar"&gt;JS&lt;/div&gt;
+&lt;/header&gt;
+&lt;div class="admin-layout"&gt;
+  &lt;aside class="admin-sidebar"&gt;
+    &lt;nav&gt;
+      &lt;a href="#metrics" class="active"&gt;📊 Metrics Hub&lt;/a&gt;
+      &lt;a href="#users"&gt;👥 Customers&lt;/a&gt;
+      &lt;a href="#api"&gt;🔑 API Keys&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+  &lt;main class="admin-main"&gt;
+    &lt;div class="kpi-grid"&gt;
+      &lt;div class="kpi"&gt;&lt;span&gt;MRR&lt;/span&gt;&lt;strong&gt;$42,850&lt;/strong&gt;&lt;/div&gt;
+      &lt;div class="kpi"&gt;&lt;span&gt;Subscriptions&lt;/span&gt;&lt;strong&gt;1,280&lt;/strong&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+&lt;footer class="admin-footer"&gt;
+  &lt;p&gt;● All cluster nodes operational &middot; 18ms &middot; Pulse Enterprise v3.2&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+
+            <!-- Card 6: DevDocs Technical API Knowledgebase -->
+            <article class="template-browser-frame" data-template-category="portal">
+              <div class="browser-header">
+                <div class="browser-traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="browser-address-bar">https://devdocs.io/api/v1/completions</div>
+              </div>
+              <div class="browser-canvas" style="padding: 16px; background: #FFFFFF;">
+                <!-- Mini DevDocs Layout -->
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden;">
+                  <!-- Topbar -->
+                  <div style="padding: 8px 12px; border-bottom: 1px solid #E2E8F0; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem;">
+                    <div style="font-weight: 800; color: #0F172A; display: flex; align-items: center; gap: 6px;">
+                      <span style="color: #6366F1;">❖</span> DEVDOCS API <span style="font-size: 0.62rem; background: #F1F5F9; padding: 1px 4px; border-radius: 3px;">v2.4.0</span>
+                    </div>
+                    <span style="color: #64748B; font-size: 0.65rem;">★ 12.4k GitHub</span>
+                    <span style="background: #6366F1; color: #FFF; font-size: 0.65rem; padding: 2px 6px; border-radius: 3px;">Get API Key</span>
+                  </div>
+                  <!-- Content Body -->
+                  <div style="display: grid; grid-template-columns: 85px 1fr; min-height: 120px;">
+                    <div style="background: #F8FAFC; border-right: 1px solid #E2E8F0; padding: 8px; font-size: 0.65rem; display: flex; flex-direction: column; gap: 4px;">
+                      <strong style="color: #4F46E5;">Chat POST</strong>
+                      <span style="color: #64748B;">Models GET</span>
+                      <span style="color: #64748B;">Embeddings</span>
+                      <span style="color: #64748B;">Webhooks</span>
+                    </div>
+                    <div style="padding: 10px;">
+                      <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 6px;">
+                        <span style="background: #10B981; color: #FFF; font-size: 0.6rem; font-weight: 800; padding: 1px 4px; border-radius: 2px;">POST</span>
+                        <code style="font-size: 0.68rem; font-weight: 700;">/v1/chat/completions</code>
+                      </div>
+                      <div style="background: #0F172A; color: #38BDF8; padding: 6px; border-radius: 4px; font-size: 0.62rem; font-family: monospace;">
+                        { "id": "chatcmpl-92xL", "choices": [{ "message": { "role": "assistant" } }] }
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Doc Feedback Footer -->
+                  <div style="background: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 6px 12px; font-size: 0.62rem; color: #64748B; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Helpful? 👍 Yes &middot; 👎 No</span>
+                    <span style="color: #4F46E5;">✏️ Edit on GitHub</span>
+                  </div>
+                </div>
+              </div>
+              <div class="template-card-actions">
+                <div>
+                  <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text);">24. Developer Documentation &amp; API Hub</h4>
+                  <span style="font-size: 0.75rem; color: var(--text-muted);">Doc Search + Nested Tree + HTTP Endpoint + Reader Feedback Footer</span>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="templates.html#tpl-developer-docs" class="btn btn-secondary btn-sm">Inspect Template &rarr;</a>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-tpl-docs">Copy Full HTML</button>
+                </div>
+              </div>
+              <pre id="code-tpl-docs" style="display: none;"><code>&lt;!-- Developer Documentation Architecture --&gt;
+&lt;header class="docs-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;div class="brand"&gt;&lt;span&gt;❖&lt;/span&gt; DEVDOCS API &lt;span class="v"&gt;v2.4.0&lt;/span&gt;&lt;/div&gt;
+    &lt;input type="search" placeholder="Search endpoints... (⌘K)" /&gt;
+    &lt;a href="/keys" class="btn btn-primary"&gt;Get API Key&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;div class="docs-layout container"&gt;
+  &lt;aside class="docs-sidebar"&gt;
+    &lt;nav&gt;
+      &lt;a href="#completions" class="active"&gt;POST /v1/chat/completions&lt;/a&gt;
+      &lt;a href="#models"&gt;GET /v1/models&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+  &lt;main class="docs-content"&gt;
+    &lt;div class="endpoint"&gt;&lt;span class="badge"&gt;POST&lt;/span&gt;&lt;code&gt;/v1/chat/completions&lt;/code&gt;&lt;/div&gt;
+    &lt;pre class="json-box"&gt;&lt;code&gt;{ "status": 200, "message": "Ready" }&lt;/code&gt;&lt;/pre&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+&lt;footer class="docs-footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;span&gt;Was this page helpful? 👍 👎&lt;/span&gt;
+    &lt;a href="#github"&gt;Edit on GitHub&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+            </article>
+          </div>
+
+          <!-- Quick Discovery Callout -->
+          <div style="text-align: center; margin-top: var(--space-8); padding: var(--space-6); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2);">
+            <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem;">Looking for all 32 production-ready layouts?</h3>
+            <p style="color: var(--text-muted); margin-bottom: var(--space-4); max-width: 650px; margin-inline: auto;">
+              Browse our complete library of 32 website templates covering cybersecurity, luxury architecture, cleantech grids, biotech genomics, artisan bistros, investigative journalism, analog synthesizers, corporate arbitration, and more.
+            </p>
+            <a href="templates.html" class="btn btn-primary btn-lg">
+              Explore All 30+ Website Templates &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Preview Component Stage -->
+      <section class="section" aria-labelledby="live-preview-title">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 720px; margin-inline: auto;">
+            <span class="section-eyebrow">Real CSS Demonstration</span>
+            <h2 id="live-preview-title">How PixelCraft UI Components Look &amp; Work</h2>
+            <p>Every component is rendered live in your browser using pure HTML and CSS. No JavaScript frameworks, no external runtime scripts.</p>
+          </div>
+
+          <!-- Live Component Showcase -->
+          <div class="component-showcase">
+            <div class="showcase-header">
+              <div class="showcase-title-area">
+                <h3 class="showcase-title">SaaS Feature Highlight Card</h3>
+                <p class="showcase-desc">Interactive card variation with subtle hover lift, tag indicator, and semantic button</p>
+              </div>
+              <div class="showcase-meta">
+                <span class="implementation-type-badge">Complete frontend implementation</span>
+                <span class="badge badge--difficulty">Beginner friendly</span>
+              </div>
+            </div>
+
+            <!-- Stage -->
+            <div class="preview-stage pv-frame--white">
+              <div style="max-width: 520px; margin-inline: auto;">
+                <div class="pv-card" style="box-shadow: var(--shadow-2);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4);">
+                    <span class="badge badge--primary">Responsive Grid</span>
+                    <span style="font-size: 0.8125rem; color: var(--text-muted);">Module #04</span>
+                  </div>
+                  <h4 class="pv-card__title">Zero-Dependency Component Architecture</h4>
+                  <p class="pv-card__text">
+                    By learning web fundamentals directly, your pages load instantly without megabytes of JavaScript frameworks. Inspect any component, copy its markup, and customize tokens with ease.
+                  </p>
+                  <div style="display: flex; gap: var(--space-3); align-items: center; flex-wrap: wrap;">
+                    <a href="getting-started.html" class="pv-btn pv-btn--primary">Get Started Guide</a>
+                    <a href="cards.html" class="pv-btn pv-btn--outline">Explore Cards</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Code Block -->
+            <div class="showcase-code-section">
+              <div class="code-tabs-header">
+                <span class="code-language-tag">HTML Markup</span>
+                <span class="code-copy-notice">Select the code and copy it manually.</span>
+              </div>
+              <pre class="code-block" tabindex="0" role="region" aria-label="SaaS card HTML code snippet"><code>&lt;<span class="hl-tag">article</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-card"</span>&gt;
+  &lt;<span class="hl-tag">div</span> <span class="hl-attr">class</span>=<span class="hl-str">"badge badge--primary"</span>&gt;Responsive Grid&lt;/<span class="hl-tag">div</span>&gt;
+  &lt;<span class="hl-tag">h4</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-card__title"</span>&gt;Zero-Dependency Component Architecture&lt;/<span class="hl-tag">h4</span>&gt;
+  &lt;<span class="hl-tag">p</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-card__text"</span>&gt;By learning web fundamentals directly...&lt;/<span class="hl-tag">p</span>&gt;
+  &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"getting-started.html"</span> <span class="hl-attr">class</span>=<span class="hl-str">"pv-btn pv-btn--primary"</span>&gt;Get Started Guide&lt;/<span class="hl-tag">a</span>&gt;
+&lt;/<span class="hl-tag">article</span>&gt;</code></pre>
+            </div>
+
+            <!-- Implementation Notes -->
+            <div class="showcase-notes">
+              <div class="notes-card">
+                <h4>
+                  <img src="assets/icons/mobile.svg" alt="" width="16" height="16" aria-hidden="true" />
+                  Responsive Behavior
+                </h4>
+                <p>Card width is constrained by max-width: 520px on desktop and shrinks gracefully to 100% on viewports below 480px without layout breakage.</p>
+              </div>
+              <div class="notes-card">
+                <h4>
+                  <img src="assets/icons/accessibility.svg" alt="" width="16" height="16" aria-hidden="true" />
+                  Accessibility Notes
+                </h4>
+                <p>Uses semantic &lt;article&gt; landmark with heading hierarchy. All interactive buttons provide visible 2px focus indicators exceeding 3:1 contrast.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modern Header & Footer Pattern Gallery (Pure CSS Standards) -->
+      <section class="section" id="headers-footers-gallery" style="background-color: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" aria-labelledby="headers-footers-heading">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 800px; margin-inline: auto;">
+            <span class="section-eyebrow">
+              <img src="assets/icons/layers.svg" alt="" width="14" height="14" aria-hidden="true" />
+              Structural Landmark Architecture
+            </span>
+            <h2 id="headers-footers-heading">Modern Header &amp; Footer Pattern Gallery</h2>
+            <p>Headers and footers define the structural boundaries of every high-converting website. Explore 4 production-ready header architectures and 4 semantic footer patterns—engineered with pure HTML5 and responsive CSS.</p>
+          </div>
+
+          <!-- Section A: 4 Header Patterns -->
+          <div style="margin-bottom: var(--space-8);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); flex-wrap: wrap; gap: 8px;">
+              <h3 style="margin: 0; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--primary);">✦</span> Part 1: Complete Header Patterns
+              </h3>
+              <a href="navbar-components.html" class="btn btn-secondary btn-sm">Explore All Navbars &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-2" style="gap: var(--space-4);">
+              <!-- Header Pattern 1: Sticky SaaS -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">1. Sticky SaaS Header with Dropdown &amp; CTA</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-header-saas">Copy Header HTML</button>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                  <div style="display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 0.88rem; color: #0F172A;">
+                    <span style="color: #6C5CE7;">◆</span> CloudCore
+                  </div>
+                  <div style="display: flex; gap: 10px; font-size: 0.75rem; color: #64748B;">
+                    <span style="color: #0F172A; font-weight: 600;">Product ▾</span>
+                    <span>Solutions</span>
+                    <span>Pricing</span>
+                    <span>Docs</span>
+                  </div>
+                  <div style="display: flex; gap: 6px;">
+                    <span style="font-size: 0.72rem; padding: 3px 8px; color: #475569; font-weight: 600;">Log In</span>
+                    <span style="background: #6C5CE7; color: #FFF; font-size: 0.72rem; padding: 3px 10px; border-radius: 4px; font-weight: 600;">Start Free</span>
+                  </div>
+                </div>
+                <pre id="code-header-saas" style="display: none;"><code>&lt;!-- Sticky SaaS Header --&gt;
+&lt;header class="site-header sticky"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;a href="/" class="brand"&gt;&lt;span&gt;◆&lt;/span&gt; CloudCore&lt;/a&gt;
+    &lt;nav&gt;
+      &lt;a href="#product"&gt;Product ▾&lt;/a&gt;
+      &lt;a href="#solutions"&gt;Solutions&lt;/a&gt;
+      &lt;a href="#pricing"&gt;Pricing&lt;/a&gt;
+      &lt;a href="#docs"&gt;Docs&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;div class="actions"&gt;
+      &lt;a href="/login" class="btn btn-ghost"&gt;Log In&lt;/a&gt;
+      &lt;a href="/signup" class="btn btn-primary"&gt;Start Free&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+
+              <!-- Header Pattern 2: Minimalist Brand -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">2. Minimalist Creative Brand Header</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-header-minimal">Copy Header HTML</button>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                  <div style="font-weight: 900; font-size: 0.95rem; color: #0F172A; letter-spacing: -0.02em;">
+                    STUDIO ATELIER
+                  </div>
+                  <div style="display: flex; gap: 14px; font-size: 0.78rem; font-weight: 600; color: #64748B;">
+                    <span style="color: #0F172A;">Index</span>
+                    <span>Selected Works</span>
+                    <span>Journal</span>
+                    <span>About</span>
+                  </div>
+                  <span style="font-size: 0.75rem; font-weight: 700; color: #0F172A; border-bottom: 1px solid #0F172A;">Contact ↗</span>
+                </div>
+                <pre id="code-header-minimal" style="display: none;"><code>&lt;!-- Minimalist Creative Header --&gt;
+&lt;header class="minimal-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;a href="/" class="brand-title"&gt;STUDIO ATELIER&lt;/a&gt;
+    &lt;nav class="minimal-nav"&gt;
+      &lt;a href="#index" class="active"&gt;Index&lt;/a&gt;
+      &lt;a href="#works"&gt;Selected Works&lt;/a&gt;
+      &lt;a href="#journal"&gt;Journal&lt;/a&gt;
+      &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;a href="#contact" class="contact-link"&gt;Contact ↗&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+
+              <!-- Header Pattern 3: E-Commerce Dual-Tier -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">3. E-Commerce Dual-Tier Header with Announcement</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-header-ecom">Copy Header HTML</button>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                  <div style="background: #0F172A; color: #FFF; text-align: center; padding: 4px; font-size: 0.65rem; font-weight: 600;">
+                    Free 2-Day Shipping on Orders Over $50 &middot; Use Code FREESHIP
+                  </div>
+                  <div style="padding: 8px 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="font-size: 0.88rem; color: #0F172A;">NORDIC GOODS</strong>
+                    <div style="background: #F1F5F9; border-radius: 4px; padding: 3px 8px; font-size: 0.7rem; color: #64748B;">
+                      🔍 Search store...
+                    </div>
+                    <div style="display: flex; gap: 8px; font-size: 0.72rem; align-items: center;">
+                      <span>Sign In</span>
+                      <span style="background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 3px; font-weight: 700;">Cart (3)</span>
+                    </div>
+                  </div>
+                </div>
+                <pre id="code-header-ecom" style="display: none;"><code>&lt;!-- E-Commerce Dual-Tier Header --&gt;
+&lt;div class="announcement-bar"&gt;
+  &lt;p&gt;Free 2-Day Shipping on Orders Over $50 &middot; Code FREESHIP&lt;/p&gt;
+&lt;/div&gt;
+&lt;header class="ecom-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;a href="/" class="brand"&gt;NORDIC GOODS&lt;/a&gt;
+    &lt;div class="search-box"&gt;&lt;input type="search" placeholder="Search store..." /&gt;&lt;/div&gt;
+    &lt;div class="actions"&gt;
+      &lt;a href="/login"&gt;Sign In&lt;/a&gt;
+      &lt;a href="/cart" class="cart-pill"&gt;Cart (3)&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+
+              <!-- Header Pattern 4: Dark Glassmorphic -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">4. Dark Glassmorphism Header with System Status</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-header-glass">Copy Header HTML</button>
+                </div>
+                <div style="background: #0F172A; border: 1px solid #1E293B; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; color: #FFF;">
+                  <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.88rem;">
+                    <span style="color: #38BDF8;">●</span> AURA CORE
+                  </div>
+                  <div style="display: flex; gap: 10px; font-size: 0.72rem; color: #94A3B8;">
+                    <span>Endpoints</span>
+                    <span>Monitoring</span>
+                    <span>Security</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="font-size: 0.68rem; background: #1E293B; padding: 2px 6px; border-radius: 4px; color: #34D399;">● 99.99% UP</span>
+                    <span style="background: #38BDF8; color: #0F172A; font-size: 0.68rem; padding: 2px 8px; border-radius: 3px; font-weight: 700;">Console</span>
+                  </div>
+                </div>
+                <pre id="code-header-glass" style="display: none;"><code>&lt;!-- Dark Glassmorphism Header --&gt;
+&lt;header class="glass-header"&gt;
+  &lt;div class="container nav-wrap"&gt;
+    &lt;div class="brand"&gt;&lt;span class="dot"&gt;●&lt;/span&gt; AURA CORE&lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#endpoints"&gt;Endpoints&lt;/a&gt;
+      &lt;a href="#monitoring"&gt;Monitoring&lt;/a&gt;
+      &lt;a href="#security"&gt;Security&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;div class="actions"&gt;
+      &lt;span class="status-badge"&gt;● 99.99% UP&lt;/span&gt;
+      &lt;a href="/console" class="btn btn-primary"&gt;Console&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B: 4 Footer Patterns -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); flex-wrap: wrap; gap: 8px;">
+              <h3 style="margin: 0; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--accent);">✦</span> Part 2: Complete Footer Patterns
+              </h3>
+              <a href="footer-components.html" class="btn btn-secondary btn-sm">Explore All Footers &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-2" style="gap: var(--space-4);">
+              <!-- Footer Pattern 1: Corporate 4-Column Directory -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">1. 4-Column Corporate Directory Footer</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-footer-corp">Copy Footer HTML</button>
+                </div>
+                <div style="background: #0F172A; color: #94A3B8; border-radius: 8px; padding: 12px 16px; font-size: 0.68rem;">
+                  <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                    <div>
+                      <strong style="color: #FFF; font-size: 0.78rem;">Apex Technologies</strong>
+                      <p style="margin: 2px 0 0; line-height: 1.3;">Cloud architecture for modern software organizations.</p>
+                    </div>
+                    <div>
+                      <strong style="color: #FFF; display: block; margin-bottom: 2px;">Product</strong>
+                      <div>Overview</div>
+                      <div>Features</div>
+                    </div>
+                    <div>
+                      <strong style="color: #FFF; display: block; margin-bottom: 2px;">Company</strong>
+                      <div>About</div>
+                      <div>Careers</div>
+                    </div>
+                    <div>
+                      <strong style="color: #FFF; display: block; margin-bottom: 2px;">Legal</strong>
+                      <div>Privacy</div>
+                      <div>Security</div>
+                    </div>
+                  </div>
+                  <div style="border-top: 1px solid #1E293B; padding-top: 6px; display: flex; justify-content: space-between; color: #64748B;">
+                    <span>&copy; 2026 Apex Technologies, Inc.</span>
+                    <span>WCAG 2.1 AA Compliant</span>
+                  </div>
+                </div>
+                <pre id="code-footer-corp" style="display: none;"><code>&lt;!-- 4-Column Corporate Directory Footer --&gt;
+&lt;footer class="corporate-footer"&gt;
+  &lt;div class="container footer-grid"&gt;
+    &lt;div class="brand-col"&gt;
+      &lt;h3&gt;Apex Technologies&lt;/h3&gt;
+      &lt;p&gt;Cloud architecture for modern engineering organizations.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="nav-col"&gt;&lt;h4&gt;Product&lt;/h4&gt;&lt;a href="#overview"&gt;Overview&lt;/a&gt;&lt;a href="#features"&gt;Features&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="nav-col"&gt;&lt;h4&gt;Company&lt;/h4&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;a href="#careers"&gt;Careers&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="nav-col"&gt;&lt;h4&gt;Legal&lt;/h4&gt;&lt;a href="#privacy"&gt;Privacy&lt;/a&gt;&lt;a href="#security"&gt;Security&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container footer-bottom"&gt;
+    &lt;p&gt;&amp;copy; 2026 Apex Technologies, Inc. All rights reserved.&lt;/p&gt;
+    &lt;span&gt;WCAG 2.1 AA Compliant&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+
+              <!-- Footer Pattern 2: Developer Terminal -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">2. Developer &amp; Open-Source Terminal Footer</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-footer-dev">Copy Footer HTML</button>
+                </div>
+                <div style="background: #0A0D14; color: #94A3B8; border: 1px solid #1E293B; border-radius: 8px; padding: 12px 16px; font-size: 0.68rem; font-family: monospace;">
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 8px; align-items: center;">
+                    <div style="color: #38BDF8; font-weight: 700;">$ systemctl status pixelcraft-daemon</div>
+                    <span style="color: #34D399;">● ACTIVE (RUNNING) &middot; 12ms</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; color: #64748B; font-size: 0.65rem;">
+                    <span>git commit: 7a82b9e &middot; Released under MIT</span>
+                    <span style="color: #F8FAFC;">★ 4.8k GitHub Stars</span>
+                  </div>
+                </div>
+                <pre id="code-footer-dev" style="display: none;"><code>&lt;!-- Developer Terminal Footer --&gt;
+&lt;footer class="dev-terminal-footer"&gt;
+  &lt;div class="container footer-wrap"&gt;
+    &lt;div class="terminal-bar"&gt;
+      &lt;span class="command"&gt;$ systemctl status engine-daemon&lt;/span&gt;
+      &lt;span class="health"&gt;● ACTIVE (RUNNING) &middot; 12ms&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="meta-row"&gt;
+      &lt;span&gt;Released under MIT License&lt;/span&gt;
+      &lt;a href="https://github.com"&gt;★ GitHub Repository&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+
+              <!-- Footer Pattern 3: Minimalist Centered Brand -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">3. Minimalist Centered Brand Footer</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-footer-minimal">Copy Footer HTML</button>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 16px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+                  <strong style="font-size: 0.88rem; color: #0F172A; display: block; margin-bottom: 4px;">PIXELCRAFT DESIGN SYSTEM</strong>
+                  <div style="display: flex; justify-content: center; gap: 12px; font-size: 0.72rem; color: #64748B; margin-bottom: 6px;">
+                    <span>Components</span> &middot; <span>Templates</span> &middot; <span>Documentation</span> &middot; <span>Licensing</span>
+                  </div>
+                  <div style="font-size: 0.65rem; color: #94A3B8;">&copy; 2026 PixelCraft UI. Pure HTML5 &amp; CSS3. Zero JavaScript.</div>
+                </div>
+                <pre id="code-footer-minimal" style="display: none;"><code>&lt;!-- Minimalist Centered Brand Footer --&gt;
+&lt;footer class="minimal-brand-footer text-center"&gt;
+  &lt;div class="container"&gt;
+    &lt;h3 class="brand-title"&gt;PIXELCRAFT DESIGN SYSTEM&lt;/h3&gt;
+    &lt;nav class="footer-links"&gt;
+      &lt;a href="/components"&gt;Components&lt;/a&gt; &middot;
+      &lt;a href="/templates"&gt;Templates&lt;/a&gt; &middot;
+      &lt;a href="/docs"&gt;Documentation&lt;/a&gt; &middot;
+      &lt;a href="/license"&gt;Licensing&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;p class="copyright"&gt;&amp;copy; 2026 PixelCraft UI. Pure HTML5 &amp; CSS3.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+
+              <!-- Footer Pattern 4: E-Commerce Trust Guarantee -->
+              <div class="card" style="padding: 16px; background: var(--surface-alt);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <strong style="font-size: 0.88rem; color: var(--text);">4. E-Commerce Trust &amp; Guarantee Footer</strong>
+                  <button type="button" class="btn btn-primary btn-sm" data-copy-template="code-footer-ecom">Copy Footer HTML</button>
+                </div>
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px 16px; font-size: 0.68rem; color: #64748B;">
+                  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; text-align: center;">
+                    <div style="background: #FFF; border: 1px solid #E2E8F0; padding: 4px; border-radius: 4px;">
+                      <strong style="color: #0F172A; display: block;">🚚 Free Delivery</strong>
+                      <span>Orders over $50</span>
+                    </div>
+                    <div style="background: #FFF; border: 1px solid #E2E8F0; padding: 4px; border-radius: 4px;">
+                      <strong style="color: #0F172A; display: block;">🛡️ 30-Day Guarantee</strong>
+                      <span>Hassle-free returns</span>
+                    </div>
+                    <div style="background: #FFF; border: 1px solid #E2E8F0; padding: 4px; border-radius: 4px;">
+                      <strong style="color: #0F172A; display: block;">🔒 256-Bit SSL</strong>
+                      <span>Encrypted checkout</span>
+                    </div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E2E8F0; padding-top: 6px;">
+                    <span>&copy; 2026 Retail Group LLC</span>
+                    <span>Cards: VISA &bull; MC &bull; AMEX &bull; Apple Pay</span>
+                  </div>
+                </div>
+                <pre id="code-footer-ecom" style="display: none;"><code>&lt;!-- E-Commerce Trust Guarantee Footer --&gt;
+&lt;footer class="ecom-trust-footer"&gt;
+  &lt;div class="container trust-badges-grid"&gt;
+    &lt;div class="trust-badge"&gt;&lt;strong&gt;🚚 Free Delivery&lt;/strong&gt;&lt;span&gt;Orders over $50&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="trust-badge"&gt;&lt;strong&gt;🛡️ 30-Day Guarantee&lt;/strong&gt;&lt;span&gt;Hassle-free returns&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="trust-badge"&gt;&lt;strong&gt;🔒 256-Bit SSL&lt;/strong&gt;&lt;span&gt;Encrypted checkout&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container footer-bottom"&gt;
+    &lt;p&gt;&amp;copy; 2026 Retail Group LLC.&lt;/p&gt;
+    &lt;div class="cards"&gt;VISA &bull; MC &bull; AMEX &bull; Apple Pay&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits of Pure HTML & CSS -->
+      <section class="section" style="background-color: var(--surface); border-top: 1px solid var(--border);" aria-labelledby="why-heading">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 720px; margin-inline: auto;">
+            <span class="section-eyebrow">Academic Rationale</span>
+            <h2 id="why-heading">Why Master Pure HTML5 and CSS3?</h2>
+            <p>Frameworks come and go, but the core web standards remain timeless. Understanding native web architecture makes you a fundamentally stronger engineer.</p>
+          </div>
+
+          <div class="grid grid-cols-3">
+            <div class="card">
+              <div style="width: 44px; height: 44px; border-radius: var(--radius-1); background: var(--lavender-50); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                <img src="assets/icons/layout.svg" alt="" width="22" height="22" aria-hidden="true" style="stroke: var(--primary);" />
+              </div>
+              <h3 class="card__title">Semantic Structure</h3>
+              <p class="card__text">Learn to use semantic HTML landmarks (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt;) to create clear, machine-readable documents that screen readers understand.</p>
+            </div>
+
+            <div class="card">
+              <div style="width: 44px; height: 44px; border-radius: var(--radius-1); background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                <img src="assets/icons/mobile.svg" alt="" width="22" height="22" aria-hidden="true" style="stroke: var(--accent);" />
+              </div>
+              <h3 class="card__title">Mobile-First Layouts</h3>
+              <p class="card__text">Master modern Flexbox and CSS Grid alongside fluid typography using clamp() to build adaptive interfaces that scale from 320px mobile up to 4K displays.</p>
+            </div>
+
+            <div class="card">
+              <div style="width: 44px; height: 44px; border-radius: var(--radius-1); background: var(--lavender-50); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                <img src="assets/icons/accessibility.svg" alt="" width="22" height="22" aria-hidden="true" style="stroke: var(--primary);" />
+              </div>
+              <h3 class="card__title">Inclusive Accessibility</h3>
+              <p class="card__text">Implement WCAG 2.1 AA compliant color contrast, visible keyboard focus outlines, accessible form labels, and reduced-motion user preferences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Learning Guides -->
+      <section class="section" aria-labelledby="guides-heading">
+        <div class="container">
+          <div class="section-title-wrap text-center" style="max-width: 720px; margin-inline: auto;">
+            <span class="section-eyebrow">Comprehensive Documentation</span>
+            <h2 id="guides-heading">In-Depth Guides for Aspiring Developers</h2>
+            <p>Practical, zero-fluff educational articles written specifically for web design students and frontend beginners.</p>
+          </div>
+
+          <div class="grid grid-cols-3">
+            <article class="card card--interactive">
+              <span class="badge badge--primary" style="margin-bottom: var(--space-3); width: fit-content;">Tutorial</span>
+              <h3 class="card__title"><a href="getting-started.html">Getting Started Guide</a></h3>
+              <p class="card__text">Learn how to create your first HTML file, link the PixelCraft UI stylesheet, customize CSS variables, and test responsive layouts locally.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Step-by-step tutorial</span>
+                <a href="getting-started.html" class="btn btn-secondary btn-sm">Read Guide &rarr;</a>
+              </div>
+            </article>
+
+            <article class="card card--interactive">
+              <span class="badge badge--accent" style="margin-bottom: var(--space-3); width: fit-content;">Architecture</span>
+              <h3 class="card__title"><a href="responsive-design.html">Responsive Design Guide</a></h3>
+              <p class="card__text">Master CSS media queries, flexbox wrapping, auto-fill grid tracks, and responsive container boundaries without frameworks.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">Mobile-first patterns</span>
+                <a href="responsive-design.html" class="btn btn-secondary btn-sm">Read Guide &rarr;</a>
+              </div>
+            </article>
+
+            <article class="card card--interactive">
+              <span class="badge badge--primary" style="margin-bottom: var(--space-3); width: fit-content;">Standards</span>
+              <h3 class="card__title"><a href="accessibility.html">Accessibility (a11y) Guide</a></h3>
+              <p class="card__text">Understand semantic landmark tags, visible keyboard focus indicators, form accessibility, and prefers-reduced-motion CSS rules.</p>
+              <div class="card__footer">
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">WCAG 2.1 AA focus</span>
+                <a href="accessibility.html" class="btn btn-secondary btn-sm">Read Guide &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (details/summary) -->
+      <section class="section" style="background-color: var(--surface); border-top: 1px solid var(--border);" aria-labelledby="faq-heading">
+        <div class="container container-narrow">
+          <div class="section-title-wrap text-center">
+            <span class="section-eyebrow">Common Questions</span>
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <p>Essential facts about PixelCraft UI, its academic purpose, and pure CSS architecture.</p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-summary">
+                <span>What is PixelCraft UI?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                PixelCraft UI is a free, modern component library built specifically for an academic website design assignment. It provides 15 interconnected HTML pages and reusable CSS components built strictly with HTML5 and CSS3—without any JavaScript.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Does PixelCraft UI require any JavaScript or npm packages?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                No. PixelCraft UI runs 100% on standard HTML5 and CSS3. There are zero JavaScript dependencies, zero npm build requirements, and zero client-side scripts. You can run the entire site locally by opening index.html in any modern web browser.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>Can I copy and customize the components for my own projects?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Yes. All component HTML and CSS snippets are displayed in accessible pre code blocks. You can select and copy the code manually and customize CSS custom properties inside your own stylesheet.
+              </div>
+            </details>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--space-8);">
+            <a href="faq.html" class="btn btn-secondary">View All 14 Frequently Asked Questions &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Call to Action -->
+      <section class="section text-center">
+        <div class="container container-narrow">
+          <span class="section-eyebrow">Start Building</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: var(--space-4);">Ready to Build Clean, Framework-Free Interfaces?</h2>
+          <p style="font-size: 1.1rem; margin-bottom: var(--space-8);">
+            Explore all 15 interconnected pages, test responsive breakpoints, and copy modular CSS components directly into your own student and client projects.
+          </p>
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+            <a href="components.html" class="btn btn-primary btn-lg">Explore Component Library</a>
+            <a href="getting-started.html" class="btn btn-secondary btn-lg">Getting Started Tutorial</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Links Section -->
+      <section class="section" style="background-color: var(--surface); border-top: 1px solid var(--border);" aria-labelledby="related-heading">
+        <div class="container">
+          <h3 id="related-heading" style="margin-top: 0; margin-bottom: var(--space-4);">Related Resources</h3>
+          <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="components.html" class="animated-link">Component Directory &rarr;</a>
+            <a href="navbar-components.html" class="animated-link">Navbar Patterns &rarr;</a>
+            <a href="forms.html" class="animated-link">Login &amp; Signup Forms &rarr;</a>
+            <a href="pricing-cards.html" class="animated-link">Pricing Tiers &rarr;</a>
+            <a href="about.html" class="animated-link">About PixelCraft &amp; Brand Rules &rarr;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Components -->
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Examples -->
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Guides -->
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Project -->
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

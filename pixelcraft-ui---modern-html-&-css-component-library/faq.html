@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions (FAQ) | PixelCraft UI</title>
+    <meta name="description" content="Find clear, honest answers to common questions about PixelCraft UI, pure HTML and CSS development, licensing, accessibility, and responsive components." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/faq.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Frequently Asked Questions (FAQ) | PixelCraft UI" />
+    <meta property="og:description" content="14 transparent answers to common questions about pure HTML/CSS, customization, and usage." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/faq.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/pixelcraft-ui/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://example.com/pixelcraft-ui/faq.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="getting-started.html" class="btn btn-secondary btn-sm">Tutorial</a>
+            <a href="components.html" class="btn btn-primary btn-sm">Components</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html" aria-current="page">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><span aria-current="page">FAQ</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="section" style="padding-top: var(--space-8);">
+        <div class="container container-narrow">
+          <span class="section-eyebrow">
+            <img src="assets/icons/check.svg" alt="" width="14" height="14" aria-hidden="true" />
+            Direct Answers
+          </span>
+          <h1>Frequently Asked Questions</h1>
+
+          <!-- Direct-Answer Intro -->
+          <p class="lead">
+            Here you will find concise, transparent answers to questions regarding PixelCraft UI's academic design system, pure CSS architecture, licensing status, and technical limitations.
+          </p>
+
+          <div style="display: flex; gap: var(--space-2); margin-block: var(--space-4); flex-wrap: wrap;">
+            <span class="implementation-type-badge">Complete frontend implementation</span>
+            <span class="badge badge--difficulty">14 Q&amp;As</span>
+          </div>
+
+          <div class="faq-list" style="margin-top: var(--space-8);">
+            <!-- Q1 -->
+            <details class="faq-item" open>
+              <summary class="faq-summary">
+                <span>1. What is PixelCraft UI?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                PixelCraft UI is a free, framework-free web design component library built specifically for an academic website design assignment. It consists of 15 fully interconnected HTML pages and reusable CSS components implemented strictly with standard HTML5 and CSS3.
+              </div>
+            </details>
+
+            <!-- Q2 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>2. Is PixelCraft UI free to use?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Yes. PixelCraft UI is an open educational resource. All documentation, component markup, and stylesheets can be inspected and used freely for learning and experimentation.
+              </div>
+            </details>
+
+            <!-- Q3 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>3. Does PixelCraft UI require any JavaScript?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                No. The entire site and all of its component patterns operate with zero JavaScript. Interactive patterns such as mobile navigation menus and FAQ accordions use native HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.
+              </div>
+            </details>
+
+            <!-- Q4 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>4. Can I use these components in my personal projects?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Yes. You are welcome to copy any component HTML and CSS into your personal website, class projects, portfolio, or experimental prototypes.
+              </div>
+            </details>
+
+            <!-- Q5 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>5. What is the commercial licensing status?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                No formal commercial license has been selected yet; terms of use still need to be established by the project owner upon public distribution. The project is currently published strictly for academic demonstration and learning.
+              </div>
+            </details>
+
+            <!-- Q6 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>6. How do I customize colors and spacing?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                All visual design tokens are declared as CSS variables inside the <code>:root</code> block of <code>assets/css/style.css</code>. To re-theme the library, modify variables such as <code>--primary: #6C5CE7;</code>, <code>--radius-1: 10px;</code>, or <code>--bg: #F8F9FC;</code>. All components update their appearance automatically.
+              </div>
+            </details>
+
+            <!-- Q7 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>7. Are the components responsive on mobile devices?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Yes. Every component is designed mobile-first using fluid widths, CSS Flexbox wrapping, auto-fill Grid columns, and media queries calibrated for standard mobile (320px, 375px), tablet (768px), and desktop (1024px+) viewports.
+              </div>
+            </details>
+
+            <!-- Q8 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>8. Do the login and signup forms actually authenticate users or submit data?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                No. All forms on this website are frontend UI demonstrations only. They illustrate accessible markup, label associations, and native validation styling. Handling submissions and authenticating user credentials requires connecting the form action to a server backend or API.
+              </div>
+            </details>
+
+            <!-- Q9 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>9. Can I copy code directly from the code blocks?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Yes. Code snippets are formatted in semantic <code>&lt;pre&gt;&lt;code&gt;</code> blocks styled with <code>user-select: all</code>. Simply click or highlight the code snippet and press <kbd>Cmd+C</kbd> or <kbd>Ctrl+C</kbd> to copy it to your clipboard manually.
+              </div>
+            </details>
+
+            <!-- Q10 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>10. How can I print a component example or guide?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Use your browser's native print feature (<kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd>). PixelCraft UI includes a dedicated <code>@media print</code> stylesheet that removes web navigation bars, converts the canvas to clean black-on-white text, and formats code blocks for paper or PDF printing.
+              </div>
+            </details>
+
+            <!-- Q11 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>11. What accessibility standards does the library follow?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                Components adhere to WCAG 2.1 AA recommendations: high text contrast (&gt;4.5:1), visible 2px keyboard focus outlines, logical heading levels (H1 through H4), explicit form labels, and a <code>prefers-reduced-motion</code> media query that disables non-essential animations.
+              </div>
+            </details>
+
+            <!-- Q12 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>12. Can I contribute new components to PixelCraft UI?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                As an academic course assignment, the core 15 pages are currently frozen. However, students and educators are encouraged to fork the repository, extend the component patterns, and build their own component collections following the same standards.
+              </div>
+            </details>
+
+            <!-- Q13 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>13. Which web browsers are supported?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                PixelCraft UI is compatible with all modern evergreen browsers: Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge, as well as iOS Safari and Chrome for Android. System font fallbacks ensure readability even if external fonts cannot load.
+              </div>
+            </details>
+
+            <!-- Q14 -->
+            <details class="faq-item">
+              <summary class="faq-summary">
+                <span>14. Why doesn't the component library use Tailwind or Bootstrap?</span>
+                <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+              </summary>
+              <div class="faq-answer">
+                The objective of this academic assignment is to master raw CSS syntax, the cascade, custom properties, and native layout engines (Flexbox and Grid). Utility frameworks abstract these concepts away; writing pure CSS provides a deeper, enduring mastery of the web platform.
+              </div>
+            </details>
+          </div>
+
+          <!-- Related Links -->
+          <div style="margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+            <h3>Explore Further</h3>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="index.html" class="animated-link">&larr; Return to Homepage</a>
+              <a href="components.html" class="animated-link">Component Directory &rarr;</a>
+              <a href="getting-started.html" class="animated-link">Getting Started Guide &rarr;</a>
+              <a href="about.html" class="animated-link">About &amp; Brand Rules &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

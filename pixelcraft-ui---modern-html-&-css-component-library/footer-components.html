@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Footer Components in HTML & CSS | PixelCraft UI</title>
+    <meta name="description" content="Discover 5 semantic, accessible footer layouts in pure HTML5 and CSS3: minimal single-line, multi-column directory, SaaS, portfolio, and newsletter footers." />
+    <link rel="canonical" href="https://example.com/footer-components.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Semantic Footer Components in HTML & CSS | PixelCraft UI" />
+    <meta property="og:description" content="5 responsive, accessible website footer patterns built with pure HTML5 and CSS3." />
+    <meta property="og:url" content="https://example.com/footer-components.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- Breadcrumb JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Components",
+          "item": "https://example.com/components.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Footers",
+          "item": "https://example.com/footer-components.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html" class="active">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html" aria-current="page">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Footers Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="#minimal-footer">1. Minimal Footer</a></li>
+          <li><a href="#multicolumn-footer">2. Multi-Column Directory</a></li>
+          <li><a href="#saas-footer">3. SaaS Product Footer</a></li>
+          <li><a href="#portfolio-footer">4. Portfolio Footer</a></li>
+          <li><a href="#newsletter-footer">5. Newsletter Footer</a></li>
+          <li><a href="accessibility.html">Accessibility Guide &rarr;</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="components.html">Components</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Footer Components</li>
+          </ol>
+        </nav>
+
+        <!-- Intro -->
+        <section class="section" style="padding-top: 1.5rem; padding-bottom: 2rem;">
+          <span class="section-eyebrow">Structural Landmarks</span>
+          <h1>Semantic Footer Components in HTML &amp; CSS</h1>
+          <p class="lead" style="max-width: 820px;">
+            The website footer serves as the closing anchor of user journeys, housing directory navigation, copyright declarations, legal policies, and accessibility indicators. These 5 footer layouts use semantic <code>&lt;footer&gt;</code> elements and responsive CSS Grid distributions.
+          </p>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="max-width: 840px;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>What Makes a Footer Accessible and Semantic?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                An accessible footer wraps content in the HTML5 <code>&lt;footer&gt;</code> landmark, uses unordered lists (<code>&lt;ul&gt;</code>) for navigational link clusters, guarantees WCAG 4.5:1 text contrast ratios against dark backgrounds, and gracefully stacks columns on mobile viewports.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER 1: Minimal One-Line Footer -->
+        <article id="minimal-footer" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">1. Minimalist One-Line Footer</h2>
+              <p class="showcase-desc">A single horizontal bar ideal for blogs, single-page portfolios, and utility pages.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag">Beginner</span>
+              <span class="badge-tag primary">Single Row</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <footer style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; max-width: 900px; margin-inline: auto;">
+              <div style="font-size: 0.875rem; color: var(--text-secondary);">
+                &copy; 2026 Minimal Studio. All rights reserved.
+              </div>
+              <ul style="display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; font-size: 0.875rem;">
+                <li><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">Privacy</a></li>
+                <li><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">Terms</a></li>
+                <li><a href="about.html" style="color: var(--text-secondary); text-decoration: none;">Colophon</a></li>
+                <li><a href="faq.html" style="color: var(--text-secondary); text-decoration: none;">Help</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Minimal Single-Line Footer --&gt;
+&lt;footer class="footer-minimal"&gt;
+  &lt;p class="copyright"&gt;&amp;copy; 2026 Minimal Studio. All rights reserved.&lt;/p&gt;
+  &lt;nav aria-label="Legal Links"&gt;
+    &lt;ul class="legal-list"&gt;
+      &lt;li&gt;&lt;a href="/privacy"&gt;Privacy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/terms"&gt;Terms&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/colophon"&gt;Colophon&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/footer&gt;
+
+&lt;style&gt;
+.footer-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+.footer-minimal p { margin: 0; font-size: 0.875rem; color: #525c6e; }
+.legal-list { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.legal-list a { font-size: 0.875rem; color: #525c6e; text-decoration: none; }
+.legal-list a:hover { color: #171923; }
+&lt;/style&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>With <code>flex-wrap: wrap;</code>, copyright text and links wrap cleanly to separate lines on small mobile devices without collision.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Includes an explicit <code>aria-label="Legal Links"</code> on the navigation landmark for fast assistive orientation.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOOTER 2: Multi-Column Directory Footer -->
+        <article id="multicolumn-footer" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">2. Multi-Column Directory Footer</h2>
+              <p class="showcase-desc">Corporate and content-heavy footer distributing products, documentation, resources, and company links in a 4-column grid.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Multi-Column</span>
+              <span class="badge-tag primary">CSS Grid</span>
+            </div>
+          </div>
+
+          <div class="preview-stage dark-stage">
+            <footer style="background: var(--dark-surface); border-radius: var(--radius-md); padding: 2.5rem; max-width: 960px; margin-inline: auto;">
+              <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                  <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #FFFFFF; margin-bottom: 0.5rem;">
+                    Nexus Platforms
+                  </div>
+                  <p style="font-size: 0.875rem; color: var(--dark-text-muted); line-height: 1.6; max-width: 260px;">
+                    Scalable interface tooling and pure CSS design patterns built for web developers.
+                  </p>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: #FFFFFF; margin-bottom: 0.75rem;">Product</div>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                    <li><a href="components.html" style="color: var(--dark-text-muted); text-decoration: none;">Components</a></li>
+                    <li><a href="pricing-cards.html" style="color: var(--dark-text-muted); text-decoration: none;">Pricing</a></li>
+                    <li><a href="navbar-components.html" style="color: var(--dark-text-muted); text-decoration: none;">Navigation</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: #FFFFFF; margin-bottom: 0.75rem;">Guides</div>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                    <li><a href="getting-started.html" style="color: var(--dark-text-muted); text-decoration: none;">Quickstart</a></li>
+                    <li><a href="responsive-design.html" style="color: var(--dark-text-muted); text-decoration: none;">Responsive</a></li>
+                    <li><a href="accessibility.html" style="color: var(--dark-text-muted); text-decoration: none;">Accessibility</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: #FFFFFF; margin-bottom: 0.75rem;">Legal</div>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                    <li><a href="about.html" style="color: var(--dark-text-muted); text-decoration: none;">Terms</a></li>
+                    <li><a href="about.html" style="color: var(--dark-text-muted); text-decoration: none;">Privacy</a></li>
+                    <li><a href="about.html" style="color: var(--dark-text-muted); text-decoration: none;">Security</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="border-top: 1px solid var(--dark-border); padding-top: 1.5rem; font-size: 0.8125rem; color: var(--dark-text-muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                <span>&copy; 2026 Nexus Platforms Inc. Pure CSS implementation.</span>
+                <span>Designed for academic assessment.</span>
+              </div>
+            </footer>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Multi-Column Directory Footer --&gt;
+&lt;footer class="footer-directory"&gt;
+  &lt;div class="footer-columns"&gt;
+    &lt;div class="col-brand"&gt;
+      &lt;h3&gt;Nexus Platforms&lt;/h3&gt;
+      &lt;p&gt;Scalable interface tooling and pure CSS design patterns.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-nav"&gt;
+      &lt;h4&gt;Product&lt;/h4&gt;
+      &lt;ul&gt;&lt;li&gt;&lt;a href="/components"&gt;Components&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="col-nav"&gt;
+      &lt;h4&gt;Guides&lt;/h4&gt;
+      &lt;ul&gt;&lt;li&gt;&lt;a href="/guides"&gt;Quickstart&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="col-nav"&gt;
+      &lt;h4&gt;Legal&lt;/h4&gt;
+      &lt;ul&gt;&lt;li&gt;&lt;a href="/terms"&gt;Terms&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer-bottom-bar"&gt;
+    &lt;p&gt;&amp;copy; 2026 Nexus Platforms. All rights reserved.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Uses CSS Grid media queries to collapse from 4 columns to 2 columns on tablets, and into a single vertical column on mobile phones.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Muted text uses <code>#9BA3BF</code> on dark surface <code>#151827</code>, maintaining a high contrast ratio of 5.8:1, well above WCAG AA.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOOTER 3: SaaS Product Footer -->
+        <article id="saas-footer" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">3. SaaS Product Footer with System Status</h2>
+              <p class="showcase-desc">Modern cloud application footer with product badges, documentation links, and uptime status indicator visual.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag primary">SaaS Product</span>
+              <span class="badge-tag">Status Visual</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <footer style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; max-width: 900px; margin-inline: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 24px; height: 24px; background: var(--primary); border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 700;">V</span>
+                  <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;">Vortex Cloud</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: var(--text-secondary); background: var(--surface-alt); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <span style="color: var(--highlight); font-weight: 700;">&bull;</span>
+                  <span>Operational Status: All Systems Healthy (Demo)</span>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.875rem;">
+                <div style="color: var(--text-secondary);">
+                  &copy; 2026 Vortex Cloud Services. Pure HTML5 &amp; CSS3.
+                </div>
+                <div style="display: flex; gap: 1.5rem;">
+                  <a href="about.html" style="color: var(--text-secondary); text-decoration: none;">Security</a>
+                  <a href="accessibility.html" style="color: var(--text-secondary); text-decoration: none;">Compliance</a>
+                  <a href="faq.html" style="color: var(--text-secondary); text-decoration: none;">Documentation</a>
+                </div>
+              </div>
+            </footer>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- SaaS Product Footer --&gt;
+&lt;footer class="saas-footer"&gt;
+  &lt;div class="saas-footer-header"&gt;
+    &lt;div class="brand"&gt;Vortex Cloud&lt;/div&gt;
+    &lt;div class="system-status"&gt;
+      &lt;span class="bullet"&gt;&amp;bull;&lt;/span&gt; Status: All Systems Operational
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="saas-footer-bottom"&gt;
+    &lt;p&gt;&amp;copy; 2026 Vortex Cloud Services.&lt;/p&gt;
+    &lt;nav&gt;
+      &lt;a href="/security"&gt;Security&lt;/a&gt;
+      &lt;a href="/privacy"&gt;Privacy&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>Top header and bottom legal rows flex seamlessly to vertical blocks on mobile devices under 640px.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>Status uses explicit textual words ("All Systems Operational") rather than color alone, meeting WCAG requirements.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOOTER 4: Developer Portfolio Footer -->
+        <article id="portfolio-footer" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">4. Developer Portfolio Footer</h2>
+              <p class="showcase-desc">Personal website footer featuring social profile links, academic assignment statement, and return-to-top anchor link.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Portfolio</span>
+              <span class="badge-tag">Back to Top Anchor</span>
+            </div>
+          </div>
+
+          <div class="preview-stage white-stage">
+            <footer style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem; max-width: 900px; margin-inline: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div>
+                  <h3 style="font-size: 1.2rem; margin-top: 0; margin-bottom: 0.25rem;">Let's build something accessible.</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">Open to web design and frontend development projects.</p>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a href="forms.html#contact-form" class="btn btn-primary btn-sm">Get in Touch &rarr;</a>
+                  <a href="#top" class="btn btn-secondary btn-sm" aria-label="Return to top of page">&uarr; Back to Top</a>
+                </div>
+              </div>
+
+              <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8125rem; color: var(--text-muted);">
+                <span>Built with semantic HTML5 &amp; CSS3. Zero JavaScript.</span>
+                <span>GitHub &middot; LinkedIn &middot; CodePen</span>
+              </div>
+            </footer>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Portfolio Footer with Back to Top Anchor --&gt;
+&lt;footer class="portfolio-footer"&gt;
+  &lt;div class="contact-cta"&gt;
+    &lt;h3&gt;Let's build something accessible.&lt;/h3&gt;
+    &lt;div class="cta-actions"&gt;
+      &lt;a href="/contact" class="btn btn-primary"&gt;Get in Touch&lt;/a&gt;
+      &lt;a href="#top" class="btn btn-secondary" aria-label="Return to top of page"&gt;&amp;uarr; Top&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer-meta"&gt;
+    &lt;p&gt;Built with semantic HTML5 and CSS3.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>The call-to-action buttons span full width on narrow viewports, preventing awkward button breaks.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The back-to-top anchor uses native browser jump navigation (<code>href="#top"</code> or <code>href="#main-content"</code>) with zero JS dependency.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOOTER 5: Newsletter-Style Footer -->
+        <article id="newsletter-footer" class="component-showcase">
+          <div class="showcase-header">
+            <div class="showcase-title-area">
+              <h2 class="showcase-title" style="font-size: 1.25rem;">5. Newsletter-Integrated Footer</h2>
+              <p class="showcase-desc">Footer featuring an embedded email signup block alongside structured legal and product links.</p>
+            </div>
+            <div class="showcase-meta">
+              <span class="badge-tag highlight">Newsletter</span>
+              <span class="badge-tag">Frontend Demo</span>
+            </div>
+          </div>
+
+          <div class="preview-stage dark-stage">
+            <footer style="background: var(--dark-surface); border-radius: var(--radius-md); padding: 2.5rem; max-width: 960px; margin-inline: auto;">
+              <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2.5rem; margin-bottom: 2rem;">
+                <div>
+                  <h3 style="color: #FFFFFF; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem;">Join the CSS Architecture Journal</h3>
+                  <p style="color: var(--dark-text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">Get deep-dives into modern layout techniques and web accessibility once a month.</p>
+                  <form action="#" method="get" onsubmit="return false;" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <label for="footer-sub-email" class="skip-link">Email Address</label>
+                    <input type="email" id="footer-sub-email" placeholder="student@example.com" required style="padding: 0.55rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--dark-border); background: var(--dark-surface-elevated); color: #FFFFFF; font-size: 0.875rem; flex: 1 1 200px;" />
+                    <button type="submit" class="btn btn-primary btn-sm">Subscribe (Demo)</button>
+                  </form>
+                  <span style="font-size: 0.75rem; color: var(--dark-text-muted); display: block; margin-top: 0.4rem;">Demonstration form. No emails are captured.</span>
+                </div>
+
+                <div style="display: flex; justify-content: space-around; gap: 1.5rem;">
+                  <div>
+                    <div style="color: #FFFFFF; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem;">Navigation</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                      <li><a href="index.html" style="color: var(--dark-text-muted); text-decoration: none;">Home</a></li>
+                      <li><a href="components.html" style="color: var(--dark-text-muted); text-decoration: none;">Library</a></li>
+                      <li><a href="faq.html" style="color: var(--dark-text-muted); text-decoration: none;">FAQ</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div style="color: #FFFFFF; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem;">Guides</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                      <li><a href="getting-started.html" style="color: var(--dark-text-muted); text-decoration: none;">Get Started</a></li>
+                      <li><a href="responsive-design.html" style="color: var(--dark-text-muted); text-decoration: none;">Responsive</a></li>
+                      <li><a href="accessibility.html" style="color: var(--dark-text-muted); text-decoration: none;">Accessibility</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div style="border-top: 1px solid var(--dark-border); padding-top: 1.5rem; font-size: 0.8125rem; color: var(--dark-text-muted); text-align: center;">
+                &copy; 2026 PixelCraft UI Assignment Project.
+              </div>
+            </footer>
+          </div>
+
+          <div class="showcase-code-section">
+            <div class="code-tabs-header">
+              <span class="code-language-tag">HTML5 &amp; CSS Source</span>
+              <span class="code-copy-notice">Select and copy manually (Ctrl+C / Cmd+C)</span>
+            </div>
+            <pre class="code-block"><code>&lt;!-- Newsletter Integrated Footer --&gt;
+&lt;footer class="footer-newsletter"&gt;
+  &lt;div class="footer-grid"&gt;
+    &lt;div class="newsletter-column"&gt;
+      &lt;h3&gt;Join the CSS Journal&lt;/h3&gt;
+      &lt;form action="/subscribe" method="post" class="sub-form"&gt;
+        &lt;label for="foot-email" class="visually-hidden"&gt;Email&lt;/label&gt;
+        &lt;input type="email" id="foot-email" name="email" required /&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Subscribe&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class="links-column"&gt;
+      &lt;!-- Navigation links --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          </div>
+
+          <div class="showcase-notes">
+            <div class="notes-card">
+              <h4>Responsive Behavior</h4>
+              <p>On screens below 768px, the newsletter input and links transition from side-by-side columns to stacked blocks.</p>
+            </div>
+            <div class="notes-card">
+              <h4>Accessibility Notes</h4>
+              <p>The form clearly discloses that it is a demonstration, and input focus uses high-contrast electric violet styling.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Related Guides CTA -->
+        <section class="section" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem;">
+          <h3 style="margin-top: 0;">Next Step: Button System &amp; Interactive States</h3>
+          <p>Explore full keyboard states, touch targets, and pure CSS loading states in our button components library.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="buttons.html" class="btn btn-primary">Explore Button System &rarr;</a>
+            <a href="cards.html" class="btn btn-secondary">Explore Card Components &rarr;</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,802 @@
+MASTER PROJECT PROMPT: PIXELCRAFT UI
+A Modern HTML & CSS Component Library — 15-Page Website Assignment
+1. YOUR ROLE
+
+Act as a senior UI/UX designer, frontend developer, design systems architect, technical SEO specialist, accessibility consultant, and web content strategist.
+
+Design and build a complete, original, modern, responsive website called PixelCraft UI.
+
+PixelCraft UI is a free HTML and CSS component library for students, beginner developers, freelance web designers, and frontend developers.
+
+The website must be created specifically for an academic website design assignment. It must contain 15 distinct, properly connected HTML pages and use only HTML5 and CSS3 for its frontend implementation.
+
+Do not create a generic template website. Build a cohesive, polished, premium-quality educational resource with a distinctive visual identity, realistic content, reusable components, and carefully designed layouts.
+
+2. ASSIGNMENT REQUIREMENTS
+
+The project must satisfy the following requirements:
+
+Create 15 distinct HTML pages.
+Use HTML5 and CSS3 only.
+Use semantic HTML and clean, readable code.
+Make every page responsive on desktop, tablet, and mobile.
+Connect all relevant pages through working internal links.
+Use a consistent design system throughout the website.
+Include modern UI/UX patterns and accessible interactions.
+Implement technical SEO and on-page SEO.
+Structure content for answer engine optimization (AEO).
+Follow generative engine optimization (GEO) best practices.
+Include original, useful written content on every page.
+Include a working CSS-only navigation experience.
+Include print-friendly and code-example sections where appropriate.
+Make the project easy to run locally by opening index.html.
+3. STRICT TECHNOLOGY RULES
+
+Allowed:
+
+HTML5
+CSS3
+CSS custom properties
+Flexbox
+CSS Grid
+Media queries
+CSS transitions and animations
+CSS pseudo-classes and pseudo-elements
+Native HTML forms
+Native HTML details and summary elements
+CSS-only interactive patterns
+Semantic HTML elements
+Local images and SVG assets where appropriate
+Google Fonts through a stylesheet link, with system-font fallbacks
+
+Not allowed:
+
+JavaScript
+Inline JavaScript
+React, Vue, Angular, or other JavaScript frameworks
+Bootstrap
+Tailwind CSS
+jQuery
+JavaScript-based icon libraries
+Node.js or a backend requirement
+Fake functional buttons
+Fake API integrations
+Claims that a static HTML/CSS website has dynamic functionality that it does not possess
+
+All essential website content and navigation must remain usable without JavaScript.
+
+Important functional limitations:
+
+Do not implement a fake clipboard-copy button. Show code in selectable code blocks and explain that users can select and copy it manually.
+Do not claim to provide automatic code generation, live code editing, dynamic search, persistent user accounts, or database functionality.
+Native anchor links, CSS hover effects, native form controls, and HTML details/summary are permitted.
+A static login form must be presented as a UI demonstration only and must not collect or transmit credentials.
+Use browser printing for print-friendly examples instead of claiming to provide automatic PDF generation.
+Do not use a nonfunctional search box without clearly identifying it as a visual demonstration. Prefer useful category navigation and actual links.
+4. BRAND IDENTITY
+
+Brand name: PixelCraft UI
+
+Tagline: Beautiful Components. Pure HTML & CSS.
+
+Brand promise: A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.
+
+Target audience:
+
+Beginner frontend developers
+Web design students
+Freelance web designers
+UI/UX learners
+Developers who want lightweight components without a framework
+People learning responsive design and accessibility
+
+Brand personality:
+
+Modern
+Creative
+Trustworthy
+Developer-focused
+Educational
+Minimal
+Practical
+
+Create a recognizable brand identity. Avoid copying the appearance, layout, content, or branding of existing component libraries.
+
+5. MODERN DESIGN DIRECTION
+
+Use a contemporary developer-tool aesthetic inspired by modern editorial websites and premium design systems.
+
+Visual direction:
+
+Light neutral background with deep charcoal typography.
+A dark navy or near-black sidebar/header accent where appropriate.
+Electric violet as the primary accent.
+Soft lavender as a secondary accent.
+Teal or lime as a restrained highlight.
+Generous whitespace.
+Large, confident headings.
+Clean cards with subtle borders.
+Soft shadows used sparingly.
+Rounded corners between 10px and 18px.
+Clear visual hierarchy.
+Carefully aligned content.
+Responsive layouts with consistent spacing.
+Attractive code examples using CSS-only styling.
+Distinctive component preview areas.
+Professional typography.
+
+Suggested palette:
+
+Main background: #F8F9FC
+Surface: #FFFFFF
+Main text: #171923
+Secondary text: #626B7A
+Primary accent: #6C5CE7
+Secondary accent: #A89BFA
+Highlight: #16B8A6
+Border: #E5E8F0
+Dark surface: #151827
+Dark text: #F7F8FC
+
+Create CSS variables for all major colors, typography sizes, spacing, border radii, shadows, and content widths.
+
+Use a font pairing such as Inter for body text and Space Grotesk for headings, with sensible system fallbacks.
+
+Use consistent spacing based on a 4px or 8px scale.
+
+Use restrained animation. Avoid excessive gradients, glowing effects, glassmorphism everywhere, oversized rounded cards, or decorative elements that interfere with readability.
+
+Every page should feel like part of one product, while each page must have a distinct content purpose.
+
+6. GLOBAL SITE LAYOUT
+
+Build reusable page structures using consistent HTML patterns and shared CSS.
+
+Every page should have:
+
+A skip-to-content link.
+A responsive header.
+The PixelCraft UI wordmark.
+Primary navigation.
+A clearly visible active navigation state.
+A meaningful page title and introduction.
+Main content with semantic sections.
+Related internal links.
+A consistent footer.
+Accessible focus indicators.
+Responsive mobile styling.
+
+Primary navigation:
+
+Home
+Components
+Examples
+Guides
+About
+
+Secondary navigation should expose the component categories where relevant.
+
+On desktop, use a clean horizontal navigation or a carefully designed sidebar-plus-content layout.
+
+On mobile, use a CSS-only navigation pattern that works without JavaScript. Prefer a native details/summary menu or another accessible HTML/CSS solution.
+
+Never hide essential navigation behind hover-only interactions.
+
+7. THE 15 REQUIRED HTML PAGES
+
+Build the following 15 pages as separate HTML files.
+
+PAGE 1 — HOME File: index.html
+
+Purpose: Introduce PixelCraft UI and direct users to the component library.
+
+Required sections:
+
+Hero with a clear value proposition.
+Primary CTA linking to the component library.
+Secondary CTA linking to the getting-started guide.
+Featured component categories.
+A visually appealing component preview grid.
+Benefits of using pure HTML and CSS.
+A short explanation of responsive and accessible components.
+Featured learning guides.
+FAQ section using native details and summary.
+Final CTA.
+Complete footer.
+
+Suggested H1: "Build Better Interfaces with Pure HTML & CSS"
+
+Include a concise introductory answer explaining what PixelCraft UI offers and who it helps.
+
+PAGE 2 — COMPONENT LIBRARY File: components.html
+
+Purpose: Provide a directory of available components.
+
+Required sections:
+
+Page introduction.
+Category navigation.
+Featured component cards.
+Component descriptions.
+Difficulty labels where useful.
+Links to each individual component page.
+Getting-started CTA.
+Related learning resources.
+
+Categories:
+
+Navigation
+Forms
+Cards
+Footers
+
+Do not display fake search results or nonfunctional filter buttons.
+
+PAGE 3 — NAVBAR COMPONENTS File: navbar-components.html
+
+Purpose: Show several navbar designs using HTML and CSS.
+
+Include at least:
+
+Minimal navigation bar.
+SaaS navigation bar.
+Portfolio navigation bar.
+E-commerce navigation bar.
+Documentation navigation bar.
+
+For each example provide:
+
+A live HTML/CSS-rendered preview.
+A clear component title.
+A short description.
+A readable HTML snippet.
+A readable CSS snippet.
+Responsive behavior.
+Accessibility notes.
+A link to the navbar guide.
+
+The actual previews must be implemented with HTML and CSS, not screenshots.
+
+PAGE 4 — LOGIN & SIGNUP FORMS File: forms.html
+
+Include:
+
+Minimal login form.
+Split-layout login form.
+Signup form.
+Contact form.
+Newsletter form.
+
+Every form must have proper labels, appropriate input types, helpful placeholder text, and accessible focus styles.
+
+Use native validation attributes such as required, minlength, and type=email when appropriate.
+
+Do not imply that demo forms authenticate users, send emails, store information, or connect to a backend.
+
+Display a clear note: "These are frontend UI examples. Form submission and account authentication require an appropriate backend or external service."
+
+PAGE 5 — PRICING CARDS File: pricing-cards.html
+
+Include:
+
+Simple pricing cards.
+Three-tier SaaS pricing layout.
+Featured plan design.
+Monthly/annual pricing presentation as static content.
+Feature comparison section.
+Responsive stacked mobile layout.
+
+Do not create a fake working pricing toggle.
+
+Use illustrative sample prices and clearly label them as examples. Do not imply that the website sells actual subscriptions unless a real purchasing system is separately implemented.
+
+Provide HTML/CSS code examples and links to related components.
+
+PAGE 6 — FOOTER COMPONENTS File: footer-components.html
+
+Include:
+
+Minimal footer.
+Multi-column footer.
+SaaS footer.
+Portfolio footer.
+Newsletter-style footer.
+
+Use semantic footer markup, meaningful links, appropriate contrast, and responsive grid layouts.
+
+Every example should have a real visual preview and readable code.
+
+Newsletter forms must be identified as demonstrations unless connected to a genuine service.
+
+PAGE 7 — BUTTON COMPONENTS File: buttons.html
+
+Include:
+
+Primary and secondary buttons.
+Outline buttons.
+Text buttons.
+Icon-style buttons where an appropriate local icon or simple CSS treatment is available.
+Loading-style visual demonstrations without JavaScript.
+Disabled states.
+Hover, focus, active, and disabled styles.
+
+Use real anchor elements for navigation and button elements for actual button-like actions.
+
+Do not use empty links or pretend that a visual button performs an action it cannot perform.
+
+PAGE 8 — CARD COMPONENTS File: cards.html
+
+Include:
+
+Basic content cards.
+Profile cards.
+Blog cards.
+Product cards.
+Feature cards.
+Testimonial cards.
+
+Use CSS Grid and Flexbox. Include realistic sample content and responsive behavior.
+
+Use meaningful image alt text if images are included.
+
+PAGE 9 — HERO SECTION EXAMPLES File: hero-sections.html
+
+Include:
+
+Minimal text hero.
+Split-screen hero.
+Product-focused hero.
+Developer portfolio hero.
+Image-supported hero.
+
+Each example must include a clear heading, supporting text, a suitable CTA, and a responsive layout.
+
+Avoid excessive marketing copy and generic filler.
+
+PAGE 10 — CSS ANIMATIONS File: animations.html
+
+Include:
+
+Button hover effects.
+Card hover effects.
+Underline animations.
+Subtle entrance-style demonstrations where appropriate.
+Loading indicators using CSS.
+Transform and transition examples.
+
+Provide accessible reduced-motion support using prefers-reduced-motion.
+
+Do not depend on JavaScript to trigger essential effects.
+
+PAGE 11 — RESPONSIVE DESIGN GUIDE File: responsive-design.html
+
+Explain:
+
+Mobile-first CSS.
+Media queries.
+Responsive containers.
+Flexbox.
+CSS Grid.
+Fluid typography.
+Responsive navigation.
+Responsive forms and cards.
+Common responsive design mistakes.
+
+Include small, useful code examples and practical explanations.
+
+PAGE 12 — GETTING STARTED File: getting-started.html
+
+Explain:
+
+What PixelCraft UI is.
+How to create an HTML file.
+How to connect a CSS stylesheet.
+How to use a component example.
+How to customize colors and spacing.
+How to test responsive layouts.
+How to check keyboard accessibility.
+How to print a component example.
+Project folder structure.
+
+Include a beginner-friendly step-by-step guide and a minimal starter example.
+
+PAGE 13 — ACCESSIBILITY GUIDE File: accessibility.html
+
+Cover:
+
+Semantic HTML.
+Keyboard navigation.
+Visible focus indicators.
+Form labels.
+Color contrast.
+Accessible navigation.
+Alt text.
+Reduced motion.
+Accessible buttons and links.
+Common accessibility mistakes.
+
+Use practical examples and avoid claiming formal compliance without testing.
+
+PAGE 14 — ABOUT File: about.html
+
+Include:
+
+Mission and purpose.
+Intended audience.
+Why HTML and CSS are used.
+Project principles.
+How the library is organized.
+Honest limitations of static examples.
+Links to the library and learning guides.
+
+Do not invent a company history, team members, user numbers, awards, testimonials, or partnerships.
+
+PAGE 15 — FAQ File: faq.html
+
+Include at least 12 genuinely useful questions with concise, direct answers.
+
+Topics:
+
+What is PixelCraft UI?
+Is the library free?
+Does it require JavaScript?
+Can I use the components in personal projects?
+Can I use them in commercial projects?
+How do I customize colors?
+Are the components responsive?
+Do forms actually submit data?
+Can I copy code manually?
+How can I print an example?
+How do I improve accessibility?
+Can I contribute additional components?
+
+Only publish licensing and usage claims that the project owner has actually adopted. If no license has been selected, clearly state that the terms of use still need to be established.
+
+Use native details and summary elements for expandable questions.
+
+8. CODE EXAMPLE PRESENTATION
+
+Each component page should have a consistent example layout:
+
+Component title.
+Brief explanation.
+Preview area.
+HTML example.
+CSS example.
+Responsive notes.
+Accessibility notes.
+Related components.
+Links to relevant guides.
+
+Use semantic pre and code elements.
+
+Style code examples with:
+
+Dark background.
+Monospaced font.
+Adequate padding.
+Readable line height.
+Horizontal overflow for long lines.
+Clear contrast.
+
+All code snippets must be real, valid HTML/CSS and correspond to the rendered example as closely as possible.
+
+Do not use fake code or screenshots in place of actual components.
+
+Because JavaScript is prohibited, users should be able to select and manually copy code from the code blocks.
+
+9. TECHNICAL SEO REQUIREMENTS
+
+Implement SEO for all 15 pages.
+
+Each page must include:
+
+A unique, descriptive title tag.
+A unique meta description.
+A canonical URL placeholder that can be replaced with the final production URL.
+Correct character encoding.
+A responsive viewport meta tag.
+Semantic HTML5 structure.
+One clear primary H1.
+Logical H2 and H3 hierarchy.
+Descriptive internal anchor text.
+Descriptive image alt text.
+Human-readable filenames.
+A consistent URL and navigation structure.
+Relevant links to related content.
+Fast-loading, appropriately sized assets.
+No unnecessary duplicate content.
+No keyword stuffing.
+No fake reviews or invented authority claims.
+
+Use descriptive page titles that reflect the content, for example: "Responsive Navbar Components in HTML & CSS | PixelCraft UI"
+
+Do not use the same title or meta description on every page.
+
+Create a sensible internal linking strategy:
+
+Homepage links to the library and major categories.
+The library links to every component category.
+Individual component pages link to related components and relevant guides.
+Guides link to practical examples.
+FAQ links to relevant help pages.
+
+Add a robots.txt file with sensible rules for the production deployment.
+
+Add a sitemap.xml listing the 15 canonical page URLs. Clearly mark example URLs as placeholders until a real domain is chosen.
+
+Create a custom 404.html page if useful, but do not count it as one of the 15 primary assignment pages.
+
+Do not claim that a sitemap, robots.txt, canonical tags, or metadata automatically guarantee indexing or ranking.
+
+10. AEO — ANSWER ENGINE OPTIMIZATION
+
+Structure content so search engines and answer-oriented systems can identify direct answers.
+
+For every major component page:
+
+Begin with a concise definition or direct answer.
+Explain what the component is used for.
+Identify the intended audience.
+Describe important implementation details.
+Explain responsive behavior.
+Include useful, self-contained headings.
+Answer practical questions in plain language.
+Provide valid examples and explain their limitations.
+
+Use question-style headings where they match genuine user needs, for example:
+
+What Is a Responsive Navbar?
+How Do You Build a Login Form with HTML and CSS?
+How Can You Make a Pricing Card Responsive?
+What Makes a Footer Accessible?
+
+Write concise answers directly beneath relevant headings.
+
+Include FAQs where genuinely helpful. Use HTML details and summary for native expandable content.
+
+Avoid keyword stuffing, repetitive answers, fabricated statistics, and claims of guaranteed AI citations.
+
+11. GEO — GENERATIVE ENGINE OPTIMIZATION
+
+Optimize the website to be understandable, attributable, and useful when generative search systems summarize web resources.
+
+Implement the following editorial practices:
+
+Explain each topic clearly and independently.
+Use consistent terminology throughout the site.
+Provide accurate definitions.
+Include original examples and practical implementation details.
+Cite external claims when external sources are actually used.
+Identify limitations and assumptions.
+Provide meaningful author or project information without inventing credentials.
+Make important information available in crawlable HTML rather than image-only content.
+Use descriptive headings and informative internal links.
+Include clear project identity and purpose.
+Keep factual claims consistent across pages.
+Explain whether each component is a visual example, a complete frontend implementation, or requires backend functionality.
+
+Where appropriate, reference authoritative documentation, such as the MDN Web Docs, using genuine relevant links.
+
+Do not create fake expert quotations, fake citations, fabricated research, or misleading claims that AI systems are guaranteed to recommend the website.
+
+Do not create a separate page for every keyword variation if the pages would contain substantially duplicate content.
+
+12. STRUCTURED DATA
+
+Add JSON-LD only where it accurately describes the visible content and complies with relevant search engine guidelines.
+
+Suitable possibilities include:
+
+WebSite for the overall website.
+Organization only if the represented organization is real and the information is accurate.
+BreadcrumbList where visible breadcrumbs exist.
+Article only for content that genuinely qualifies as an article and displays corresponding information.
+
+Use valid JSON-LD embedded in a script type="application/ld+json" element. This is structured data, not executable JavaScript.
+
+Do not add invented ratings, reviews, prices, organization details, authors, or social profiles.
+
+Do not expect FAQ structured data to automatically produce a rich result.
+
+Do not mark up content that is not visible to users.
+
+Validate structured data and replace domain placeholders before deployment.
+
+13. IMAGES, ICONS, AND ASSETS
+
+Prefer CSS-created decoration and locally available assets.
+
+If images are required:
+
+Use appropriately licensed images.
+Optimize image file sizes.
+Use descriptive filenames.
+Add meaningful alt text.
+Reserve image dimensions to reduce layout shifts.
+Avoid irrelevant stock imagery.
+Do not use screenshots as substitutes for the actual HTML/CSS component previews.
+
+For icons, prefer simple CSS shapes, inline SVG assets, or appropriately licensed local SVG files.
+
+Do not use emoji as the primary icon system.
+
+Ensure the site remains usable if optional external fonts or images fail to load.
+
+14. ACCESSIBILITY REQUIREMENTS
+
+Use semantic landmarks:
+
+header
+nav
+main
+section
+article
+footer
+
+Ensure:
+
+Keyboard-accessible navigation.
+Visible focus states.
+Proper labels for all form controls.
+Appropriate color contrast.
+Logical heading hierarchy.
+Descriptive link text.
+No essential hover-only interactions.
+Reduced-motion support.
+Correct use of buttons and links.
+Responsive layouts at common viewport widths.
+
+Do not rely solely on color to convey meaning.
+
+Do not use placeholder text as the only label for a form field.
+
+15. RESPONSIVE DESIGN REQUIREMENTS
+
+Implement a mobile-first layout with CSS media queries.
+
+Test at approximately:
+
+320px mobile width.
+375px mobile width.
+768px tablet width.
+1024px laptop width.
+1440px desktop width.
+
+Ensure:
+
+No unintended horizontal page overflow.
+Navigation remains usable.
+Cards stack correctly on small screens.
+Code blocks remain readable.
+Typography scales appropriately.
+Images do not overflow containers.
+Forms fit within narrow screens.
+Footer columns adapt to smaller viewports.
+Buttons and interactive controls have comfortable touch targets.
+
+Use fluid layouts where appropriate and avoid fixed widths that break on mobile.
+
+16. PROJECT FILE STRUCTURE
+
+Deliver a clean project structure similar to:
+
+pixelcraft-ui/ ├── index.html ├── components.html ├── navbar-components.html ├── forms.html ├── pricing-cards.html ├── footer-components.html ├── buttons.html ├── cards.html ├── hero-sections.html ├── animations.html ├── responsive-design.html ├── getting-started.html ├── accessibility.html ├── about.html ├── faq.html ├── 404.html ├── robots.txt ├── sitemap.xml ├── README.md └── assets/ ├── css/ │ └── style.css ├── images/ └── icons/
+
+Keep the primary site to HTML and CSS. The optional README, sitemap, robots file, and local asset files support project delivery and deployment.
+
+Use one shared stylesheet for consistent global styling. Add additional stylesheets only if there is a clear organizational benefit.
+
+Use relative internal links so the project can run locally.
+
+17. CODE QUALITY
+
+Write clean, maintainable, well-formatted HTML and CSS.
+
+Requirements:
+
+No missing closing tags.
+No broken internal links.
+No duplicate IDs.
+No invalid nesting.
+No unexplained magic numbers where CSS variables are appropriate.
+No unused styles where reasonably avoidable.
+No unnecessary external dependencies.
+No fake functionality.
+No placeholder lorem ipsum in the final content.
+No empty sections.
+No copied branding from existing sites.
+
+Use reusable CSS classes and a clear naming convention.
+
+Use CSS custom properties for the design tokens.
+
+Keep global layout styles separate from component-specific styles.
+
+Comment complex CSS patterns where comments improve understanding.
+
+18. PERFORMANCE
+
+Use lightweight assets and avoid unnecessary effects.
+
+Prefer CSS over image assets for simple shapes and decorative details.
+
+Avoid excessive animation, large background images, and unnecessary font weights.
+
+Set appropriate image dimensions and use loading="lazy" for below-the-fold images where appropriate.
+
+Keep content readable if external resources are unavailable.
+
+Do not claim a specific Lighthouse score unless the site has actually been tested.
+
+19. CONTENT QUALITY AND ORIGINALITY
+
+Write useful, specific, human-readable content for all pages.
+
+Avoid:
+
+Generic filler.
+Repeated descriptions.
+Keyword stuffing.
+Fake testimonials.
+Fake usage statistics.
+Fake customer logos.
+Unsupported performance claims.
+Invented research.
+Misleading download or copy buttons.
+Unverified commercial licensing promises.
+
+Use original component implementations and original explanatory content.
+
+The final website should demonstrate understanding of HTML semantics, CSS layout, responsive design, component architecture, accessibility, and SEO.
+
+20. FINAL DELIVERABLES
+
+Deliver:
+
+All 15 complete HTML pages.
+A shared, fully implemented CSS stylesheet.
+Responsive navigation and footer.
+Original component previews.
+Readable HTML/CSS code examples.
+Unique SEO titles and descriptions for all 15 pages.
+Appropriate canonical URL placeholders.
+robots.txt.
+sitemap.xml with clearly identified placeholder URLs.
+A custom 404 page if implemented.
+A README with local setup and deployment instructions.
+A checklist documenting assignment compliance.
+A list of any remaining limitations.
+
+Do not deliver only a plan, wireframe, mockup, or partial code.
+
+Provide complete file contents. If the output must be split into multiple responses, divide it into clearly labeled batches and continue until every required file is complete.
+
+21. FINAL QUALITY ASSURANCE
+
+Before declaring the project complete, verify:
+
+All 15 primary pages exist.
+Every page has unique and relevant content.
+All internal navigation links work.
+All component previews use actual HTML/CSS.
+The stylesheet loads correctly.
+No JavaScript is used.
+No prohibited framework is included.
+No fake functionality is presented as real.
+Responsive layouts are checked at mobile and desktop widths.
+Forms have labels and clear limitations.
+All pages have unique titles and meta descriptions.
+Headings are logically structured.
+Structured data, if included, matches visible content.
+Canonical URLs and sitemap URLs are marked for production replacement.
+Accessibility basics are addressed.
+Code examples are readable and valid.
+The site works when opened locally.
+The project includes instructions for testing and publishing.
+
+The final result must look like a contemporary, carefully crafted developer product—not a basic student template.
+
+Prioritize originality, clarity, usability, responsive behavior, accessibility, content quality, and honest functionality over unnecessary visual effects.
+
+Begin by establishing the design system and file structure, then implement the shared stylesheet and all 15 pages. Finish with a complete quality-assurance checklist.

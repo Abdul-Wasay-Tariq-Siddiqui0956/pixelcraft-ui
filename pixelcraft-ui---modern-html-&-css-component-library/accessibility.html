@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Accessibility (a11y) Guide for HTML & CSS | PixelCraft UI</title>
+    <meta name="description" content="A comprehensive practical guide to web accessibility: semantic landmarks, visible focus rings, WCAG contrast, descriptive form labels, and reduced motion." />
+    <link rel="canonical" href="https://example.com/accessibility.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Web Accessibility (a11y) Guide for HTML & CSS | PixelCraft UI" />
+    <meta property="og:description" content="Master web accessibility with pure HTML5 semantics and CSS3 standards." />
+    <meta property="og:url" content="https://example.com/accessibility.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Web Accessibility (a11y) Guide for HTML & CSS",
+      "description": "Practical guidelines for achieving WCAG 2.1 AA accessibility using native HTML5 and CSS3.",
+      "author": {
+        "@type": "Organization",
+        "name": "PixelCraft UI Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PixelCraft UI",
+        "url": "https://example.com/"
+      },
+      "datePublished": "2026-10-20",
+      "mainEntityOfPage": "https://example.com/accessibility.html"
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html" aria-current="page">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subnav -->
+    <nav class="category-subnav" aria-label="Guides Sub-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="responsive-design.html">Responsive Design Guide</a></li>
+          <li><a href="accessibility.html" class="active">Accessibility Guide</a></li>
+          <li><a href="about.html">About PixelCraft</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li><a href="getting-started.html">Guides</a></li>
+            <li class="breadcrumbs-sep" aria-hidden="true">/</li>
+            <li aria-current="page">Accessibility Guide</li>
+          </ol>
+        </nav>
+
+        <!-- Article -->
+        <article class="guide-article section" style="padding-top: 1.5rem;">
+          <header style="margin-bottom: 2rem;">
+            <span class="section-eyebrow">WCAG 2.1 AA Foundations</span>
+            <h1>Web Accessibility (a11y) Guide for HTML &amp; CSS</h1>
+            <div class="guide-meta">
+              <span>Published by PixelCraft UI Editorial</span>
+              <span aria-hidden="true">&bull;</span>
+              <span>14 Min Read</span>
+              <span aria-hidden="true">&bull;</span>
+              <span>Practical Standards</span>
+            </div>
+            <p class="lead">
+              Accessibility is not an afterthought or an optional checklist. It is the fundamental practice of making the web usable for everyone, including people who navigate with keyboards, rely on screen readers, or experience low vision. Learn how standard HTML5 semantics and intentional CSS styling deliver exceptional accessibility without fragile JavaScript patches.
+            </p>
+          </header>
+
+          <!-- AEO Direct Answer -->
+          <div class="notice-box info" style="margin-bottom: 2.5rem;">
+            <svg class="notice-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <strong>Why Is Semantic HTML the Best Accessibility Tool?</strong>
+              <p style="margin: 0.25rem 0 0 0;">
+                Native HTML elements (such as <code>&lt;button&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;main&gt;</code>) come pre-packaged with built-in accessibility semantics, tab focusability, and keyboard activation events recognized automatically by all major screen readers and operating systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 1: Semantic Landmarks -->
+          <section>
+            <h2>1. Semantic HTML Landmarks</h2>
+            <p>
+              Screen reader users frequently navigate pages by skipping directly between major structural landmarks. Replacing generic <code>&lt;div&gt;</code> wrappers with HTML5 landmarks establishes a clear document hierarchy:
+            </p>
+            <ul>
+              <li><code>&lt;header&gt;</code>: Identifies site branding, primary navigation, and global tools.</li>
+              <li><code>&lt;nav&gt;</code>: Designates a collection of navigation links. Always supply an <code>aria-label</code> (such as <code>aria-label="Main"</code> or <code>aria-label="Footer"</code>) when multiple <code>&lt;nav&gt;</code> elements exist.</li>
+              <li><code>&lt;main&gt;</code>: Contains the central, unique content of the document. Every page must have exactly one <code>&lt;main&gt;</code> element.</li>
+              <li><code>&lt;section&gt;</code>: Groups thematically related content with a dedicated heading (<code>&lt;h2&gt;</code>).</li>
+              <li><code>&lt;article&gt;</code>: Encloses self-contained content that makes sense independently (e.g. a blog post or product card).</li>
+              <li><code>&lt;aside&gt;</code>: Houses complementary, secondary content (e.g. sidebars or callouts).</li>
+              <li><code>&lt;footer&gt;</code>: Marks copyright, colophon, and secondary directory links.</li>
+            </ul>
+          </section>
+
+          <!-- Section 2: Visible Focus Rings -->
+          <section>
+            <h2>2. Visible Keyboard Focus (:focus-visible)</h2>
+            <p>
+              One of the most damaging mistakes on the web is writing <code>outline: none;</code> in CSS. This strips away visual indicators for keyboard users, making it impossible to tell which button or link is active.
+            </p>
+            <p>
+              Modern browsers support <code>:focus-visible</code>, which applies focus rings strictly when a user navigates via keyboard (or assistive tech) while keeping mouse clicks clean:
+            </p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>/* WCAG 2.4.7 Visible Focus Ring */
+:focus-visible {
+  outline: 2px solid #6c5ce7;
+  outline-offset: 3px;
+}</code></pre>
+            <p>
+              The <code>outline-offset: 3px;</code> creates a breathing buffer so the outline never collides with or obscures the text inside the button.
+            </p>
+          </section>
+
+          <!-- Section 3: Form Labels vs Placeholders -->
+          <section>
+            <h2>3. Form Labels vs. Placeholder Text</h2>
+            <div class="guide-callout">
+              <h4>Golden Rule of Form Accessibility</h4>
+              <p>
+                <strong>A placeholder is not a label.</strong> Placeholders disappear when a user types, provide low contrast by default, and are not reliably announced as labels by screen readers.
+              </p>
+            </div>
+            <p>
+              Always connect every form field to an explicit <code>&lt;label&gt;</code> element using matching <code>for</code> and <code>id</code> attributes:
+            </p>
+            <pre class="code-block" style="border-radius: var(--radius-md); margin-bottom: 1.25rem;"><code>&lt;!-- Accessible Form Control Pair --&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="user-email" class="form-label"&gt;Email Address &lt;span class="required"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input type="email" id="user-email" name="email" class="form-input" placeholder="you@university.edu" required /&gt;
+  &lt;span class="form-hint"&gt;We will send your assignment confirmation here.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <!-- Section 4: Color Contrast Standards -->
+          <section>
+            <h2>4. Color Contrast Ratios (WCAG 1.4.3)</h2>
+            <p>
+              The Web Content Accessibility Guidelines (WCAG) 2.1 Level AA require minimum contrast ratios between foreground text and background surfaces:
+            </p>
+            <ul>
+              <li><strong>Normal Body Text (&lt;18pt / &lt;24px)</strong>: Minimum <strong>4.5:1</strong> contrast ratio.</li>
+              <li><strong>Large Text (&ge;18pt or &ge;14pt Bold)</strong>: Minimum <strong>3.0:1</strong> contrast ratio.</li>
+              <li><strong>UI Components &amp; Graphical Boundaries</strong>: Minimum <strong>3.0:1</strong> contrast ratio against adjacent surfaces.</li>
+            </ul>
+            <p>
+              In PixelCraft UI, our charcoal text (<code>#171923</code>) against canvas white (<code>#FFFFFF</code>) achieves an extraordinary <strong>15.2:1</strong> contrast ratio, effortlessly passing WCAG AAA standards.
+            </p>
+          </section>
+
+          <!-- Section 5: Descriptive Alt Text -->
+          <section>
+            <h2>5. Meaningful Image Alt Text</h2>
+            <p>
+              Every <code>&lt;img&gt;</code> tag requires an <code>alt</code> attribute. The content of that attribute depends on whether the image is informative or decorative:
+            </p>
+            <ul>
+              <li>
+                <strong>Informative Images</strong>: Provide concise, contextual descriptions of the information conveyed (e.g., <code>alt="PixelCraft UI components organized in a three-tier subscription grid"</code>).
+              </li>
+              <li>
+                <strong>Decorative Images</strong>: If an image or SVG is purely visual decoration and adjacent text already conveys the meaning, supply an empty alt attribute (<code>alt=""</code>) or <code>aria-hidden="true"</code> so screen readers skip it cleanly.
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section 6: Buttons vs Links -->
+          <section>
+            <h2>6. Buttons vs. Links (Semantics Matter)</h2>
+            <div class="comparison-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Element</th>
+                    <th>HTML Tag</th>
+                    <th>Proper Use Case</th>
+                    <th>Keyboard Trigger</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Link</strong></td>
+                    <td><code>&lt;a href="..."&gt;</code></td>
+                    <td>Navigating to a new page, document, or anchor hash.</td>
+                    <td><code>Enter</code> key</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Button</strong></td>
+                    <td><code>&lt;button type="button"&gt;</code></td>
+                    <td>Triggering an action, opening a modal, submitting a form.</td>
+                    <td><code>Enter</code> and <code>Space</code> keys</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Never write <code>&lt;div onclick="..."&gt;</code> or <code>&lt;a href="#"&gt;</code> for button actions. Doing so breaks keyboard navigation and causes screen readers to misidentify interactive controls.
+            </p>
+          </section>
+
+          <!-- Section 7: Top Accessibility Mistakes -->
+          <section>
+            <h2>7. Common Accessibility Mistakes &amp; Fixes</h2>
+            <ol>
+              <li>
+                <strong>Color as the Sole Indicator</strong>: Never signal state (such as error or success) using color alone. Always pair red or green highlights with clear text or explicit icons.
+              </li>
+              <li>
+                <strong>Skipping Heading Levels</strong>: Do not jump from an <code>&lt;h1&gt;</code> directly to an <code>&lt;h4&gt;</code> merely for styling. Maintain a logical hierarchy (h1 &rarr; h2 &rarr; h3) and use CSS classes for visual sizing.
+              </li>
+              <li>
+                <strong>Vague Link Text</strong>: Avoid generic links like "Click here" or "Read more". Use informative phrases like "Explore Navbar Components" or "Read the Responsive Design Guide".
+              </li>
+              <li>
+                <strong>Trapping Focus</strong>: Ensure users can navigate into and out of all interactive controls using only the <code>Tab</code> and <code>Shift+Tab</code> keys.
+              </li>
+            </ol>
+          </section>
+
+          <!-- Navigation Footer -->
+          <footer style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <a href="responsive-design.html" class="btn btn-secondary">&larr; Responsive Design Guide</a>
+            <a href="about.html" class="btn btn-primary">Next: About PixelCraft UI &rarr;</a>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>
+              A modern, free HTML5 and CSS3 component library created specifically for an academic website design assignment. Pure web standards with zero JavaScript dependencies.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Assignment Edition</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Components</h3>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Login &amp; Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Guides</h3>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="components.html">Component Directory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Project</h3>
+            <ul class="footer-nav">
+              <li><a href="about.html">About PixelCraft</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Standards</h3>
+            <ul class="footer-nav">
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">HTML5 Semantic</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">CSS3 Custom Properties</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">WCAG AA Compliant</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Zero JS Architecture</span></li>
+              <li><span style="color: var(--dark-text-muted); font-size: 0.875rem;">Print-Friendly CSS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for academic demonstration purposes. All components are static HTML &amp; CSS.
+          </div>
+          <div>
+            <span style="color: var(--dark-text-muted);">Beautiful Components. Pure HTML &amp; CSS.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

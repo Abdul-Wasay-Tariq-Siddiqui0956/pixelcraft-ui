@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started with PixelCraft UI | Pure HTML &amp; CSS</title>
+    <meta name="description" content="Learn how to start a web project with PixelCraft UI. Step-by-step setup guide for creating HTML files, linking stylesheets, and customizing CSS variables." />
+    <link rel="canonical" href="https://example.com/pixelcraft-ui/getting-started.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="theme-color" content="#6C5CE7" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Getting Started with PixelCraft UI | Pure HTML &amp; CSS" />
+    <meta property="og:description" content="A beginner-friendly guide to building websites with zero-dependency HTML5 and CSS3 components." />
+    <meta property="og:url" content="https://example.com/pixelcraft-ui/getting-started.html" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.com/pixelcraft-ui/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://example.com/pixelcraft-ui/getting-started.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting Started",
+          "item": "https://example.com/pixelcraft-ui/getting-started.html"
+        }
+      ]
+    }
+    </script>
+  
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <!-- Primary Desktop Nav -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="templates.html">Templates (30+)</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="components.html" class="btn btn-secondary btn-sm">Components</a>
+            <a href="#tutorial-steps" class="btn btn-primary btn-sm">Start Tutorial</a>
+
+            <!-- Mobile Nav (details/summary, Zero JS) -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="templates.html">Templates (20+)</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+                <div class="mobile-nav-divider"></div>
+                <a href="navbar-components.html">Navbars</a>
+                <a href="pricing-cards.html">Pricing Cards</a>
+                <a href="footer-components.html">Footers</a>
+                <a href="buttons.html">Buttons</a>
+                <a href="cards.html">Cards</a>
+                <a href="hero-sections.html">Hero Sections</a>
+                <a href="animations.html">CSS Animations</a>
+                <a href="getting-started.html" aria-current="page">Getting Started Guide</a>
+                <a href="responsive-design.html">Responsive Design</a>
+                <a href="accessibility.html">Accessibility (a11y)</a>
+                <a href="about.html">About &amp; Brand Kit</a>
+                <a href="faq.html">FAQ</a>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Secondary Subnav Bar (Always-visible on desktop) -->
+    <nav class="subnav-bar" aria-label="Guides Navigation">
+      <div class="container">
+        <ul>
+          <li><span style="font-size: 0.8125rem; font-weight: 700; color: var(--text); text-transform: uppercase; margin-right: 0.5rem;">Guides:</span></li>
+          <li><a href="getting-started.html" class="active" aria-current="page"><img src="assets/icons/book.svg" alt="" width="14" height="14" aria-hidden="true" /> Getting Started</a></li>
+          <li><a href="responsive-design.html"><img src="assets/icons/mobile.svg" alt="" width="14" height="14" aria-hidden="true" /> Responsive Design</a></li>
+          <li><a href="accessibility.html"><img src="assets/icons/accessibility.svg" alt="" width="14" height="14" aria-hidden="true" /> Accessibility</a></li>
+          <li><a href="faq.html"><img src="assets/icons/check.svg" alt="" width="14" height="14" aria-hidden="true" /> FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Visible Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><a href="getting-started.html">Guides</a></li>
+          <li class="breadcrumbs-sep">/</li>
+          <li><span aria-current="page">Getting Started</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <article class="section" style="padding-top: var(--space-8);">
+        <div class="container container-narrow">
+          <span class="section-eyebrow">
+            <img src="assets/icons/book.svg" alt="" width="14" height="14" aria-hidden="true" />
+            Beginner Tutorial
+          </span>
+          <h1>Getting Started with PixelCraft UI</h1>
+
+          <!-- Direct-Answer Intro -->
+          <p class="lead">
+            PixelCraft UI is a lightweight, zero-dependency HTML5 and CSS3 component library built for students and web design practitioners. Getting started requires nothing more than a text editor and a web browser—no Node.js build pipeline, no package installation, and no JavaScript runtime scripts.
+          </p>
+
+          <div style="display: flex; gap: var(--space-2); margin-block: var(--space-4); flex-wrap: wrap;">
+            <span class="implementation-type-badge">Complete frontend implementation</span>
+            <span class="badge badge--difficulty">Beginner friendly</span>
+          </div>
+
+          <div class="alert alert--info">
+            <img src="assets/icons/check.svg" alt="" class="notice-icon" aria-hidden="true" />
+            <div>
+              <strong>Prerequisites:</strong>
+              Basic understanding of HTML elements (&lt;header&gt;, &lt;nav&gt;, &lt;div&gt;) and CSS classes. That's all! You can inspect, edit, and double-click your HTML files to preview changes locally in any modern browser.
+            </div>
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--border); margin-block: var(--space-8);" />
+
+          <!-- Numbered Steps -->
+          <div id="tutorial-steps">
+            <h2>Step 1: Set Up Your Project Folder Structure</h2>
+            <p>
+              Organize your project with a dedicated root folder containing your HTML files and an <code>assets/</code> directory for stylesheets, images, and SVG icons. Here is the recommended folder structure:
+            </p>
+
+            <div class="code-block-wrapper">
+              <div class="code-tabs-header">
+                <span class="code-language-tag">Project Directory Tree</span>
+                <span class="code-copy-notice">Select and copy manually</span>
+              </div>
+              <pre class="code-block" tabindex="0" role="region" aria-label="Project folder structure"><code>my-website/
+├── index.html            <span class="hl-comment">&lt;-- Your main website page</span>
+├── about.html            <span class="hl-comment">&lt;-- Secondary content page</span>
+├── contact.html          <span class="hl-comment">&lt;-- Contact &amp; inquiry form</span>
+└── assets/
+    ├── css/
+    │   └── style.css     <span class="hl-comment">&lt;-- PixelCraft UI master stylesheet</span>
+    ├── images/
+    │   ├── logo.svg      <span class="hl-comment">&lt;-- Brand logo asset</span>
+    │   └── favicon.svg   <span class="hl-comment">&lt;-- Browser tab icon</span>
+    └── icons/
+        ├── menu.svg      <span class="hl-comment">&lt;-- Navigation drawer icon</span>
+        └── check.svg     <span class="hl-comment">&lt;-- Feature checklist icon</span></code></pre>
+            </div>
+
+            <h2>Step 2: Create Your First HTML Document</h2>
+            <p>
+              Create an <code>index.html</code> file with the standard HTML5 doctype, viewport meta tag, and link to the PixelCraft UI stylesheet in the <code>&lt;head&gt;</code>:
+            </p>
+
+            <div class="code-block-wrapper">
+              <div class="code-tabs-header">
+                <span class="code-language-tag">HTML Boilerplate</span>
+                <span class="code-copy-notice">Select and copy manually</span>
+              </div>
+              <pre class="code-block" tabindex="0" role="region" aria-label="Starter HTML5 Boilerplate"><code>&lt;!<span class="hl-tag">doctype</span> <span class="hl-attr">html</span>&gt;
+&lt;<span class="hl-tag">html</span> <span class="hl-attr">lang</span>=<span class="hl-str">"en"</span>&gt;
+  &lt;<span class="hl-tag">head</span>&gt;
+    &lt;<span class="hl-tag">meta</span> <span class="hl-attr">charset</span>=<span class="hl-str">"UTF-8"</span> /&gt;
+    &lt;<span class="hl-tag">meta</span> <span class="hl-attr">name</span>=<span class="hl-str">"viewport"</span> <span class="hl-attr">content</span>=<span class="hl-str">"width=device-width, initial-scale=1.0"</span> /&gt;
+    &lt;<span class="hl-tag">title</span>&gt;My New Website | Built with PixelCraft UI&lt;/<span class="hl-tag">title</span>&gt;
+    &lt;<span class="hl-tag">meta</span> <span class="hl-attr">name</span>=<span class="hl-str">"description"</span> <span class="hl-attr">content</span>=<span class="hl-str">"Clean modern website built with pure HTML and CSS."</span> /&gt;
+    
+    <span class="hl-comment">&lt;!-- Connect PixelCraft UI Stylesheet (Supports both relative &amp; absolute root) --&gt;</span>
+    &lt;<span class="hl-tag">link</span> <span class="hl-attr">rel</span>=<span class="hl-str">"stylesheet"</span> <span class="hl-attr">href</span>=<span class="hl-str">"assets/css/style.css"</span> /&gt;
+    &lt;<span class="hl-tag">link</span> <span class="hl-attr">rel</span>=<span class="hl-str">"stylesheet"</span> <span class="hl-attr">href</span>=<span class="hl-str">"/assets/css/style.css"</span> /&gt;
+  &lt;/<span class="hl-tag">head</span>&gt;
+  &lt;<span class="hl-tag">body</span>&gt;
+    &lt;<span class="hl-tag">a</span> <span class="hl-attr">href</span>=<span class="hl-str">"#main"</span> <span class="hl-attr">class</span>=<span class="hl-str">"skip-link"</span>&gt;Skip to main content&lt;/<span class="hl-tag">a</span>&gt;
+
+    &lt;<span class="hl-tag">main</span> <span class="hl-attr">id</span>=<span class="hl-str">"main"</span> <span class="hl-attr">class</span>=<span class="hl-str">"container"</span>&gt;
+      &lt;<span class="hl-tag">h1</span>&gt;Welcome to My Website&lt;/<span class="hl-tag">h1</span>&gt;
+      &lt;<span class="hl-tag">p</span> <span class="hl-attr">class</span>=<span class="hl-str">"lead"</span>&gt;This page is styled purely with standard CSS3.&lt;/<span class="hl-tag">p</span>&gt;
+    &lt;/<span class="hl-tag">main</span>&gt;
+  &lt;/<span class="hl-tag">body</span>&gt;
+&lt;/<span class="hl-tag">html</span>&gt;</code></pre>
+            </div>
+
+            <h2>Step 3: Copy and Paste Component Examples</h2>
+            <p>
+              Navigate to any component page—such as <a href="navbar-components.html">Navbars</a>, <a href="forms.html">Forms</a>, or <a href="cards.html">Cards</a>. Under the live preview, select the provided HTML snippet, paste it into your <code>&lt;body&gt;</code>, and refresh your browser. Because all classes are already included in <code>style.css</code>, your elements render immediately with full styling.
+            </p>
+
+            <h2>Step 4: Customize Colors &amp; Design Tokens</h2>
+            <p>
+              Every visual design token is declared as a CSS variable at the top of <code>assets/css/style.css</code> inside the <code>:root</code> selector. You can change your brand palette in one place without touching individual components:
+            </p>
+
+            <div class="code-block-wrapper">
+              <div class="code-tabs-header">
+                <span class="code-language-tag">CSS Custom Properties</span>
+                <span class="code-copy-notice">assets/css/style.css</span>
+              </div>
+              <pre class="code-block" tabindex="0" role="region" aria-label="CSS Tokens in :root"><code><span class="hl-sel">:root</span> {
+  <span class="hl-comment">/* Primary Brand Accents */</span>
+  <span class="hl-prop">--primary</span>: <span class="hl-val">#6C5CE7</span>;       <span class="hl-comment">/* Change to your brand color */</span>
+  <span class="hl-prop">--primary-600</span>: <span class="hl-val">#5848D3</span>;   <span class="hl-comment">/* Hover/active state */</span>
+  <span class="hl-prop">--lavender</span>: <span class="hl-val">#A89BFA</span>;      <span class="hl-comment">/* Secondary soft accent */</span>
+  <span class="hl-prop">--accent</span>: <span class="hl-val">#16B8A6</span>;        <span class="hl-comment">/* Teal highlight */</span>
+
+  <span class="hl-comment">/* Backgrounds &amp; Text */</span>
+  <span class="hl-prop">--bg</span>: <span class="hl-val">#F8F9FC</span>;            <span class="hl-comment">/* Canvas background */</span>
+  <span class="hl-prop">--surface</span>: <span class="hl-val">#FFFFFF</span>;       <span class="hl-comment">/* Card surface */</span>
+  <span class="hl-prop">--text</span>: <span class="hl-val">#171923</span>;          <span class="hl-comment">/* High-contrast charcoal text */</span>
+  <span class="hl-prop">--text-muted</span>: <span class="hl-val">#626B7A</span>;    <span class="hl-comment">/* Secondary body copy */</span>
+
+  <span class="hl-comment">/* Border Radii Tokens */</span>
+  <span class="hl-prop">--radius-1</span>: <span class="hl-val">10px</span>;
+  <span class="hl-prop">--radius-2</span>: <span class="hl-val">14px</span>;
+  <span class="hl-prop">--radius-3</span>: <span class="hl-val">18px</span>;
+}</code></pre>
+            </div>
+
+            <h2>Step 5: Test Responsive Layouts</h2>
+            <p>
+              To inspect how your website behaves across screen sizes:
+            </p>
+            <ul>
+              <li>Open your <code>index.html</code> in Google Chrome, Firefox, or Safari.</li>
+              <li>Press <kbd>F12</kbd> or <kbd>Cmd+Option+I</kbd> to open Developer Tools.</li>
+              <li>Click the <strong>Toggle Device Toolbar</strong> icon (<kbd>Cmd+Shift+M</kbd> or <kbd>Ctrl+Shift+M</kbd>).</li>
+              <li>Test standard breakpoints: <strong>320px</strong> (small mobile), <strong>375px</strong> (iPhone), <strong>768px</strong> (tablet portrait), and <strong>1024px+</strong> (desktop).</li>
+              <li>Confirm there is no unintentional horizontal scrolling.</li>
+            </ul>
+
+            <h2>Step 6: Verify Keyboard Accessibility</h2>
+            <p>
+              A fundamental test of inclusive web design is navigating your site without a mouse:
+            </p>
+            <ul>
+              <li>Click your browser address bar and press <kbd>Tab</kbd>.</li>
+              <li>The <strong>Skip to main content</strong> link must appear at the top-left.</li>
+              <li>Continuing to press <kbd>Tab</kbd> will move sequentially through nav links, buttons, and form inputs.</li>
+              <li>Every focused element must display a visible 2px violet outline (<code>--focus: #6C5CE7</code>).</li>
+              <li>Pressing <kbd>Enter</kbd> or <kbd>Space</kbd> activates links and buttons natively.</li>
+            </ul>
+
+            <h2>Step 7: Test Browser Printing (@media print)</h2>
+            <p>
+              PixelCraft UI includes an accessible print stylesheet. Press <kbd>Cmd+P</kbd> or <kbd>Ctrl+P</kbd> to open your browser's Print Preview:
+            </p>
+            <ul>
+              <li>The sticky navigation header and footer are automatically hidden.</li>
+              <li>The background switches to pure white and typography converts to high-contrast black.</li>
+              <li>Code blocks remain intact with preserved formatting.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: var(--space-10); padding: var(--space-6); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2); text-align: center;">
+            <h3 style="margin-top: 0; margin-bottom: var(--space-2);">Ready to Explore Components?</h3>
+            <p style="margin-bottom: var(--space-4);">Browse 15 pages of modular navbars, forms, cards, buttons, footers, and responsive layout guides.</p>
+            <a href="components.html" class="btn btn-primary">Browse Component Library &rarr;</a>
+          </div>
+
+          <!-- Related Links -->
+          <div style="margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border);">
+            <h3>Related Guides &amp; References</h3>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="responsive-design.html" class="animated-link">Responsive Design Guide &rarr;</a>
+              <a href="accessibility.html" class="animated-link">Accessibility Guidelines &rarr;</a>
+              <a href="about.html#brand-kit" class="animated-link">Brand Rules &amp; SVGs &rarr;</a>
+              <a href="faq.html" class="animated-link">Frequently Asked Questions &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+            </a>
+            <p>A practical, free resource for exploring, understanding, and building beautiful website interfaces with clean HTML and CSS.</p>
+            <div style="margin-top: 1rem;">
+              <span class="footer-academic-badge">Academic Project &middot; Zero JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Components</div>
+            <ul class="footer-nav">
+              <li><a href="navbar-components.html">Navbars</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="footer-components.html">Footers</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Examples</div>
+            <ul class="footer-nav">
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+              <li><a href="animations.html">CSS Animations</a></li>
+              <li><a href="components.html">Full Directory</a></li>
+              <li><a href="404.html">404 Error Page</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Guides</div>
+            <ul class="footer-nav">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility (a11y)</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Project</div>
+            <ul class="footer-nav">
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="about.html#brand-kit">Brand Kit Rules</a></li>
+              <li><a href="sitemap.xml">XML Sitemap</a></li>
+              <li><a href="robots.txt">Robots.txt</a></li>
+            </ul>
+            <div style="margin-top: 1rem; font-size: 0.8125rem; color: var(--dark-text-muted);">
+              <strong>Tip:</strong> Press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> to test the print-friendly stylesheet.
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 PixelCraft UI. Created for an academic web design assignment. Open learning project. Terms of use not yet defined.
+          </div>
+          <div>
+            Pure HTML5 &amp; CSS3 &middot; Zero JavaScript &middot; WCAG 2.1 AA Compliant
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

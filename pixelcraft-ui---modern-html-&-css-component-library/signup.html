@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page Patterns — PixelCraft UI</title>
+    <meta
+      name="description"
+      content="Explore pure HTML & CSS sign up and registration patterns. Includes multi-step visual indicators, role selectors, password strength UI, and responsive cards."
+    />
+    <link rel="canonical" href="https://pixelcraft-ui.dev/signup.html" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body>
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="register.html" class="active" aria-current="page">Register</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <div class="header-actions">
+            <!-- Theme Color Trigger -->
+            <button type="button" class="nav-theme-btn" data-theme-picker-open aria-label="Customize theme colors">
+              <span class="theme-dot"></span>
+              <span>Theme</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="components.html">Component Library</a>
+                <a href="card-gallery.html">100+ Card Divs</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html" aria-current="page">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-picker-open style="width: 100%; justify-content: center;">
+                  🎨 Change Theme Color
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm w-100" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><span aria-current="page">Sign Up Page</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- Page Hero -->
+      <section class="section section-hero">
+        <div class="container text-center">
+          <div class="badge badge-primary mb-3">Onboarding Patterns</div>
+          <h1 class="page-title">Modern HTML &amp; CSS Registration Pages</h1>
+          <p class="page-lead">
+            High-converting sign up interfaces with multi-step progress indicators, selectable role cards, password validation indicators, and zero JavaScript dependencies.
+          </p>
+          <div class="notice-box notice-info" style="max-width: 720px; margin: var(--space-4) auto 0; text-align: left;">
+            <p style="margin: 0;">
+              <strong>Note on Form Demonstration:</strong> These are frontend UI examples. Form submission and account authentication require an appropriate backend or external service.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Sign Up Pattern -->
+      <section class="section" id="signup-split">
+        <div class="container">
+          <div class="preview-stage" style="padding: 0; overflow: hidden; border-radius: 16px;">
+            <div class="auth-split-wrapper" style="min-height: auto;">
+              <!-- Left Sidebar: Onboarding Benefits -->
+              <div class="auth-showcase-sidebar">
+                <div>
+                  <a href="index.html" style="display: inline-block; margin-bottom: var(--space-6);">
+                    <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" width="170" height="36" />
+                  </a>
+                  <h3 style="font-size: 1.85rem; line-height: 1.25; margin-bottom: var(--space-3); color: #FFFFFF;">
+                    Join Thousands of Developers Building Faster.
+                  </h3>
+                  <p style="color: #A89BFA; font-size: 1rem; line-height: 1.6;">
+                    Unlock the complete component catalog, design guides, and accessible patterns for your next web project.
+                  </p>
+
+                  <div class="auth-sidebar-features">
+                    <div class="auth-feature-item">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #16B8A6; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">✓</div>
+                      <div>
+                        <strong style="display: block; font-size: 0.92rem; color: #FFFFFF;">Instant Component Access</strong>
+                        <span style="font-size: 0.82rem; color: #CBD5E1;">Ready-to-use HTML &amp; CSS snippets for headers, cards, and forms.</span>
+                      </div>
+                    </div>
+                    <div class="auth-feature-item">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #16B8A6; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">✓</div>
+                      <div>
+                        <strong style="display: block; font-size: 0.92rem; color: #FFFFFF;">Semantic HTML5 Standards</strong>
+                        <span style="font-size: 0.82rem; color: #CBD5E1;">Built according to WCAG 2.1 AA specifications and clean landmarks.</span>
+                      </div>
+                    </div>
+                    <div class="auth-feature-item">
+                      <div style="width: 24px; height: 24px; border-radius: 50%; background: #16B8A6; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">✓</div>
+                      <div>
+                        <strong style="display: block; font-size: 0.92rem; color: #FFFFFF;">No Build Tools Required</strong>
+                        <span style="font-size: 0.82rem; color: #CBD5E1;">Works instantly in any static browser environment or editor.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Live Community Stat Card -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: var(--space-4); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(6px);">
+                  <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: #A89BFA; font-weight: 600;">Resource Health</div>
+                  <div style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; font-family: var(--font-heading); margin-top: 2px;">100% Free &amp; Open</div>
+                  <p style="font-size: 0.82rem; color: #CBD5E1; margin: 4px 0 0;">Zero telemetry, zero tracking cookies, zero external runtime scripts.</p>
+                </div>
+              </div>
+
+              <!-- Right Auth Form Column -->
+              <div class="auth-form-column" style="padding: var(--space-8) var(--space-6);">
+                <div class="auth-card-main" style="max-width: 480px;">
+                  <!-- Visual Progress Steps -->
+                  <div class="auth-steps" aria-label="Registration steps">
+                    <div class="step-item active">
+                      <span class="step-number" aria-hidden="true">1</span>
+                      <span>Account</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-item">
+                      <span class="step-number" aria-hidden="true">2</span>
+                      <span>Profile</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-item">
+                      <span class="step-number" aria-hidden="true">3</span>
+                      <span>Finish</span>
+                    </div>
+                  </div>
+
+                  <div class="auth-header">
+                    <h2>Create your account</h2>
+                    <p>Start exploring PixelCraft UI components today</p>
+                  </div>
+
+                  <!-- Quick Social Sign-up -->
+                  <div class="social-auth-grid">
+                    <button type="button" class="btn-social" aria-label="Sign up with GitHub">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>GitHub</span>
+                    </button>
+                    <button type="button" class="btn-social" aria-label="Sign up with Google">
+                      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                      </svg>
+                      <span>Google</span>
+                    </button>
+                  </div>
+
+                  <div class="auth-divider">
+                    <span>or register with email</span>
+                  </div>
+
+                  <!-- Registration Form -->
+                  <form action="#" method="post" novalidate>
+                    <!-- Role Picker (Radio Cards) -->
+                    <fieldset style="border: none; padding: 0; margin: 0 0 var(--space-4) 0;">
+                      <legend style="font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text);">Primary Role</legend>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                        <label style="border: 1px solid var(--border); border-radius: 8px; padding: 8px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.8rem;">
+                          <input type="radio" name="role" value="dev" checked style="margin: 0;" />
+                          <span>Developer</span>
+                        </label>
+                        <label style="border: 1px solid var(--border); border-radius: 8px; padding: 8px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.8rem;">
+                          <input type="radio" name="role" value="designer" style="margin: 0;" />
+                          <span>Designer</span>
+                        </label>
+                        <label style="border: 1px solid var(--border); border-radius: 8px; padding: 8px; text-align: center; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.8rem;">
+                          <input type="radio" name="role" value="student" style="margin: 0;" />
+                          <span>Student</span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                      <label for="signup-name">Full Name</label>
+                      <input
+                        type="text"
+                        id="signup-name"
+                        name="name"
+                        placeholder="Ada Lovelace"
+                        required
+                        autocomplete="name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="signup-email">Work or Personal Email</label>
+                      <input
+                        type="email"
+                        id="signup-email"
+                        name="email"
+                        placeholder="ada@example.com"
+                        required
+                        autocomplete="email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="signup-password">Choose Password</label>
+                      <input
+                        type="password"
+                        id="signup-password"
+                        name="password"
+                        placeholder="At least 8 characters"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                      />
+                      <!-- Pure CSS Password Strength Meter -->
+                      <div class="password-strength-meter" aria-hidden="true">
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                        <div class="strength-bar"></div>
+                      </div>
+                      <span class="form-help" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: -4px;">
+                        Must be at least 8 characters with a number or symbol.
+                      </span>
+                    </div>
+
+                    <div class="form-group" style="margin-top: var(--space-4);">
+                      <label class="custom-checkbox" style="font-size: 0.85rem; align-items: flex-start;">
+                        <input type="checkbox" name="terms" required />
+                        <span class="checkbox-indicator" style="margin-top: 2px;"></span>
+                        <span>
+                          I agree to the <a href="about.html" style="color: var(--primary);">Terms of Service</a> and have reviewed the <a href="about.html" style="color: var(--primary);">Privacy Guidelines</a>.
+                        </span>
+                      </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-3);">
+                      Create Free Account &rarr;
+                    </button>
+                  </form>
+
+                  <div style="text-align: center; margin-top: var(--space-6); font-size: 0.9rem; color: var(--text-muted);">
+                    Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 600;">Sign in here</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="code-block-wrapper" style="margin-top: var(--space-6);">
+            <div class="code-block-header">
+              <span>Sign Up Card HTML Structure</span>
+              <span class="code-lang">HTML</span>
+            </div>
+            <pre><code>&lt;!-- Registration Form with Role Radios and Strength Meter --&gt;
+&lt;div class="auth-card-main"&gt;
+  &lt;div class="auth-steps"&gt;
+    &lt;div class="step-item active"&gt;&lt;span class="step-number"&gt;1&lt;/span&gt;&lt;span&gt;Account&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="step-connector"&gt;&lt;/div&gt;
+    &lt;div class="step-item"&gt;&lt;span class="step-number"&gt;2&lt;/span&gt;&lt;span&gt;Profile&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;form action="#" method="post"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="reg-name"&gt;Full Name&lt;/label&gt;
+      &lt;input type="text" id="reg-name" name="name" required autocomplete="name" /&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="reg-email"&gt;Email Address&lt;/label&gt;
+      &lt;input type="email" id="reg-email" name="email" required autocomplete="email" /&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="reg-password"&gt;Password&lt;/label&gt;
+      &lt;input type="password" id="reg-password" name="password" minlength="8" required /&gt;
+      &lt;div class="password-strength-meter" aria-hidden="true"&gt;
+        &lt;div class="strength-bar"&gt;&lt;/div&gt;
+        &lt;div class="strength-bar"&gt;&lt;/div&gt;
+        &lt;div class="strength-bar"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Create Free Account&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" width="160" height="34" />
+            </a>
+            <p class="footer-tagline">
+              Beautiful Components. Pure HTML &amp; CSS. An open developer resource designed for clean, accessible web development.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Auth &amp; Forms</h4>
+            <ul class="footer-links">
+              <li><a href="login.html">Login Page</a></li>
+              <li><a href="signup.html">Signup Page</a></li>
+              <li><a href="forms.html">Form Components</a></li>
+              <li><a href="card-gallery.html">100+ Card Divs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Components</h4>
+            <ul class="footer-links">
+              <li><a href="components.html">Overview</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="pricing-cards.html">Pricing Cards</a></li>
+              <li><a href="hero-sections.html">Hero Sections</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Guides</h4>
+            <ul class="footer-links">
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="responsive-design.html">Responsive Design</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="about.html">About &amp; Principles</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 PixelCraft UI. Academic Open Resource. Pure HTML &amp; CSS.</p>
+          <div class="footer-bottom-links">
+            <a href="about.html">Brand Kit</a>
+            <a href="getting-started.html">Quick Start</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

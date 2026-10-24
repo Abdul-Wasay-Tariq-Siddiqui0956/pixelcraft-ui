@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="PixelCraft UI Favicon">
+  <rect width="32" height="32" rx="7" fill="#6C5CE7" />
+  <!-- Crisp 3x3 pixel layout at 32x32 -->
+  <rect x="5" y="5" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="13.25" y="5" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="21.5" y="5" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="5" y="13.25" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="13.25" y="13.25" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="21.5" y="13.25" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="5" y="21.5" width="5.5" height="5.5" rx="1.5" fill="#FFFFFF" />
+  <rect x="21.5" y="21.5" width="5.5" height="5.5" rx="1.5" fill="#16B8A6" />
+</svg>

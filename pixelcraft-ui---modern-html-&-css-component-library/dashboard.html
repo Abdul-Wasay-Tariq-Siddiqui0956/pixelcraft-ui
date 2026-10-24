@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — PixelCraft UI</title>
+    <meta
+      name="description"
+      content="PixelCraft UI Developer Dashboard. Manage saved components, customize live themes and colors, monitor design system metrics, and export CSS tokens."
+    />
+    <link rel="canonical" href="https://pixelcraft-ui.dev/dashboard.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Instant Non-blocking Theme Sync (Light/Dark Mode) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pixelcraft_theme_mode');
+          if (mode === 'dark' || (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/component-live-customizer.js" defer></script></head>
+  <body class="dashboard-page-wrapper">
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header with Theme Controls -->
+    <header class="site-header">
+      <div class="container-fluid" style="padding: 0 var(--space-6);">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-link" aria-label="PixelCraft UI Home">
+            <img src="assets/images/logo.svg" alt="PixelCraft UI" class="brand-logo-img" width="180" height="38" />
+          </a>
+
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="components.html">Components</a>
+            <a href="card-gallery.html">100+ Cards</a>
+            <a href="dashboard.html" class="active" aria-current="page">Dashboard</a>
+            <a href="forms.html">Forms</a>
+            <a href="about.html">About</a>
+          </nav>
+
+          <div class="header-actions" style="display: flex; align-items: center; gap: 10px;">
+            <!-- Theme Color Trigger Button in Navbar -->
+            <button type="button" class="nav-theme-btn" data-theme-picker-open aria-label="Customize theme colors">
+              <span class="theme-dot"></span>
+              <span>Theme</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher in Navbar -->
+            <button type="button" class="nav-mode-btn" data-theme-toggle aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+
+            <!-- User Menu Button -->
+            <div style="position: relative; display: inline-block;">
+              <a href="login.html" class="btn btn-secondary btn-sm" title="Switch Account">Log Out</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <details class="mobile-nav-toggle">
+              <summary aria-label="Toggle navigation menu">
+                <img src="assets/icons/menu.svg" alt="" width="22" height="22" aria-hidden="true" />
+              </summary>
+              <div class="mobile-nav-dropdown">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" aria-current="page">Dashboard</a>
+                <a href="components.html">Components Directory</a>
+                <a href="card-gallery.html">100+ Cards Gallery</a>
+                <a href="login.html">Login Page</a>
+                <a href="register.html">Register Page</a>
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="reset-password.html">Reset Password</a>
+                <div class="mobile-nav-divider"></div>
+                <button type="button" class="btn btn-secondary btn-sm w-100 mb-2" data-theme-picker-open style="width: 100%; justify-content: center;">
+                  🎨 Change Theme Color
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm w-100" data-theme-toggle style="width: 100%; justify-content: center;">
+                  🌙 Toggle Dark Mode
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dashboard Two-Column Layout -->
+    <div class="dashboard-main-container">
+      <!-- Left Sidebar Panel -->
+      <aside class="dashboard-sidebar-panel" aria-label="Dashboard Sidebar">
+        <!-- User Identity Card -->
+        <div class="sidebar-user-card">
+          <div class="sidebar-avatar">AC</div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name">Alex Chen</div>
+            <div class="sidebar-user-role">Lead UI Engineer</div>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav aria-label="Sidebar Menu">
+          <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item active">
+              <a href="dashboard.html" aria-current="page">
+                <span>📊</span>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="#theme-studio-section">
+                <span>🎨</span>
+                <span>Theme Studio</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="components.html">
+                <span>🧩</span>
+                <span>Components</span>
+                <span class="sidebar-badge">40+</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="card-gallery.html">
+                <span>🃏</span>
+                <span>100+ Cards</span>
+                <span class="sidebar-badge">112</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="buttons.html">
+                <span>🔘</span>
+                <span>Buttons</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="forms.html">
+                <span>📝</span>
+                <span>Forms &amp; Auth</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="navbar-components.html">
+                <span>🧭</span>
+                <span>Navbars</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a href="pricing-cards.html">
+                <span>💳</span>
+                <span>Pricing Cards</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div style="margin-top: auto; padding: var(--space-4); background-color: var(--surface-subtle); border-radius: 10px; border: 1px solid var(--border);">
+          <div style="font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; color: var(--text);">Active Theme Color</div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="theme-color-dot" style="width: 14px; height: 14px; border-radius: 50%; background-color: var(--primary); display: inline-block;"></span>
+              <span class="theme-hex-value" style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; color: var(--text-muted);">#6C5CE7</span>
+            </div>
+            <button type="button" data-theme-picker-open style="background: none; border: none; font-size: 0.78rem; font-weight: 700; color: var(--primary); cursor: pointer; text-decoration: underline;">
+              Change
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main id="main-content" class="dashboard-content-area">
+        <!-- Welcome Hero Banner -->
+        <section class="dashboard-hero-card">
+          <div>
+            <div class="badge badge-primary" style="margin-bottom: 8px;">Workspace Ready</div>
+            <h1 style="font-family: var(--font-headings); font-size: 1.85rem; font-weight: 700; margin: 0 0 6px 0; color: var(--text);">
+              Welcome back, Alex! 👋
+            </h1>
+            <p style="margin: 0; color: var(--text-muted); max-width: 620px; font-size: 0.95rem;">
+              Your PixelCraft UI system is synchronized. Change your theme color anytime using preset palettes or custom color pickers, toggle dark mode, or copy production-ready HTML &amp; CSS.
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary" data-theme-picker-open>
+              🎨 Customize Theme
+            </button>
+            <a href="card-gallery.html" class="btn btn-secondary">
+              Explore 100+ Cards
+            </a>
+          </div>
+        </section>
+
+        <!-- Metrics Stats Grid (4 Cards) -->
+        <section class="dash-stats-grid" aria-label="Key Metrics">
+          <!-- Stat 1 -->
+          <div class="dash-stat-card">
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Total Components</span>
+              <span style="font-size: 20px;">📦</span>
+            </div>
+            <div class="dash-stat-value">112+</div>
+            <div class="dash-stat-trend positive">
+              <span>↑ 18.4%</span>
+              <span style="color: var(--text-muted); font-weight: 400;">from last month</span>
+            </div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="dash-stat-card">
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Active Preset</span>
+              <span style="font-size: 20px;">🎨</span>
+            </div>
+            <div class="dash-stat-value theme-hex-value" style="font-size: 1.5rem;">#6C5CE7</div>
+            <div class="dash-stat-trend" style="color: var(--primary);">
+              <span>● Real-time Applied</span>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="dash-stat-card">
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">Color Mode</span>
+              <span style="font-size: 20px;">🌓</span>
+            </div>
+            <div class="dash-stat-value" id="dash-mode-label">Light / Dark</div>
+            <div class="dash-stat-trend" style="color: var(--text-muted);">
+              <span>Synced with LocalStorage</span>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="dash-stat-card">
+            <div class="dash-stat-top">
+              <span class="dash-stat-label">WCAG Contrast</span>
+              <span style="font-size: 20px;">🛡️</span>
+            </div>
+            <div class="dash-stat-value">AAA Pass</div>
+            <div class="dash-stat-trend positive">
+              <span>✓ 4.5:1 Minimum Met</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interactive Theme Color Studio Widget -->
+        <section id="theme-studio-section" class="dash-theme-card" aria-label="Theme Color Customizer Studio">
+          <div class="dash-theme-header">
+            <h2 class="dash-theme-title">
+              <span>🎨</span> Interactive Theme Color Studio
+            </h2>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="btn btn-secondary btn-sm" data-theme-toggle>
+                <span class="theme-toggle-icon">🌙</span> <span class="theme-toggle-text">Toggle Dark</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="dash-theme-body">
+            <!-- Left Controls -->
+            <div>
+              <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: var(--space-4);">
+                Select any preset brand color below or use the custom color picker wheel. Every button, link, navigation bar, focus outline, and card accent on the entire website immediately responds!
+              </p>
+
+              <!-- Preset Swatches Pills -->
+              <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;">
+                Preset Brand Colors (Click to apply)
+              </div>
+              <div class="dash-swatches-grid" style="margin-bottom: var(--space-5);">
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#6C5CE7">
+                  <span class="swatch-circle" style="background-color: #6C5CE7;"></span>
+                  <span>Violet (Default)</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#2563EB">
+                  <span class="swatch-circle" style="background-color: #2563EB;"></span>
+                  <span>Ocean Blue</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#10B981">
+                  <span class="swatch-circle" style="background-color: #10B981;"></span>
+                  <span>Emerald Mint</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#F43F5E">
+                  <span class="swatch-circle" style="background-color: #F43F5E;"></span>
+                  <span>Sunset Rose</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#F59E0B">
+                  <span class="swatch-circle" style="background-color: #F59E0B;"></span>
+                  <span>Royal Amber</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#06B6D4">
+                  <span class="swatch-circle" style="background-color: #06B6D4;"></span>
+                  <span>Cyber Cyan</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#8B5CF6">
+                  <span class="swatch-circle" style="background-color: #8B5CF6;"></span>
+                  <span>Deep Purple</span>
+                </button>
+                <button type="button" class="dash-color-pill-btn" data-theme-preset="#FF6B6B">
+                  <span class="swatch-circle" style="background-color: #FF6B6B;"></span>
+                  <span>Coral Peach</span>
+                </button>
+              </div>
+
+              <!-- Custom Color Wheel Picker -->
+              <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;">
+                Custom Color Picker
+              </div>
+              <div style="display: flex; align-items: center; gap: 14px; background-color: var(--surface-alt); padding: 12px 18px; border-radius: 10px; border: 1px solid var(--border);">
+                <input type="color" class="theme-custom-input" value="#6C5CE7" id="dashCustomColorInput" style="width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;" />
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: var(--text);">Choose Any Hex / RGB Color</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">
+                    Live value: <strong class="theme-hex-value" style="color: var(--primary);">#6C5CE7</strong>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnResetThemeDash" style="margin-left: auto;">
+                  Reset to Default
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Live Preview Sandbox -->
+            <div style="background-color: var(--surface-alt); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: center; gap: 14px;">
+              <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+                Live Preview Sandbox
+              </div>
+              <div>
+                <button type="button" class="btn btn-primary btn-sm" style="margin-right: 8px;">
+                  Primary Button
+                </button>
+                <span class="badge badge-primary">Active Badge</span>
+              </div>
+              <div>
+                <input type="text" class="form-input" value="Focus outline matches theme" style="font-size: 0.85rem; padding: 8px 12px; width: 100%; border-radius: 6px; border: 1px solid var(--border);" />
+              </div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">
+                Link preview: <a href="dashboard.html" style="color: var(--primary); font-weight: 600;">Explore Documentation →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Access Authentication & Management Links -->
+        <section aria-label="Quick Access Hub">
+          <div style="margin-bottom: var(--space-4); display: flex; align-items: center; justify-content: space-between;">
+            <h2 style="font-family: var(--font-headings); font-size: 1.3rem; font-weight: 700; margin: 0; color: var(--text);">
+              Authentication &amp; Account Pages
+            </h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Connected &amp; Responsive</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+            <a href="login.html" class="component-card" style="text-decoration: none; padding: 18px; border-radius: 10px; border: 1px solid var(--border); background-color: var(--surface);">
+              <div style="font-size: 24px; margin-bottom: 8px;">🔑</div>
+              <div style="font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 4px;">Login Page</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Sign in with email or OAuth with remember-me state.</div>
+            </a>
+
+            <a href="register.html" class="component-card" style="text-decoration: none; padding: 18px; border-radius: 10px; border: 1px solid var(--border); background-color: var(--surface);">
+              <div style="font-size: 24px; margin-bottom: 8px;">✨</div>
+              <div style="font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 4px;">Register Page</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Full account registration with live password strength meter.</div>
+            </a>
+
+            <a href="forgot-password.html" class="component-card" style="text-decoration: none; padding: 18px; border-radius: 10px; border: 1px solid var(--border); background-color: var(--surface);">
+              <div style="font-size: 24px; margin-bottom: 8px;">📬</div>
+              <div style="font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 4px;">Forgot Password</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Email recovery flow with validation and reset guidance.</div>
+            </a>
+
+            <a href="reset-password.html" class="component-card" style="text-decoration: none; padding: 18px; border-radius: 10px; border: 1px solid var(--border); background-color: var(--surface);">
+              <div style="font-size: 24px; margin-bottom: 8px;">🔒</div>
+              <div style="font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: 4px;">Reset Password</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Secure password replacement with dynamic criteria checklist.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Recent Component Activity Table -->
+        <section class="dash-table-card" aria-label="Component Activity Table">
+          <div class="dash-table-header">
+            <h3>Recent Components &amp; Templates</h3>
+            <a href="components.html" class="btn btn-secondary btn-sm">View All Components</a>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Component Name</th>
+                  <th>Category</th>
+                  <th>Last Modified</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600;">Bento Grid Metric Card</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Modern multi-column dashboard widget</div>
+                  </td>
+                  <td>Cards</td>
+                  <td>10 mins ago</td>
+                  <td><span class="status-badge live">● Active</span></td>
+                  <td><a href="card-gallery.html#bento-card" class="btn btn-secondary btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600;">Split-Screen Auth Hero</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Branded visual + floating login form</div>
+                  </td>
+                  <td>Forms &amp; Auth</td>
+                  <td>1 hour ago</td>
+                  <td><span class="status-badge live">● Active</span></td>
+                  <td><a href="login.html" class="btn btn-secondary btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600;">Glassmorphic Cyber Card</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Frosted backdrop-filter CSS surface</div>
+                  </td>
+                  <td>Cards</td>
+                  <td>2 hours ago</td>
+                  <td><span class="status-badge live">● Active</span></td>
+                  <td><a href="card-gallery.html#glass-card" class="btn btn-secondary btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600;">Tiered SaaS Pricing Grid</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">3-column comparison table with badge</div>
+                  </td>
+                  <td>Pricing</td>
+                  <td>Yesterday</td>
+                  <td><span class="status-badge review">● Review</span></td>
+                  <td><a href="pricing-cards.html" class="btn btn-secondary btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight: 600;">Responsive Mobile-First Navbar</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Zero-JS pure CSS details/summary navigation</div>
+                  </td>
+                  <td>Navigation</td>
+                  <td>2 days ago</td>
+                  <td><span class="status-badge live">● Active</span></td>
+                  <td><a href="navbar-components.html" class="btn btn-secondary btn-sm" style="padding: 4px 10px; font-size: 0.78rem;">Inspect</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-link">
+              <img src="assets/images/logo-dark.svg" alt="PixelCraft UI" width="160" height="34" />
+            </a>
+            <p class="footer-tagline">
+              Beautiful Components. Pure HTML &amp; CSS.
+            </p>
+            <p class="footer-note">
+              An open design systems project. All features support Light/Dark mode and customized color palettes.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Pages</div>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="card-gallery.html">100+ Cards</a></li>
+              <li><a href="forms.html">Forms</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Authentication</div>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="forgot-password.html">Forgot Password</a></li>
+              <li><a href="reset-password.html">Reset Password</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <div class="footer-col-title">Appearance</div>
+            <ul class="footer-links">
+              <li><a href="#" data-theme-picker-open>🎨 Theme Color Picker</a></li>
+              <li><a href="#" data-theme-toggle>🌓 Toggle Light / Dark</a></li>
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="about.html">About &amp; Brand Kit</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 PixelCraft UI. Modern, Accessible, Pure HTML &amp; CSS Library.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Dashboard Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var dashInput = document.getElementById('dashCustomColorInput');
+        if (dashInput && window.PixelCraftTheme) {
+          dashInput.value = window.PixelCraftTheme.currentColor;
+          dashInput.addEventListener('input', function(e) {
+            window.PixelCraftTheme.applyColor(e.target.value, true, 'page');
+          });
+        }
+        var btnReset = document.getElementById('btnResetThemeDash');
+        if (btnReset && window.PixelCraftTheme) {
+          btnReset.addEventListener('click', function() {
+            window.PixelCraftTheme.resetPageDefault();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
